@@ -1,0 +1,75 @@
+st-icon-addthis
+st-icon-adn
+st-icon-amazon
+st-icon-android
+st-icon-apple
+st-icon-behance
+st-icon-blogger
+st-icon-codepen
+st-icon-delicious
+st-icon-deviantart
+st-icon-digg
+st-icon-dribbble
+st-icon-dribbble-alt (with shadow)
+st-icon-dropbox
+st-icon-ebay
+st-icon-email
+st-icon-email2 (darker)
+st-icon-evernote
+st-icon-facebook
+st-icon-facebook-alt (centered "f")
+st-icon-flattr
+st-icon-flickr
+st-icon-forrst
+st-icon-foursquare
+st-icon-github
+st-icon-github-alt (silhouette)
+st-icon-gittip
+st-icon-gmail
+st-icon-gmail-alt (iOS icon)
+st-icon-google
+st-icon-googleplus
+st-icon-imdb
+st-icon-instagram
+st-icon-kickstarter
+st-icon-lastfm
+st-icon-linkedin
+st-icon-microsoft
+st-icon-myspace
+st-icon-pandora
+st-icon-paypal
+st-icon-paypal2 (iOS icon)
+st-icon-picasa
+st-icon-pinboard
+st-icon-pinterest
+st-icon-rdio
+st-icon-reddit
+st-icon-rss
+st-icon-sharethis
+st-icon-skype
+st-icon-slideshare
+st-icon-soundcloud
+st-icon-spotify
+st-icon-stumbleupon
+st-icon-stackoverflow
+st-icon-tumblr
+st-icon-twitter
+st-icon-vimeo
+st-icon-vine
+st-icon-windows
+st-icon-windows7
+st-icon-wordpress
+st-icon-xing
+st-icon-yahoo
+st-icon-yelp
+st-icon-youtube
+st-icon-youtube2 (colors inverted)
+st-icon-youtube-alt ("YouTube")
+st-icon-zerply
+st-icon-search
+st-icon-search-alt (multi-color)
+st-icon-menu
+st-icon-menu-alt (square)
+st-icon-menu-alt2 (fully rounded)
+st-icon-more (ellipsis)
+st-icon-triangle-down

@@ -1,0 +1,832 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Stackicons - Examples</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="description" content="Stackicons are icon fonts for web designers with added flexibility, including multiple button shapes and a unique multi-color option. Free and open source, Stackicons-Social includes finely-crafted icons for over 60 social brands. The Stackicons project is by Parker Bennett, a web designer and front-end developer based in Los Angeles.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Stackicons">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<link rel="SHORTCUT ICON" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57.png">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/stackicons-min.css" media="screen" type="text/css" />
+
+  <style>
+
+    *,
+    *:before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+
+    html {
+      width: 100%;
+      border-top: 6px solid #f5aa00;
+      font-size: 100%; }
+
+    body {
+      color: #666;
+      font-family: sans-serif;
+      font-size: 96%; }
+
+    a:hover {
+      cursor: pointer; }
+
+    img,
+    object,
+    embed {
+      max-width: 100%;
+      height: auto; }
+
+    object,
+    embed {
+      height: 100%; }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      -ms-interpolation-mode: bicubic; }
+
+    .left {
+      float: left !important; }
+
+    .right {
+      float: right !important; }
+
+    .clearfix {
+      *zoom: 1; }
+      .clearfix:before, .clearfix:after {
+        content: " ";
+        display: table; }
+      .clearfix:after {
+        clear: both; }
+
+    .hide {
+      display: none; }
+
+    .visuallyhidden, .screen-reader-text {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px; }
+
+    /*
+     * Extends the .visuallyhidden class to allow the element to be focusable
+     * when navigated to via the keyboard: h5bp.com/p
+     */
+
+    .visuallyhidden.focusable:active, .screen-reader-text.focusable:active,
+        .visuallyhidden.focusable:focus, .screen-reader-text.focusable:focus {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto; }
+
+    .wrap {
+      position: relative;
+      margin: 0 auto;
+      padding: 10px;
+      width: 100%;
+      min-width: 320px;
+      max-width: 720px; }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: #bbb;
+      font-weight: 200; }
+
+    h4 {
+      margin-bottom: 0; }
+
+    a {
+      text-decoration: none;
+      color: #f5aa00; }
+
+    a:hover, a:focus {
+      color: #fa580d; }
+
+    a:active {
+      color: #dc002a; }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0; }
+
+    nav ul, nav li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+
+    .nobr, .nobreak, .nobr-small, .nobreak-small {
+      white-space: nowrap; }
+
+    .width-half { width: 50%; }
+
+    .left {
+      float: left !important; }
+
+    .clear-both {
+      clear: both !important; }
+
+    pre {
+      clear: both;
+      padding: .75em 1em 0;
+      color: #222;
+      background: lightyellow; }
+
+    pre span { color: #999; }
+
+    code {
+      margin: 0 -.125em;
+      padding: 0 .125em;
+      background: lightyellow; }
+
+    .nav-top { font-size: 85%; }
+
+    .nav-top a {
+      margin: -.75em -.27em 0; }
+
+    .nav-top .st-icon-email {
+      /* more spacing */
+      margin: -.75em -.1em 0; }
+
+    .mynav {
+      float: right;
+      text-align: right;
+      font-size: 115%; }
+
+    .mynav a {
+      margin-left: -.15em;
+      margin-bottom: .125em; }
+
+    .brand-classes {
+      font-size: 75%; }
+
+    .brand-classes ul, .brand-classes li {
+      margin: 0;
+      padding: 0 0 0 1em;
+      list-style: none;
+      list-style-type: none; }
+
+    .nav-list a { color: #999;
+      font-family: 'Helvetica', sans-serif;
+      font-weight: 200; }
+
+    .nav-list a:hover, .nav-list a:focus { color: #666; }
+
+    .nav-list a:active { color: #222; }
+
+    .nav-list-tighter a { margin-bottom: -.1em; }
+
+    .nav-panel { white-space: nowrap; }
+
+    .nav-panel a {
+      display: block;
+      /* to clear these floats we'll need to add
+         the clear: property to the next element.
+         We can't use methods that rely on adding
+         pseudo elements; it will disrupt the icon */
+      float: left;
+      border-right: 2px solid #eee;
+      border-bottom: 2px solid #ddd;
+      margin: 0 0 .75em;
+      padding: 0;
+      background: #fafafa; }
+
+    .nav-panel a:before, .nav-panel a span:before,
+    .nav-panel a span:after, .nav-panel a:after {
+      top: .08em;
+      left: .136em; }
+
+    .nav-panel a:hover, .nav-panel a:focus {
+      border-right: 2px solid #e0e0e0;
+      border-bottom: 2px solid #d0d0d0;
+      background: #fefefe; }
+
+    .nav-panel a:active {
+      border-left: 1px solid #e0e0e0;
+      border-top: 1px solid #d0d0d0;
+      border-right: 1px solid #fafafa;
+      border-bottom: 1px solid #fafafa;
+      background: #efefef; }
+
+    .nav-panel a:before {
+      text-shadow: 0px -1px 1px rgba(255,255,255,0.75), 0px 1px 1px rgba(0,0,0,0.35); }
+
+    .panel {
+      margin: 2em 0;
+      padding: .75em 2em 1.125em 1.5em;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-left: 3px solid #f5aa00; }
+
+    .st-sample dd {
+      font-size: 85%;
+      margin-left: 2.5em;
+      color: #999; }
+
+    .st-sample span, .st-demo {
+      font-family: 'Stackicons-Social';
+      font-style: normal !important;
+      font-weight: 400 !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+      speak: none; }
+
+    .st-sample span {
+      position: relative;
+      top: .4em;
+      margin-right: .25em;
+      font-size: 150%;}
+
+    .st-demo {
+      width: 100%;
+      font-size: 400%;
+      top: 0;
+      margin: 0; }
+
+    .st-demo .st-icon {
+      margin: -.25em 0 0 -.6em;
+      font-size: 125%; }
+
+    .st-demo b {
+      position:relative;
+      top: -.5em;
+      left: -.85em;
+      font-size: 50%;
+      color: #ffd200;
+      font-family: 'Stackicons-Social', sans-serif; }
+
+    .dribbble-1 {
+      color: rgb(240, 119, 160);
+      /* to show overlapping "multi-color" elements */
+      margin-left: 0; }
+    .dribbble-2 {
+      color: rgb(250, 156, 190);
+      margin-left: -.75em; }
+    .dribbble-3 {
+      color: rgb(197, 55, 109);
+      margin-left: -.75em; }
+    .dribbble-4 {
+      color: rgb(204, 204, 204);
+      color: rgba(0, 0, 0, 0.198);
+      margin-left: -.85em; }
+
+    .github-1 {
+      color: rgb(21, 21, 21);
+      margin-left: 0em; }
+    .github-2 { color: rgb(243, 202, 178);
+      margin-left: -.65em; }
+    .github-3 {
+      color: rgb(177, 66, 58);
+      margin-left: -.7em; }
+    .github-4 {
+      color: rgb(156, 230, 254);
+      color: rgba(131, 224, 254, 0.8);
+      margin-left: -.9em; }
+
+    /* you can override with a single-color in CSS */
+    .st-single-color a:before { color: #f5aa00 !important; }
+
+    .st-single-color a:hover:before,
+    .st-single-color a:focus:before { color: #fa580d !important; }
+    .st-single-color a:active:before { color: #dc002a !important; }
+
+    /* font-sample viewer */
+
+    .font-sample {
+      margin: 1.5em auto;
+      padding: 0;
+      border: 1px solid #bbb;
+      font-size: 94%;}
+
+    .font-sample h2 {
+      text-align: center;
+      padding: .135em 0 .165em;
+      color: #fff;
+      background: #bbb; }
+
+    .stackicons-font-sample {
+      padding: 0 1.4em 0 1.1em;;
+      font-size: 125%;
+      text-align: center; }
+
+    .control-font {
+      margin-bottom: 1em;
+      padding: 0;
+      background: #f4f4f4;
+      font-size: 85%; }
+
+    .toggle-color {
+      float: right;
+      padding: 0 1em;
+      height: 2.125em;
+      line-height: 2.125em;
+      text-align: right;
+  -webkit-transition: color .2s ease,
+                 background .2s ease;
+     -moz-transition: color .2s ease,
+                 background .2s ease;
+       -o-transition: color .2s ease,
+                 background .2s ease;
+      -ms-transition: color .2s ease,
+                 background .2s ease;
+          transition: color .2s ease,
+                 background .2s ease;
+      color: #bbb; }
+
+    .toggle-color:hover, .toggle-color:focus {
+      color: #555;
+      background: #eaeaea; }
+
+    .toggle-color:active,
+    .toggle-color.active {
+      color: #fa580d; }
+
+    .toggle-color:after {
+      content: " off"; }
+
+    .toggle-color.active:after {
+      content: " on"; }
+
+    .control-shape {
+      padding: 0 0 0 .5em; }
+
+    .control-shape a {
+      float: left;
+      padding: 0 .5em;
+      height: 2.125em;
+      line-height: 2.125em; }
+
+    .control-shape a:hover, .control-shape a:focus {
+       background: #eaeaea; }
+
+    .control-shape a:active, .control-shape a.active {
+      color: #fa580d; }
+
+    .toggle-ssmin {
+      display: block;
+      margin-top: .5em;
+      padding: 0 1em;
+      height: 2em;
+      line-height: 2em;
+      text-align: right;
+      font-size: 85%;
+      color: #bbb; }
+
+    .toggle-ssmin.active {
+      color: #f5aa00; }
+
+    .toggle-ssmin:after {
+      content: "-Minimal"; }
+
+    .toggle-ssmin.active:after {
+       content: "";  }
+
+    .font-sample-name.active:after {
+      content: "-Minimal"; }
+
+    /* end font-sample viewer */
+
+
+    @media only screen
+      and (min-width : 480px) {
+
+      html { font-size: 100%;}
+
+      .stackicons-logo {
+        margin-top: .25em;
+        font-size: 150%; }
+
+      .st-demo {
+        width: 35%;
+        white-space: nowrap; }
+
+      .left-wide { float: left; }
+
+      .indent-half { margin-left: 50%; }
+
+      .nav-top {
+        position: absolute;
+        top: 0;
+        right: .4em;
+        margin-top: 1.125em; }
+
+    }
+
+    @media only screen
+      and (min-width : 640px) {
+
+      .stackicons-logo {
+        font-size: 166.67%; }
+
+      .nav-top {
+        font-size: 133%;
+        position: absolute;
+        top: 1.56em;
+        right: .4em;
+        margin-top: 1.125em; }
+
+    }
+
+  </style>
+
+</head>
+
+<body style="font-family:sans-serif;">
+
+  <div class="wrap">
+  <header>
+    <h1><a class="stackicons-logo text-left" href="http://stackicons.com"><span></span>Stackicons</a></h1>
+    <h2>Doing More with Icon Fonts</h2>
+    <p><a href="http://stackicons.com">http://stackicons.com</a></p>
+    <nav class="nav-top st-shape-icon st-single-color-brand">
+      <ul>
+        <li><a title="Twitter" class="st-icon-twitter" href="https://twitter.com/stackicons">Twitter</a></li>
+        <li><a title="Facebook" class="st-icon-facebook-alt" href="https://facebook.com/stackicons">Facebook</a></li>
+        <li><a title="Github" class="st-icon-github-alt" href="http://github.com/parkerbennett">Github</a></li>
+     <li><a title="Email" class="st-icon-email" href="mailto:&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;"><span></span>&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <p>The default CSS included with <strong>Stackicons-Social</strong> renders a horizontal row of slightly-rounded buttons, each in a single color that reflects the brand (with a lighter variant <span class="nobr">on :hover).</span></p>
+  <nav class="nav-left">
+    <ul>
+    <!-- inline-block: comment-out white space or don't
+         close tags or, as I've done, -.16em margin-right -->
+    <li><a title="Twitter" class="st-icon-twitter" href="">Twitter</a></li>
+    <li><a title="Facebook" class="st-icon-facebook" href="">Facebook</a></li>
+    <li><a title="Google+" class="st-icon-googleplus" href="">Google+</a></li>
+    <li><a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a></li>
+    <li><a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a></li>
+    <li><a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a></li>
+    <li><a title="Email" class="st-icon-email" href=""><span></span>Email</a></li>
+    </ul>
+  </nav>
+  <hr />
+  <p>Adding the <code>.st-multi-color</code> class to the icon or parent element displays "multi-color" icons (created by stacking pseudo elements). For more than two colors, you'll need to add a non-semantic <code>&lt;span>&lt;/span></code> in the markup:</p>
+
+<!-- dribbble -->
+<div class="st-demo left-wide"><span class="dribbble-1">&#xe127;</span><span class="dribbble-2">&#xe128;</span><span class="dribbble-3">&#xe126;</span><span class="dribbble-4">&#xe129;</span><b>&rarr;</b><a class="st-icon st-multi-color st-icon-dribbble-alt st-shape-icon" href=""><span></span>Dribbble</a></div>
+<!-- github -->
+<div class="st-demo indent-half"><span class="github-1">&#xe179;</span><span class="github-2">&#xe174;</span><span class="github-3">&#xe175;</span><span class="github-4">&#xe176;</span><b>&rarr;</b><a class="st-icon st-multi-color st-icon-github st-shape-icon" href=""><span></span>Github</a></div>
+  <nav class="nav-social nav-left st-multi-color" style="margin-top:1em;">
+    <ul>
+    <li><a title="Twitter" class="st-icon-twitter" href="">Twitter</a></li>
+    <li><a title="Facebook" class="st-icon-facebook" href="">Facebook</a></li>
+    <li><a title="Google+" class="st-icon-googleplus" href="">Google+</a></li>
+    <li><a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a></li>
+    <li><a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a></li>
+    <li><a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a></li>
+    <li><a title="Email" class="st-icon-email" href=""><span></span>Email</a></li>
+    </ul>
+  </nav>
+
+  <hr />
+
+  <p>You can override button shapes by adding a class to an icon or its parent container:</p>
+  <dl class="st-sample">
+    <dt><span>&#xe101;</span><code>.st-shape-square</code> (or .st-shape-r0)</dt>
+      <dd>square button shape</dd>
+    <dt><span>&#xe102;</span><code>.st-shape-rounded1</code> (or .st-shape-r1)</dt>
+      <dd>slightly rounded button (Android)</dd>
+    <dt><span>&#xe103;</span><code>.st-shape-rounded2</code> (or .st-shape-r2)</dt>
+      <dd>rounded button</dd>
+    <dt><span>&#xe104;</span><code>.st-shape-rounded3</code> (or .st-shape-r3)</dt>
+      <dd>more rounded button (iOS 7)</dd>
+    <dt><span>&#xe105;</span><code>.st-shape-circle</code> (or .st-shape-r4)</dt>
+      <dd>circular button</dd>
+    <dt><span>&#xe106;</span><code>.st-shape-icon</code> (or .st-shape-r5)</dt>
+      <dd>no button, icon only</dd>
+  </dl>
+  <nav class="nav-left st-shape-icon">
+    <ul>
+    <li><a title="Twitter" class="st-icon-twitter" href="">Twitter</a></li>
+    <li><a title="Facebook" class="st-icon-facebook-alt" href="">Facebook</a></li>
+    <li><a title="Google+" class="st-icon-googleplus" href="">Google+</a></li>
+    <li><a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a></li>
+    <li><a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a></li>
+    <li><a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a></li>
+    <li><a title="Email" class="st-icon-email" href=""><span></span>Email</a></li>
+    </ul>
+  </nav>
+
+  <hr />
+
+  <p>It's fairly easy to change icon size, position, and spacing using CSS:
+  </p>
+  <nav class="mynav st-multi-color" >
+    <a title="Twitter" class="st-icon-twitter st-shape-square" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook-alt st-shape-rounded1" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus st-shape-rounded2" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin st-shape-rounded3" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest st-shape-circle" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube-alt st-shape-icon" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email2" href=""><span></span>Email</a>
+  </nav>
+  <pre><code>.mynav {
+  float: right;
+  text-align: right;
+  font-size: 115%; }
+
+<span>/* tighter spacing */</span>
+.mynav a { margin-left: -.15em; }
+  </code></pre>
+  <p>(Some icons have -alt versions, where the icon differs. A few are just colored differently and get numbered, like <code>.st-icon-email2</code>.)</p>
+  <hr />
+  <p>There's also a <code>.nav-list</code> parent class, which creates a vertical list with text:</p>
+
+  <nav class="nav-list st-shape-r4 st-single-color-brand left">
+    <ul>
+      <li><a title="Twitter" class="st-icon-twitter" href="">Twitter</a></li>
+      <li><a title="Facebook" class="st-icon-facebook-alt" href="">Facebook</a></li>
+      <li><a title="Google+" class="st-icon-googleplus" href="">Google+</a></li>
+      <li><a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a></li>
+      <li><a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a></li>
+      <li><a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a></li>
+      <li><a title="Email" class="st-icon-email" href=""><span></span>Email</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav-list nav-list-tighter st-shape-icon st-multi-color" style="margin-left: 50%;">
+    <ul>
+      <li><a title="Twitter" class="st-icon-twitter" href="">Twitter<span style="display:block; font-size: 75%; color: #ccc;">@stackicons</span></a></li>
+      <li><a title="Facebook" class="st-icon-facebook-alt" href="">Facebook</a></li>
+      <li><a title="Google+" class="st-icon-flickr" href=""><span></span>Flickr</a></li>
+      <li><a title="LinkedIn" class="st-icon-flattr" href=""><span></span> Flattr</a></li>
+      <li><a title="Pinterest" class="st-icon-instagram" href=""><span></span>Instagram</a></li>
+      <li><a title="YouTube" class="st-icon-youtube-alt" href=""><span></span>YouTube</a></li>
+      <li><a title="Email" class="st-icon-email2" href=""><span></span>Email</a></li>
+    </ul>
+  </nav>
+  <hr class="clear-both" />
+
+  <p>The CSS for Stackicons-Social is generated by a group of Sass _partial files. A Sass "construction kit" file allows you to specify a "color style" for single-color icons in the compiled default CSS, and tweak it with variables.</p>
+  <h4>single-color (hover: single-color-hover):</h4>
+  <nav class="nav-social st-single-color">
+    <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email" href=""><span></span>Email</a>
+  </nav>
+  <p>(You can also create this effect using CSS styling. See source.)</p>
+  <h4>single-color (hover: brand-color):</h4>
+  <nav class="nav-social st-single-color-brand">
+    <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email" href=""><span></span>Email</a>
+  </nav>
+  <h4>brand-variant (hover: brand-color):</h4>
+  <nav class="nav-social st-brand-variant">
+    <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email" href="mailto:&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;"><span></span>Email</a>
+  </nav>
+  <h4>embossed-only (hover: brand-color):</h4>
+  <nav class="nav-social st-embossed-only">
+    <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email" href=""><span></span>Email</a>
+  </nav>
+  <p>To demonstrate above, I created a few color override classes, which you <em>could</em> @import when building stackicons-social.scss (it's commented-out by default), but it adds a lot of CSS overhead.</p>
+  <p>Of course, you can tweak however you want in the Sass files. I included these pre-made "color styles" as a convenience. You could also use the icon-only style, and use CSS to create the button background (takes a little tweaking):
+   <nav class="nav-panel st-shape-icon">
+    <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+    <a title="Facebook" class="st-icon-facebook-alt" href="">Facebook</a>
+    <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+    <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+    <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+    <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+    <a title="Email" class="st-icon-email" href=""><span></span>Email</a>
+  </nav>
+  <hr style="clear:both;" />
+  <p>Stackicons-Social uses class names to generate different icons. <a href="http://stackicons.com/stackicons-social_class_list.txt">Here's the full list</a> (or see the source code for below). You can also see the complete character set for the font <a href="stackicons-social-complete-characters.html">here</a>.</p>
+  <section class="font-sample wrap">
+    <h2 class="font-sample-name">Stackicons-Social</h2>
+    <div class="control-font clearfix">
+      <div class="control-shape">
+        <a class="make-icon-only active nobr">icon-only</a><a class="make-square">square</a><a class="make-r1">rounded1</a><a class="make-r2">rounded2</a><a class="make-r3">rounded3</a><a class="make-circle">circle</a>
+      </div>
+      <div class="control-color"><a class="toggle-color active">multi-color</a>
+      </div>
+    </div>
+    <nav class="stackicons-font-sample st-multi-color st-shape-r5">
+      <!-- inline-block: comment-out white space
+           or don't close tags, or -5px margin-right -->
+      <a title="AddThis" class="st-icon-addthis" href="">Add This</a>
+      <a title="Alt.net" class="st-icon-adn" href="">Alt.net</a>
+      <a title="Amazon" class="st-icon-amazon" href=""><span></span>Amazon</a>
+      <a title="Android" class="st-icon-android" href=""><span></span>Android</a>
+      <a title="Apple" class="st-icon-apple" href="">Apple</a>
+      <a title="Behance" class="st-icon-behance" href="">Behance</a>
+      <a title="Blogger" class="st-icon-blogger" href="">Blogger</a>
+      <a title="CodePen" class="st-icon-codepen" href="">Codepen</a>
+      <a title="Delicious" class="st-icon-delicious" href=""><span></span>Delicious</a>
+      <a title="deviantART" class="st-icon-deviantart" href=""><span></span>Deviant Art</a>
+      <a title="Digg" class="st-icon-digg" href="">Digg</a>
+      <a title="Dribbble" class="st-icon-dribbble" href=""><span></span>Dribbble</a>
+      <a title="Dribbble" class="st-icon-dribbble-alt" href=""><span></span>Dribbble</a>
+      <a title="Dropbox" class="st-icon-dropbox" href="">Dropbox</a>
+      <a title="Ebay" class="st-icon-ebay" href=""><span></span>Ebay</a>
+      <a title="Email" class="st-icon-email" href=""><span></span>Email</a>
+      <a class="st-icon-email2" href="">Email</a>
+      <a title="Evernote" class="st-icon-evernote" href="">Evernote</a>
+      <a title="Facebook" class="st-icon-facebook" href="">Facebook</a>
+      <a title="Facebook" class="st-icon-facebook-alt" href="">Facebook</a>
+      <a title="Flattr" class="st-icon-flattr" href=""><span></span>Flattr</a>
+      <a title="Flickr" class="st-icon-flickr" href=""><span></span>Flickr</a>
+      <a title="Forrst" class="st-icon-forrst" href=""><span></span>Forrst</a>
+      <a title="Foursquare" class="st-icon-foursquare" href=""><span></span>Foursquare</a>
+      <a title="GitHub" class="st-icon-github" href=""><span></span>Github</a>
+      <a title="GitHub" class="st-icon-github-alt" href=""><span></span>Github</a>
+      <a title="Gittip" class="st-icon-gittip" href="">Gittip</a>
+      <a title="Gmail" class="st-icon-gmail" href=""><span></span>Gmail</a>
+      <a title="Gmail" class="st-icon-gmail-alt" href=""><span></span>Gmail</a>
+      <a title="Google" class="st-icon-google" href="">Google</a>
+      <a title="Google+" class="st-icon-googleplus" href="">Google+</a>
+      <a title="IMDb" class="st-icon-imdb" href=""><span></span>IMDb</a>
+      <a title="Instagram" class="st-icon-instagram" href=""><span></span>Instagram</a>
+      <a title="Kickstarter" class="st-icon-kickstarter" href="">Kickstarter</a>
+      <a title="Last.fm" class="st-icon-lastfm" href="">last.fm</a>
+      <a title="LinkedIn" class="st-icon-linkedin" href="">LinkedIn</a>
+      <a title="Microsoft" class="st-icon-microsoft" href=""><span></span>Microsoft</a>
+      <a title="Myspace" class="st-icon-myspace" href="">Myspace</a>
+      <a title="Pandora" class="st-icon-pandora" href="">Pandora</a>
+      <a title="PayPal" class="st-icon-paypal" href=""><span></span>Paypal</a>
+      <a title="PayPal" class="st-icon-paypal2" href=""><span></span>Paypal</a>
+      <a title="Picasa" class="st-icon-picasa" href=""><span><span></span></span>Picasa</a>
+      <a title="Pinboard" class="st-icon-pinboard" href="">Pinboard</a>
+      <a title="Pinterest" class="st-icon-pinterest" href=""><span></span>Pinterest</a>
+      <a title="Rdio" class="st-icon-rdio" href="">Rdio</a>
+      <a title="Reddit" class="st-icon-reddit" href=""><span></span>Reddit</a>
+      <a title="RSS" class="st-icon-rss" href="">RSS</a>
+      <a title="ShareThis" class="st-icon-sharethis" href="">ShareThis</a>
+      <a title="Skype" class="st-icon-skype" href=""><span></span>Skype</a>
+      <a title="SlideShare" class="st-icon-slideshare" href=""><span></span>Slideshare</a>
+      <a title="SoundCloud" class="st-icon-soundcloud" href="">Soundcloud</a>
+      <a title="Spotify" class="st-icon-spotify" href=""><span></span>Spotify</a>
+      <a title="StumbleUpon" class="st-icon-stumbleupon" href="">Stumbleupon</a>
+      <a title="Stack Overflow" class="st-icon-stackoverflow" href=""><span></span>Stack Overflow</a>
+      <a title="Tumblr" class="st-icon-tumblr" href="">Tumblr</a>
+      <a title="Twitter" class="st-icon-twitter" href="">Twitter</a>
+      <a title="Vimeo" class="st-icon-vimeo" href="">Vimeo</a>
+      <a title="Vine" class="st-icon-vine" href="">Vine</a>
+      <a title="Windows" class="st-icon-windows" href="">Windows</a>
+      <a title="Windows 7" class="st-icon-windows7" href=""><span></span>Windows 7</a>
+      <a title="Wordpress" class="st-icon-wordpress" href="">Wordpress</a>
+      <a title="Xing" class="st-icon-xing" href=""><span></span>Xing</a>
+      <a title="Yahoo" class="st-icon-yahoo" href=""><span></span>Yahoo</a>
+      <a title="Yelp" class="st-icon-yelp" href=""><span></span>Yelp</a>
+      <a title="YouTube" class="st-icon-youtube" href=""><span></span>YouTube</a>
+      <a title="YouTube" class="st-icon-youtube2" href=""><span></span>YouTube</a>
+      <a title="YouTube" class="st-icon-youtube-alt" href=""><span></span>YouTube</a>
+      <a title="Zerply" class="st-icon-zerply" href="">Zerply</a>
+      <a title="Search" class="st-icon-search" href="">Search</a>
+      <a class="st-icon-search-alt" href=""><span></span>Search</a>
+      <a title="Menu" class="st-icon-menu" href="">Menu</a>
+      <a title="Menu" class="st-icon-menu-alt" href="">Menu</a>
+      <a title="Menu" class="st-icon-menu-alt2" href="">Menu</a>
+      <a title="More..." class="st-icon-more" href="">More&#8230;</a>
+      <a title="Submenu" class="st-icon-triangle-down" href="">More</a>
+      <!-- <p class="complete" style="text-align: left"><small>Added in Stackicons-Social-Complete:</small></p>
+      <a title="Cart" class="st-icon-cart" href=""><span></span>Cart</a>
+      <a title="DeviantArt" class="st-icon-deviantart-alt" href=""><span></span>DeviantArt</a>
+      <a title="Email" class="st-icon-email-alt" href=""><span></span>Email</a>
+      <a title="Email" class="st-icon-email-alt2" href=""><span></span>Email</a>
+      <a title="Gmail" class="st-icon-gmail-lg" href=""><span></span>Gmail</a>
+      <a title="Gmail" class="st-icon-gmail-lg-alt" href=""><span></span>Gmail</a>
+      <a title="Instagram" class="st-icon-instagram-alt" href=""><span></span>Instagram</a>
+      <a title="Instagram" class="st-icon-instagram-alt2" href=""><span></span>Instagram</a>
+      <a title="Pinterest" class="st-icon-pinterest-alt" href=""><span></span>Pinterest</a>
+      <a title="Podcast" class="st-icon-podcast" href=""><span></span>Podcast</a>
+      <a title="Yelp" class="st-icon-yelp-alt" href=""><span></span>Yelp</a>
+      <a title="Yahoo" class="st-icon-yahoo-alt" href="">Yahoo</a>
+      <a title="YouTube" class="st-icon-youtube-alt2" href=""><span></span>YouTube</a>
+      <div class="nobr">
+        <a title="Submenu" class="st-icon-triangle-left" href="">More</a>
+        <a title="Submenu" class="st-icon-triangle-right" href="">More</a>
+        <a title="Submenu" class="st-icon-triangle-up" href="">More</a>
+      </div> -->
+    </nav>
+    <a class="toggle-ssmin">View Stackicons-Social</a>
+
+  </section> <!-- end .font-sample wrap -->
+<p>Hope this helps you get started. I'm sure there will be some revisions along the way. <span class="nobr">If you'd</span> like to be updated, <a href="http://eepurl.com/NYiuf">sign up for emails here</a>, or follow <a href="https://twitter.com/stackicons">@stackicons</a>.</p>
+<p>Other questions? Need a custom icon font for your project, or other work for hire? <span class="nobr">Email <a href="mailto:&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;">&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;</a>.</span></p>
+
+<div class="panel">
+<small><strong>Thanks for your generous support of the project!</strong> <a href="https://spb.io/AY3rLlt5aG">Any more</a> would be asking too much :-)<br /><a href="mailto:&#x70;&#x61;&#x72;&#x6B;&#x65;&#x72;&#x40;&#x73;&#x74;&#x61;&#x63;&#x6B;&#x69;&#x63;&#x6F;&#x6E;&#x73;&#x2E;&#x63;&#x6F;&#x6D;">Let me know</a> if you have any questions or suggestions, thanks!</span></small>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+
+<script>
+    $('.toggle-color').click(function () {
+      $(this).toggleClass('active');
+      $('.stackicons-font-sample').toggleClass('st-multi-color');
+    });
+
+    $('.make-square').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+      $('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r0');
+    });
+
+    $('.make-r1').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+      $('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r1');
+    });
+
+    $('.make-r2').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+      $('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r2');
+    });
+
+    $('.make-r3').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+$('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r3');
+    });
+
+    $('.make-circle').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+      $('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r4');
+    });
+
+    $('.make-icon-only').click(function () {
+      $('.make-square, .make-r1, .make-r2, .make-r3, .make-circle, .make-icon-only').removeClass('active')
+      $(this).addClass('active');
+      $('.stackicons-font-sample').removeClass('st-shape-r0 st-shape-r1 st-shape-r2 st-shape-r3 st-shape-r4 st-shape-r5').addClass('st-shape-r5');
+    });
+
+    $('.toggle-ssmin').click(function () {
+      $(this).toggleClass('active');
+      $('.font-sample-name').toggleClass('active');
+      $('.stackicons-font-sample .st-icon-addthis, .stackicons-font-sample .st-icon-amazon, .stackicons-font-sample .st-icon-android, .stackicons-font-sample .st-icon-apple, .stackicons-font-sample .st-icon-behance, .stackicons-font-sample .st-icon-blogger, .stackicons-font-sample .st-icon-delicious, .stackicons-font-sample .st-icon-deviantart, .stackicons-font-sample .st-icon-digg, .stackicons-font-sample .st-icon-dropbox, .stackicons-font-sample .st-icon-ebay, .stackicons-font-sample .st-icon-evernote, .stackicons-font-sample .st-icon-flattr, .stackicons-font-sample .st-icon-forrst, .stackicons-font-sample .st-icon-foursquare, .stackicons-font-sample .st-icon-gittip, .stackicons-font-sample .st-icon-google, .stackicons-font-sample .st-icon-imdb, .stackicons-font-sample .st-icon-kickstarter, .stackicons-font-sample .st-icon-lastfm, .stackicons-font-sample .st-icon-microsoft, .stackicons-font-sample .st-icon-myspace, .stackicons-font-sample .st-icon-pandora, .stackicons-font-sample .st-icon-paypal, .stackicons-font-sample .st-icon-paypal2, .stackicons-font-sample .st-icon-picasa, .stackicons-font-sample .st-icon-rdio, .stackicons-font-sample .st-icon-reddit, .stackicons-font-sample .st-icon-sharethis, .stackicons-font-sample .st-icon-skype, .stackicons-font-sample .st-icon-slideshare, .stackicons-font-sample .st-icon-soundcloud, .stackicons-font-sample .st-icon-spotify, .stackicons-font-sample .st-icon-stumbleupon, .stackicons-font-sample .st-icon-stackoverflow, .stackicons-font-sample .st-icon-vine, .stackicons-font-sample .st-icon-windows, .stackicons-font-sample .st-icon-windows7, .stackicons-font-sample .st-icon-wordpress, .stackicons-font-sample .st-icon-xing, .stackicons-font-sample .st-icon-yahoo, .stackicons-font-sample .st-icon-yelp, .stackicons-font-sample .st-icon-zerply, .stackicons-font-sample .st-icon-search-alt, .stackicons-font-sample .st-icon-menu-alt, .stackicons-font-sample .st-icon-menu-alt2, .stackicons-font-sample .st-icon-more, .stackicons-font-sample .complete, .stackicons-font-sample .st-icon-cart, .stackicons-font-sample .st-icon-deviantart-alt, .stackicons-font-sample .st-icon-email-alt, .stackicons-font-sample .st-icon-email-alt2, .stackicons-font-sample .st-icon-gmail-lg, .stackicons-font-sample .st-icon-gmail-lg-alt, .stackicons-font-sample .st-icon-instagram-alt, .stackicons-font-sample .st-icon-instagram-alt2, .stackicons-font-sample .st-icon-pinterest-alt, .stackicons-font-sample .st-icon-podcast, .stackicons-font-sample .st-icon-yahoo-alt, .stackicons-font-sample .st-icon-yelp-alt, .stackicons-font-sample .st-icon-youtube-alt2, .stackicons-font-sample .st-icon-triangle-left, .stackicons-font-sample .st-icon-triangle-right, .stackicons-font-sample .st-icon-triangle-up').toggleClass('hide');
+    });
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47890813-1', 'stackicons.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

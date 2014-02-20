@@ -1,0 +1,31 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "stackicons-social-minimal/fonts-stackicons-social-minimal"; // make sure the font path in this file is right
+
+// variables
+@import "colors-social-2014"; // brand colors as variables (tweak as desired)
+@import "unicodes-stackicons-social"; // font characters (don't change this)
+
+// *** variables used in default css ***
+@import "construction-kit-stackicons-social"; // *** change values here to tweak css defaults ***
+
+@import "stackicons-social-minimal/css-defaults-stackicons-social-minimal"; // @each statement here lists brands - trim as needed
+
+// optional - comment-out if you're happy with the defaults, and don't need to override shapes per icon...
+@import "stackicons-social-minimal/override-button-shapes-stackicons-social-minimal"; // @each statement here lists brands - trim as needed
+
+// you might still want icon-only (e.g., for dropdown nav-list)
+@import "stackicons-social-minimal/override-icon-only-stackicons-social-minimal"; // @each statement here lists all brands (trim as needed)
+
+// this one is really more for demo purposes. It's commented-out by default...
+// @import "stackicons-social-minimal/override-colors-stackicons-social-minimal"; // @each statement here lists brands - trim as needed
+
+// *** variables used in default css ***
+@import "multi-color-kit-stackicons-social"; // *** change values here to tweak css defaults ***
+
+@import "stackicons-social-minimal/multi-color-css-stackicons-social-minimal"; // @each statements here list brands - trim as needed
+
+// optional - comment-out if you don't need to override button shapes per icon. 
+// ("st.icon-only" class is generated separately by the file above.)
+@import "stackicons-social-minimal/multi-color-override-shapes-stackicons-social-minimal"; // @each statement here lists brands - trim as needed

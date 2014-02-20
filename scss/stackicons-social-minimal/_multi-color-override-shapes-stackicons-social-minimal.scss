@@ -1,0 +1,653 @@
+//  *********************************************
+// |                                             |
+// |   STACKICONS-SOCIAL "MULTI-COLOR"           |
+// |   OVERIDE CLASSES - SHAPES                  |
+// |                                             |
+//  *********************************************
+
+// If you want to be able to override icon shapes
+// on the fly via CSS classes, then @import this
+// _partial file into stackicons.scss.
+
+// If you're happy with the defaults generated 
+// by _construction-kit-stackicons-social.scss 
+// and _multi-color-stackicons-social.scss then 
+// comment-out the @import of this file in 
+// stackicons.scss to cut the extraneous CSS.
+
+/* There are 6 button classes (parent or icon)
+
+  - .st-shape-square:      square button shape
+  also:   
+    .st-shape-sq
+    .st-shape-r0
+
+  - .st-shape-rounded1:    slightly rounded button (Android)
+  also:
+    .st-shape-r1
+
+  - .st-shape-rounded2:    rounded button
+  also:
+    .st-shape-rounded
+    .st-shape-r2
+
+  - .st-shape-rounded3:    more rounded button (iOS 7)
+  also:
+    .st-shape-r3
+
+  - .st-shape-circle:      circle button
+  also:
+    .st-shape-cir
+    .st-shape-rounded4
+    .st-shape-r4
+
+  - .st-shape-icon:        no button, icon only
+  also:
+    .st-shape-rounded5 (yes, it's not actually rounded)
+    .st-shape-r5
+*/
+
+// BUTTON SHAPE OVERRIDE CLASSES...
+
+// pretty straightforward, we're just changing the button-shape at c0.
+
+// Stackicons-Social-Minimal:
+@each $brand in adn, codepen, dribbble, dribbble-alt, email, email2, facebook, facebook-alt, flickr, github, github-alt, gmail, gmail-alt, googleplus, instagram, linkedin, pinboard, pinterest, rss, tumblr, twitter, vimeo, youtube, youtube2, youtube-alt, youtube-alt-sm, menu, menu-alt, menu-alt2, search, triangle-down {
+
+// Standard:
+// @each $brand in addthis, adn, amazon, android, apple, behance, blogger, codepen, delicious, deviantart, digg, dribbble, dribbble-alt, dropbox, ebay, email, email2, evernote, facebook, facebook-alt, flattr, flickr, forrst, foursquare, github, github-alt, gittip, gmail, gmail-alt, google, googleplus, imdb, instagram, kickstarter, lastfm, linkedin, microsoft, myspace, pandora, paypal, paypal2, picasa, pinboard, pinterest, rdio, reddit, rss, sharethis, skype, slideshare, soundcloud, spotify, stackoverflow, stumbleupon, tumblr, twitter, vimeo, vine, windows, windows7, wordpress, xing, yahoo, yelp, youtube, youtube2, youtube-alt, youtube-alt-sm, zerply, menu, menu-alt, menu-alt2, more, search, search-alt, triangle-down {
+
+// * Stackicons-Social-Complete
+// adding email-alt, email-alt2, gmail-lg, gmail-lg-alt, 
+// instagram-alt, instagram-alt2, pinterest-alt, podcast, 
+// yahoo-alt, yelp-alt, youtube-alt2, more triangles...
+
+// @each $brand in addthis, adn, amazon, android, apple, behance, blogger, codepen, delicious, deviantart, deviantart-alt, digg, dribbble, dribbble-alt, dropbox, ebay, email, email2, email-alt, email-alt2, evernote, facebook, facebook-alt, flattr, flickr, forrst, foursquare, github, github-alt, gittip, gmail, gmail-alt, gmail-lg, gmail-lg-alt, google, googleplus, imdb, instagram, instagram-alt, instagram-alt2, kickstarter, lastfm, linkedin, microsoft, myspace, pandora, paypal, paypal2, picasa, pinboard, pinterest, pinterest-alt, podcast, rdio, reddit, rss, sharethis, skype, slideshare, soundcloud, spotify, stackoverflow, stumbleupon, tumblr, twitter, vimeo, vine, windows, windows7, wordpress, xing, yahoo, yahoo-alt, yelp, yelp-alt, youtube, youtube2, youtube-alt, youtube-alt-sm, youtube-alt2, zerply, cart, menu, menu-alt, menu-alt2, more, search, search-alt, triangle-down, triangle-left, triangle-right, triangle-up {
+
+  // square
+  .st-shape-square.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-square.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-square .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-sq.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-sq.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-sq .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r0.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-r0.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r0 .st-multi-color.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-square.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-sq.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-r0.st-icon-#{$brand}:before { 
+  
+    content: $btn-shape-sq;
+
+    // * in stackicons-social-complete
+    @if $brand == instagram-alt {
+      content: $instagram-alt-c1-alt0;
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == yahoo-alt {
+      content: $yahoo-alt-c0-alt;
+    }
+
+  } // end square
+
+
+  // rounded1 (r1) - slightly rounded (Android)
+  .st-shape-rounded1.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-rounded1.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded1 .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r1.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-r1.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r1 .st-multi-color.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-rounded1.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-r1.st-icon-#{$brand}:before { 
+  
+    content: $btn-shape-r1;
+
+    // * in stackicons-social-complete
+    @if $brand == instagram-alt {
+      content: $instagram-alt-c1-alt1;
+    }
+
+  } // end rounded1 (r1)
+
+
+  // rounded2 (r2) - rounded 
+  .st-shape-rounded.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-rounded.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded2.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-rounded2.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded2 .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r2.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-r2.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r2 .st-multi-color.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-rounded.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-rounded2.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-r2.st-icon-#{$brand}:before { 
+  
+    content: $btn-shape-r2;
+
+    // * in stackicons-social-complete
+    @if $brand == instagram-alt {
+      content: $instagram-alt-c1-alt2;
+    }
+
+  } // end rounded2 (r2)
+
+
+  // rounded3 (r3) - more rounded (iOS 7)
+  .st-shape-rounded3.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-rounded3.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded3 .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r3.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-r3.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r3 .st-multi-color.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-rounded3.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-r3.st-icon-#{$brand}:before { 
+
+    content: $btn-shape-r3;
+  
+    // * in stackicons-social-complete
+    @if $brand == instagram-alt {
+      content: $instagram-alt-c1-alt3;
+    }
+
+  } // end rounded3 (r3)
+
+
+  // circle (cir)
+  .st-shape-circle.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-circle.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-circle .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-cir.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-cir.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-cir .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded4.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-rounded4.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-rounded4 .st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r4.st-multi-color .st-icon-#{$brand}:before,
+  .st-shape-r4.st-multi-color.st-icon-#{$brand}:before,
+  .st-shape-r4 .st-multi-color.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-circle.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-cir.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-rounded4.st-icon-#{$brand}:before,
+  .st-multi-color .st-shape-r4.st-icon-#{$brand}:before { 
+
+    content: $btn-shape-cir;
+
+    // * in stackicons-social-complete
+    @if $brand == instagram-alt {
+      content: $instagram-alt-c1-alt4;
+    }
+
+  } // end circle
+
+} // end @each
+
+
+// These multi-color icons vary elements based on shape: 
+// deviantart, deviantart-alt, email-alt, email-alt2, 
+// facebook, foursquare, imdb, instagram-alt, youtube-alt2
+
+// * in stackicons-social-complete
+// deviantart-alt
+.st-shape-circle.st-multi-color .st-icon-deviantart-alt span:before,
+.st-shape-circle.st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-circle .st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-cir.st-multi-color .st-icon-deviantart-alt span:before,
+.st-shape-cir.st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-cir .st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-rounded4.st-multi-color .st-icon-deviantart-alt span:before,
+.st-shape-rounded4.st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-rounded4 .st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-r4.st-multi-color .st-icon-deviantart-alt span:before,
+.st-shape-r4.st-multi-color.st-icon-deviantart-alt span:before,
+.st-shape-r4 .st-multi-color.st-icon-deviantart-alt span:before,
+.st-multi-color .st-shape-circle.st-icon-deviantart-alt span:before,
+.st-multi-color .st-shape-cir.st-icon-deviantart-alt span:before,
+.st-multi-color .st-shape-rounded4.st-icon-deviantart-alt span:before,
+.st-multi-color .st-shape-r4.st-icon-deviantart-alt span:before { 
+  content: $deviantart-alt-c1-alt2; // cropped for circle
+}
+
+// * in stackicons-social-complete
+// email-alt2
+.st-shape-circle.st-multi-color .st-icon-email-alt2 span:before,
+.st-shape-circle.st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-circle .st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-cir.st-multi-color .st-icon-email-alt2 span:before,
+.st-shape-cir.st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-cir .st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-rounded4.st-multi-color .st-icon-email-alt2 span:before,
+.st-shape-rounded4.st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-rounded4 .st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-r4.st-multi-color .st-icon-email-alt2 span:before,
+.st-shape-r4.st-multi-color.st-icon-email-alt2 span:before,
+.st-shape-r4 .st-multi-color.st-icon-email-alt2 span:before,
+.st-multi-color .st-shape-circle.st-icon-email-alt2 span:before,
+.st-multi-color .st-shape-cir.st-icon-email-alt2 span:before,
+.st-multi-color .st-shape-rounded4.st-icon-email-alt2 span:before,
+.st-multi-color .st-shape-r4.st-icon-email-alt2 span:before { 
+  content: $email-alt2-c2-cir; // cropped for circle
+}
+
+// * in stackicons-social-complete
+// imdb
+.st-shape-square.st-multi-color .st-icon-imdb span:before,
+.st-shape-square.st-multi-color.st-icon-imdb span:before,
+.st-shape-square .st-multi-color.st-icon-imdb span:before,
+.st-shape-sq.st-multi-color .st-icon-imdb span:before,
+.st-shape-sq.st-multi-color.st-icon-imdb span:before,
+.st-shape-sq .st-multi-color.st-icon-imdb span:before,
+.st-shape-r0.st-multi-color .st-icon-imdb span:before,
+.st-shape-r0.st-multi-color.st-icon-imdb span:before,
+.st-shape-r0 .st-multi-color.st-icon-imdb span:before,
+.st-s0.st-multi-color .st-icon-imdb span:before,
+.st-s0.st-multi-color.st-icon-imdb span:before,
+.st-s0 .st-multi-color.st-icon-imdb span:before,
+.st-multi-color .st-shape-square.st-icon-imdb span:before,
+.st-multi-color .st-shape-sq.st-icon-imdb span:before,
+.st-multi-color .st-shape-r0.st-icon-imdb span:before,
+.st-multi-color .st-s0.st-icon-imdb span:before { 
+  content: $imdb-c1-alt0;
+}
+.st-shape-rounded1.st-multi-color .st-icon-imdb span:before,
+.st-shape-rounded1.st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded1 .st-multi-color.st-icon-imdb span:before,
+.st-shape-r1.st-multi-color .st-icon-imdb span:before,
+.st-shape-r1.st-multi-color.st-icon-imdb span:before,
+.st-shape-r1 .st-multi-color.st-icon-imdb span:before,
+.st-multi-color .st-shape-rounded1.st-icon-imdb span:before,
+.st-multi-color .st-shape-r1.st-icon-imdb span:before { 
+  content: $imdb-c1-alt1;
+}
+.st-shape-rounded.st-multi-color .st-icon-imdb span:before,
+.st-shape-rounded.st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded .st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded2.st-multi-color .st-icon-imdb span:before,
+.st-shape-rounded2.st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded2 .st-multi-color.st-icon-imdb span:before,
+.st-shape-r2.st-multi-color .st-icon-imdb span:before,
+.st-shape-r2.st-multi-color.st-icon-imdb span:before,
+.st-shape-r2 .st-multi-color.st-icon-imdb span:before,
+.st-multi-color .st-shape-rounded.st-icon-imdb span:before,
+.st-multi-color .st-shape-rounded2.st-icon-imdb span:before,
+.st-multi-color .st-shape-r2.st-icon-imdb span:before { 
+  content: $imdb-c1-alt2;
+}
+.st-shape-rounded3.st-multi-color .st-icon-imdb span:before,
+.st-shape-rounded3.st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded3 .st-multi-color.st-icon-imdb span:before,
+.st-shape-r3.st-multi-color .st-icon-imdb span:before,
+.st-shape-r3.st-multi-color.st-icon-imdb span:before,
+.st-shape-r3 .st-multi-color.st-icon-imdb span:before,
+.st-multi-color .st-shape-rounded3.st-icon-imdb span:before,
+.st-multi-color .st-shape-r3.st-icon-imdb span:before { 
+  content: $imdb-c1-alt3;
+}
+.st-shape-circle.st-multi-color .st-icon-imdb span:before,
+.st-shape-circle.st-multi-color.st-icon-imdb span:before,
+.st-shape-circle .st-multi-color.st-icon-imdb span:before,
+.st-shape-cir.st-multi-color .st-icon-imdb span:before,
+.st-shape-cir.st-multi-color.st-icon-imdb span:before,
+.st-shape-cir .st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded4.st-multi-color .st-icon-imdb span:before,
+.st-shape-rounded4.st-multi-color.st-icon-imdb span:before,
+.st-shape-rounded4 .st-multi-color.st-icon-imdb span:before,
+.st-shape-r4.st-multi-color .st-icon-imdb span:before,
+.st-shape-r4.st-multi-color.st-icon-imdb span:before,
+.st-shape-r4 .st-multi-color.st-icon-imdb span:before,
+.st-multi-color .st-shape-circle.st-icon-imdb span:before,
+.st-multi-color .st-shape-cir.st-icon-imdb span:before,
+.st-multi-color .st-shape-rounded4.st-icon-imdb span:before,
+.st-multi-color .st-shape-r4.st-icon-imdb span:before { 
+  content: $imdb-c1-alt4;
+}
+.st-shape-square.st-multi-color .st-icon-imdb span:after,
+.st-shape-square.st-multi-color.st-icon-imdb span:after,
+.st-shape-square .st-multi-color.st-icon-imdb span:after,
+.st-shape-sq.st-multi-color .st-icon-imdb span:after,
+.st-shape-sq.st-multi-color.st-icon-imdb span:after,
+.st-shape-sq .st-multi-color.st-icon-imdb span:after,
+.st-shape-r0.st-multi-color .st-icon-imdb span:after,
+.st-shape-r0.st-multi-color.st-icon-imdb span:after,
+.st-shape-r0 .st-multi-color.st-icon-imdb span:after,
+.st-s0.st-multi-color .st-icon-imdb span:after,
+.st-s0.st-multi-color.st-icon-imdb span:after,
+.st-s0 .st-multi-color.st-icon-imdb span:after,
+.st-multi-color .st-shape-square.st-icon-imdb span:after,
+.st-multi-color .st-shape-sq.st-icon-imdb span:after,
+.st-multi-color .st-shape-r0.st-icon-imdb span:after,
+.st-multi-color .st-s0.st-icon-imdb span:after { 
+  content: $imdb-c2-alt0;
+}
+.st-shape-rounded1.st-multi-color .st-icon-imdb span:after,
+.st-shape-rounded1.st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded1 .st-multi-color.st-icon-imdb span:after,
+.st-shape-r1.st-multi-color .st-icon-imdb span:after,
+.st-shape-r1.st-multi-color.st-icon-imdb span:after,
+.st-shape-r1 .st-multi-color.st-icon-imdb span:after,
+.st-multi-color .st-shape-rounded1.st-icon-imdb span:after,
+.st-multi-color .st-shape-r1.st-icon-imdb span:after { 
+  content: $imdb-c2-alt1;
+}
+.st-shape-rounded.st-multi-color .st-icon-imdb span:after,
+.st-shape-rounded.st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded .st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded2.st-multi-color .st-icon-imdb span:after,
+.st-shape-rounded2.st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded2 .st-multi-color.st-icon-imdb span:after,
+.st-shape-r2.st-multi-color .st-icon-imdb span:after,
+.st-shape-r2.st-multi-color.st-icon-imdb span:after,
+.st-shape-r2 .st-multi-color.st-icon-imdb span:after,
+.st-multi-color .st-shape-rounded.st-icon-imdb span:after,
+.st-multi-color .st-shape-rounded2.st-icon-imdb span:after,
+.st-multi-color .st-shape-r2.st-icon-imdb span:after { 
+  content: $imdb-c2-alt2;
+}
+.st-shape-rounded3.st-multi-color .st-icon-imdb span:after,
+.st-shape-rounded3.st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded3 .st-multi-color.st-icon-imdb span:after,
+.st-shape-r3.st-multi-color .st-icon-imdb span:after,
+.st-shape-r3.st-multi-color.st-icon-imdb span:after,
+.st-shape-r3 .st-multi-color.st-icon-imdb span:after,
+.st-multi-color .st-shape-rounded3.st-icon-imdb span:after,
+.st-multi-color .st-shape-r3.st-icon-imdb span:after { 
+  content: $imdb-c2-alt3;
+}
+.st-shape-circle.st-multi-color .st-icon-imdb span:after,
+.st-shape-circle.st-multi-color.st-icon-imdb span:after,
+.st-shape-circle .st-multi-color.st-icon-imdb span:after,
+.st-shape-cir.st-multi-color .st-icon-imdb span:after,
+.st-shape-cir.st-multi-color.st-icon-imdb span:after,
+.st-shape-cir .st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded4.st-multi-color .st-icon-imdb span:after,
+.st-shape-rounded4.st-multi-color.st-icon-imdb span:after,
+.st-shape-rounded4 .st-multi-color.st-icon-imdb span:after,
+.st-shape-r4.st-multi-color .st-icon-imdb span:after,
+.st-shape-r4.st-multi-color.st-icon-imdb span:after,
+.st-shape-r4 .st-multi-color.st-icon-imdb span:after,
+.st-multi-color .st-shape-circle.st-icon-imdb span:after,
+.st-multi-color .st-shape-cir.st-icon-imdb span:after,
+.st-multi-color .st-shape-rounded4.st-icon-imdb span:after,
+.st-multi-color .st-shape-r4.st-icon-imdb span:after { 
+  content: $imdb-c2-alt4;
+}
+
+// Minimal:
+@each $brand in facebook {
+
+// Stamdard:
+// @each $brand in deviantart, facebook, foursquare {
+
+// *stackicons-social-complete:
+// @each $brand in deviantart, deviantart-alt, email-alt, email-alt2, facebook, foursquare, instagram-alt, youtube-alt2 {
+  
+  .st-shape-square.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-square.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-sq.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-sq.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r0.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-r0.st-multi-color.st-icon-#{$brand}:after,
+  .st-s0.st-multi-color .st-icon-#{$brand}:after,
+  .st-s0.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-square .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-sq .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r0 .st-multi-color.st-icon-#{$brand}:after,
+  .st-s0 .st-multi-color.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-square.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-sq.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-r0.st-icon-#{$brand}:after,
+  .st-multi-color .st-s0.st-icon-#{$brand}:after { 
+  
+    @if $brand == deviantart {
+      content: $deviantart-c1-alt0; // bordered logo
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == deviantart-alt {
+      content: $deviantart-alt-c2-alt0; // border
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt {
+      content: $email-alt-sq;
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt2 {
+      content: $email-alt2-sq;
+    }
+
+    @else if $brand == facebook {
+      content: $facebook-c1; // "f"
+    }
+
+    @else if $brand == foursquare {
+      content: $foursquare-c3-alt0; // white whoosh
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == instagram-alt {
+      content: $instagram-alt-c2-alt0 // tan bottom
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == youtube-alt2 {
+      content: $youtube-alt2-sq;
+    }
+
+  } // end sq
+
+  // rounded1 (r1) - slightly rounded (Android)
+  .st-shape-rounded1.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-rounded1.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r1.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-r1.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded1 .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r1 .st-multi-color.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-rounded1.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-r1.st-icon-#{$brand}:after { 
+  
+    @if $brand == deviantart {
+      content: $deviantart-c1-alt1; // bordered logo
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == deviantart-alt {
+      content: $deviantart-alt-c2-alt1; // border
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt {
+      content: $email-alt-r1;
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt2 {
+      content: $email-alt2-r1;
+    }
+
+    @else if $brand == facebook {
+      content: $facebook-c1; // "f"
+    }
+
+    @else if $brand == foursquare {
+      content: $foursquare-c3-alt1; // white whoosh
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == instagram-alt {
+      content: $instagram-alt-c2-alt1 // tan bottom
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == youtube-alt2 {
+      content: $youtube-alt2-r1;
+    }
+
+  } // end rounded1 (r1)
+
+  // rounded2 (r2) - rounded 
+  .st-shape-rounded.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-rounded.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded2.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-rounded2.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r2.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-r2.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded2 .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r2 .st-multi-color.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-rounded.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-rounded2.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-r2.st-icon-#{$brand}:after { 
+  
+    @if $brand == deviantart {
+      content: $deviantart-c1-alt2; // bordered logo
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == deviantart-alt {
+      content: $deviantart-alt-c2-alt2; // border
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt {
+      content: $email-alt-r2;
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt2 {
+      content: $email-alt2-r2;
+    }
+
+    @else if $brand == facebook {
+      content: $facebook-c1; // "f"
+    }
+
+    @else if $brand == foursquare {
+      content: $foursquare-c3-alt2; // white whoosh
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == instagram-alt {
+      content: $instagram-alt-c2-alt2 // tan bottom
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == youtube-alt2 {
+      content: $youtube-alt2-r2;
+    }
+  } // end rounded2 (r2)
+
+  // rounded3 (r3) - more rounded (iOS 7)
+  .st-shape-rounded3.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-rounded3.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r3.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-r3.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded3 .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r3 .st-multi-color.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-rounded3.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-r3.st-icon-#{$brand}:after { 
+
+    @if $brand == deviantart {
+      content: $deviantart-c1-alt3; // bordered logo
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == deviantart-alt {
+      content: $deviantart-alt-c2-alt3; // border
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt {
+      content: $email-alt-r3;
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt2 {
+      content: $email-alt2-r3;
+    }
+
+    @else if $brand == facebook {
+      content: $facebook-c1; // "f"
+    }
+
+    @else if $brand == foursquare {
+      content: $foursquare-c3-alt3; // white whoosh
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == instagram-alt {
+      content: $instagram-alt-c2-alt3 // tan bottom
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == youtube-alt2 {
+      content: $youtube-alt2-r3;
+    }
+
+  } // end rounded3 (r3)
+
+  // circle (cir)
+  .st-shape-circle.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-circle.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-cir.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-cir.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded4.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-rounded4.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r4.st-multi-color .st-icon-#{$brand}:after,
+  .st-shape-r4.st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-circle .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-cir .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-rounded4 .st-multi-color.st-icon-#{$brand}:after,
+  .st-shape-r4 .st-multi-color.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-circle.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-cir.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-rounded4.st-icon-#{$brand}:after,
+  .st-multi-color .st-shape-r4.st-icon-#{$brand}:after { 
+  
+    @if $brand == deviantart {
+      content: $deviantart-c1-alt4; // bordered logo
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == deviantart-alt {
+      content: $deviantart-alt-c2-alt4; // border
+    }
+
+    // * in stackicons-social-complete
+    @if $brand == email-alt {
+      content: $email-alt-cir;
+    }
+    
+    // * in stackicons-social-complete
+    @if $brand == email-alt2 {
+      content: $email-alt2-cir;
+    }
+
+    @else if $brand == facebook {
+      content: $facebook-c1-alt; // "f" cropped for circle
+    }
+
+    @else if $brand == foursquare {
+      content: $foursquare-c3-alt4; // white whoosh
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == instagram-alt {
+      content: $instagram-alt-c2-alt4 // tan bottom
+    }
+
+    // * in stackicons-social-complete
+    @else if $brand == youtube-alt2 {
+      content: $youtube-alt2-cir;
+    }
+  } // end circle
+
+} // end @each
+
+// END MULTI-COLOR BUTTON-SHAPE OVERRIDES
+

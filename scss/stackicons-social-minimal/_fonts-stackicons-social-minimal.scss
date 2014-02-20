@@ -1,0 +1,24 @@
+/* FONTS */
+
+/* Stackicons-Social-Minimal (subset)
+   Includes codepen, dribbble, email, facebook, flickr,
+   github, instagram, linkedin, pinboard, pinterest, 
+   rss, tumblr, twitter, vimeo, youtube, menu, search,  
+   and triangle-down (along with some variants). 
+*/
+
+@font-face {
+  font-family: 'Stackicons-Social';
+  /* make sure this is the correct relative path */
+  src: url("../fonts/Stackicons/Stackicons-Social-Minimal.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Stackicons/Stackicons-Social-Minimal.eot?#iefix") format("embedded-opentype"), url("../fonts/Stackicons/Stackicons-Social-Minimal.woff") format("woff"), url("../fonts/Stackicons/Stackicons-Social-Minimal.ttf") format("truetype"), url("../fonts/Stackicons/Stackicons-Social-Minimal.svg#76cc4077294aa89eeb6c5fa684bb9048") format("svg");
+  /* Legacy iOS */
+  font-style: normal !important;
+  font-weight: 400 !important;
+  /* copy below to styles using this font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  speak: none;
+}

@@ -1,0 +1,291 @@
+/* STACKICONS-SOCIAL "MULTI-COLOR" CLASSES
+
+Using absolute positioning, we stack multiple 
+font characters to create "multi-color" icons, 
+e.g., the blue & pink dots in the Flickr logo. 
+
+Often, the .st-multi-color version is simply 
+a solid button b.g. shape with a white icon.
+This allows us to use text-shadow effects on 
+the button and logo separately (in the single 
+color version the logo is "cut out" of b.g.).
+
+There is a default button shape for multi-color 
+icons, $btn-shape-c0-default, that is set in 
+_unicodes-stackicons-social.scss. It mirrors 
+the $btn-shape-default set for single color icons 
+in _construction-kit-stackicons-social.scss */
+
+
+// **** VARIABLES **** /
+
+// **** CHOOSE "MULTI-COLOR" COLOR-STYLE... **** /
+
+// For .st-multi-color icons there are two "color-style" choices:
+
+// brand-color:         brand color (_colors-social-2014.scss)
+// brand-color-variant: brand-color is adjusted by mixin
+//                      (no rgba, use opacity on parent instead)
+
+// For .st-multi-color icons, there are 2 "hover style" choices:
+
+// brand-color:         brand color on hover
+// brand-color-hover:   brand-color is adjusted by mixin
+
+
+$multi-color-default: brand-color !default;
+
+$multi-color-hover-default: brand-color-hover !default;
+
+
+// **** CHOOSE DEFAULT COLORS **** /
+
+// default color for "generic" multi-color icon -- 
+// usually white, e.g., white "f" on facebook blue bg. 
+
+$color-multi-color-icon-default: $white !default;
+
+$color-multi-color-bg-default: $grey-lightest-alt2 !default; // veerrry light grey #f1f1f1
+
+
+// **** CHOOSE DEFAULT EFFECTS **** /
+
+// button and icon effects - glow, dropshadow, etc. (@mixins in _construction-kit)
+
+// choices: dropshadow, glow, glowshadow, false
+
+$multi-color-bg-effect: false; 
+
+$multi-color-bg-effect-hover: false;
+
+$multi-color-icon-effect: false;
+
+$multi-color-icon-effect-hover: dropshadow;
+
+// when there's no button background, just the icon...
+
+$multi-color-icon-only-effect: false;
+
+$multi-color-icon-only-effect-hover: dropshadow;
+
+
+@mixin shadow-effect($target:bg) {
+  @if $target == bg {
+    @if $multi-color-bg-effect == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-bg-effect == glow {
+      @include glow;
+    }
+    @else if $multi-color-bg-effect == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-bg-effect == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-bg-effect == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+  @else if $target == bg-hover {
+    @if $multi-color-bg-effect-hover == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-bg-effect-hover == glow {
+      @include glow;
+    }
+    @else if $multi-color-bg-effect-hover == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-bg-effect-hover == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-bg-effect-hover == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+  @else if $target == icon {
+    @if $multi-color-icon-effect == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-icon-effect == glow {
+      @include glow;
+    }
+    @else if $multi-color-icon-effect == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-icon-effect == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-icon-effect == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+  @else if $target == icon-hover {
+      @if $multi-color-icon-effect-hover == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-icon-effect-hover == glow {
+      @include glow;
+    }
+    @else if $multi-color-icon-effect-hover == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-icon-effect-hover == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-icon-effect-hover == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+  @else if $target == icon-only {
+    @if $multi-color-icon-only-effect == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-icon-only-effect == glow {
+      @include glow;
+    }
+    @else if $multi-color-icon-only-effect == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-icon-only-effect == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-icon-only-effect == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+  @else if $target == icon-only-hover {
+    @if $multi-color-icon-only-effect-hover == dropshadow {
+      @include dropshadow;
+    }
+    @else if $multi-color-icon-only-effect-hover == glow {
+      @include glow;
+    }
+    @else if $multi-color-icon-only-effect-hover == glowshadow {
+      @include glowshadow;
+    }
+    @else if $multi-color-icon-only-effect-hover == embossed {
+      @include embossed;
+    }
+    @else if $multi-color-icon-only-effect-hover == raised {
+      @include raised;
+    }
+    @else {
+      text-shadow: none;
+    }
+  }
+} // end @shadow-effect
+
+
+// **** DEFINE "BRAND-COLOR-VARIANT"... **** /
+
+//   lighten or darken, saturate or desaturate, change alpha
+//   percentage variables required for "scale-color" function:
+
+$multi-color-lighten-by: 40%;  // (-100 to 0 to 100%) negative darkens
+
+$multi-color-saturate-by: -25%;  // (-100 to 0 to 100%) negative desaturates
+
+$multi-color-alpha: 50%;  // (0 to 100%) 0 is completely transparent
+
+
+// **** DEFINE "BRAND-COLOR-HOVER"... **** /
+
+//   lighten or darken, saturate or desaturate, change alpha
+//   percentage variables required for "scale-color" function:
+
+$multi-color-hover-lighten-by: 35%;  // (-100 to 0 to 100%) negative darkens
+
+$multi-color-hover-saturate-by: 4%;  // (-100 to 0 to 100%) negative desaturates
+
+$multi-color-hover-alpha: 100%;  // (0 to 100%) 0 is completely transparent
+
+
+// ---- MIXINS ---- /
+
+// brand-color-variant - btn or icon, @include for each
+
+// If the $brand-color lightness is low (<25) and saturation 
+// isn't super-high (<90) we lighten more and don't change the 
+// saturation. If saturation is very low (<5) we don't change it.
+// We don't change alpha here, as stacked rgba colors will mix.
+// Instead, we change opacity on the parent element down below...
+
+@mixin adjust-multi-color ($brand-color:$grey-lighter-alt, $saturation:$multi-color-saturate-by, $lightness:$multi-color-lighten-by, $alpha:$multi-color-alpha) {
+  @if lightness($brand-color) < 25 and saturation($brand-color) < 95 and $lightness > 0 {
+    color: scale-color($brand-color, $saturation:0%, $lightness:$multi-color-lighten-by*1.1);
+  }
+  @else if saturation($brand-color) < 5 or saturation($brand-color) > 95 {
+    color: scale-color($brand-color, $saturation:0%, $lightness:$multi-color-lighten-by);
+  }
+  @else {
+    color: scale-color($brand-color, $saturation:$multi-color-saturate-by, $lightness:$multi-color-lighten-by);
+  }
+}
+
+// brand-color-hover - btn or icon, @include for each
+
+@mixin adjust-multi-color-hover ($brand-color:$grey-lighter-alt, $saturation:$multi-color-hover-saturate-by, $lightness:$multi-color-hover-lighten-by, $alpha:$multi-color-hover-alpha) {
+  @if lightness($brand-color) < 25 and saturation($brand-color) < 95 and $lightness > 0 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:0%, $lightness:$multi-color-hover-lighten-by*1.1);
+  }
+  @else if saturation($brand-color) < 5 or saturation($brand-color) > 95 {
+    color: scale-color($brand-color, $saturation:0%, $lightness:$multi-color-hover-lighten-by);
+  }
+  @else {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:$multi-color-hover-saturate-by, $lightness:$multi-color-hover-lighten-by);
+  }
+}
+
+// **** MULTI-COLOR CUSTOMIZING - UNIVERSAL FOR ALL BRANDS **** /
+
+// For all brands... to give the brand-variant color-style 
+// transparency, specify opacity here instead of using rgba.
+
+.st-multi-color .st-icon,
+.st-multi-color.st-icon,
+.st-multi-color [class^="st-icon-"],
+[class^="st-icon-"].st-multi-color { 
+  @if $multi-color-default == brand-color-variant {
+    opacity: $multi-color-opacity;
+  }
+  // plus anything else you want to add...
+}
+
+.st-multi-color .st-icon:hover,
+.st-multi-color.st-icon:hover,
+.st-multi-color [class^="st-icon-"]:hover,
+[class^="st-icon-"].st-multi-color:hover,
+.st-multi-color .st-icon:active,
+.st-multi-color.st-icon:active,
+.st-multi-color [class^="st-icon-"]:active,
+[class^="st-icon-"].st-multi-color:active,
+.st-multi-color .st-icon:focus,
+.st-multi-color.st-icon:focus,
+.st-multi-color [class^="st-icon-"]:focus,
+[class^="st-icon-"].st-multi-color:focus {
+  @if $multi-color-hover-default == brand-color-hover {
+    opacity: 1*$multi-color-hover-alpha;
+  }
+  // plus anything else you want to add...
+}
+
+

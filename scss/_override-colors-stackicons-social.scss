@@ -1,0 +1,4345 @@
+//  *********************************************
+// |                                             |
+// | STACKICONS-SOCIAL OVERRIDE CLASSES - COLORS |
+// |                                             |
+//  *********************************************
+
+// If you want to be able to override color-styles
+// on the fly via CSS classes, then @import this
+// _partial file into stackicons.scss.
+
+// If you're happy with the defaults generated 
+// by _construction-kit-stackicons-social.scss 
+// then comment-out the @import of this file in 
+// stackicons.scss to cut the extraneous CSS.
+
+// These use the variables and mixins set in    
+// _construction-kit-stackicons-social to formulate   
+// the brand-color-variant and brand-color-hover. 
+
+/* override classes (parent or icon)
+  - .st-single-color:        single-color, single-color-hover on hover
+  - .st-single-color-brand:  single-color, brand-color on hover
+  - .st-brand-color:         brand-color, brand-color-hover on hover
+  - .st-brand-color-variant: brand-color-variant, brand-color on hover
+  - .st-embossed-only:       darkened background-color, brand-color on hover
+*/
+  
+// BRAND LIST
+
+// uncomment the appropriate @each statment below... 
+// (you can also create your own subset here and elsewhere)
+
+// Stackicons-Social-Minimal (subsets the most commonly used icons):
+// @each $brand in adn, codepen, dribbble, dribbble-alt, email, email2, facebook, facebook-alt, flickr, github, github-alt, gmail, gmail-alt, googleplus, instagram, linkedin, pinboard, pinterest, rss, tumblr, twitter, vimeo, youtube, youtube2, youtube-alt, youtube-alt-sm, menu, menu-alt, menu-alt2, search, search-alt, triangle-down {
+
+// Standard:
+@each $brand in addthis, adn, amazon, amazon2, android, apple, behance, blogger, codepen, delicious, deviantart, digg, dribbble, dribbble-alt, dropbox, ebay, email, email2, evernote, facebook, facebook-alt, flattr, flickr, forrst, foursquare, github, github-alt, gittip, gmail, gmail-alt, google, googleplus, imdb, instagram, kickstarter, lastfm, linkedin, microsoft, myspace, pandora, paypal, paypal2, picasa, pinboard, pinterest, rdio, reddit, rss, sharethis, skype, slideshare, soundcloud, spotify, stackoverflow, stumbleupon, tumblr, twitter, vimeo, vine, windows, windows7, wordpress, xing, yahoo, yelp, youtube, youtube2, youtube-alt, youtube-alt-sm, zerply, menu, menu-alt, menu-alt2, more, triangle-down, search, search-alt {
+
+// * Stackicons-Social-Complete
+// adds deviantart-alt, email-alt, email-alt2, gmail-lg, gmail-lg-alt, 
+// instagram-alt, instagram-alt2, pinterest-alt, podcast, yelp-alt,  
+// yahoo-alt, youtube-alt2, cart, triangle-left, triangle-right, triangle-up
+
+// @each $brand in addthis, adn, amazon, android, apple, behance, blogger, codepen, delicious, deviantart, deviantart-alt, digg, dribbble, dribbble-alt, dropbox, ebay, email, email2, email-alt, email-alt2, evernote, facebook, facebook-alt, flattr, flickr, forrst, foursquare, github, github-alt, gittip, gmail, gmail-alt, gmail-lg, gmail-lg-alt, google, googleplus, imdb, instagram, instagram-alt, instagram-alt2, kickstarter, lastfm, linkedin, microsoft, myspace, pandora, paypal, paypal2, picasa, pinboard, pinterest, pinterest-alt, podcast, rdio, reddit, rss, sharethis, skype, slideshare, soundcloud, spotify, stackoverflow, stumbleupon, tumblr, twitter, vimeo, vine, windows, windows7, wordpress, xing, yahoo, yahoo-alt, yelp, yelp-alt, youtube, youtube2, youtube-alt, youtube-alt-sm, youtube-alt2, zerply, cart, menu, menu-alt, menu-alt2, more, triangle-down, triangle-left, triangle-right, triangle-up, search, search-alt {
+
+   // COLOR STYLE CLASSES...
+
+  // .st-brand-color 
+  // (also  .st-brand-variant:hover, .st-embossed-only:hover, .st-single-color-brand:hover)
+  // on parent
+  .st-brand-color .st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-brand-color.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand.st-icon-#{$brand}:focus:#{$pseudo-default} { 
+
+    // addthis
+    @if $brand == addthis {
+      @if $btn-shape-default == icon {
+        color: $icon-color-addthis;
+      }
+      @else {
+        color: $btn-color-addthis;
+      }
+    } // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @if $btn-shape-default == icon {
+        color: $icon-color-adn;
+      }
+      @else {
+        color: $btn-color-adn;
+      }
+    } // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-amazon;
+      }
+      @else {
+        color: $btn-color-amazon;
+      }
+    } // end amazon
+
+    // android
+    @else if $brand == android {
+      @if $btn-shape-default == icon {
+        color: $icon-color-android;
+      }
+      @else {
+        color: $btn-color-android;
+      }
+    } // end android
+
+    // apple
+    @else if $brand == apple {
+      @if $btn-shape-default == icon {
+        color: $icon-color-apple;
+      }
+      @else {
+        color: $btn-color-apple;
+      }
+    } // end apple
+
+    // behance
+    @else if $brand == behance {
+      @if $btn-shape-default == icon {
+        color: $icon-color-behance;
+      }
+      @else {
+        color: $btn-color-behance;
+      }
+    } // end behance
+
+    // blogger
+    @else if $brand == blogger {
+      @if $btn-shape-default == icon {
+        color: $icon-color-blogger;
+      }
+      @else {
+        color: $btn-color-blogger;
+      }
+    } // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+      @if $btn-shape-default == icon {
+        color: $icon-color-codepen;
+      }
+      @else {
+        color: $btn-color-codepen;
+      }
+    } // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+      @if $btn-shape-default == icon {
+        color: $icon-color-delicious;
+      }
+      @else {
+        color: $btn-color-delicious;
+      }
+    } // end delicious
+
+    // deviantart, deviantart-alt
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-deviantart;
+      }
+      @else {
+        color: $btn-color-deviantart;
+      }
+    } // end deviantart
+
+    // digg
+    @else if $brand == digg {
+      @if $btn-shape-default == icon {
+        color: $icon-color-digg;
+      }
+      @else {
+        color: $btn-color-digg;
+      }
+    } // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-dribbble;
+      }
+      @else {
+        color: $btn-color-dribbble;
+      }
+    } // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+      @if $btn-shape-default == icon {
+        color: $icon-color-dropbox;
+      }
+      @else {
+        color: $btn-color-dropbox;
+      }
+    } // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+      @if $btn-shape-default == icon {
+        color: $icon-color-ebay;
+      }
+      @else {
+        color: $btn-color-ebay;
+      }
+    } // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-email;
+      }
+      @else {
+        color: $btn-color-email;
+      }
+    } // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-email-alt;
+      }
+      @else {
+        color: $btn-color-email-alt;
+      }
+    } // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-email-alt2;
+      }
+      @else {
+        color: $btn-color-email-alt2;
+      }
+    } // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+      @if $btn-shape-default == icon {
+        color: $icon-color-evernote;
+      }
+      @else {
+        color: $btn-color-evernote;
+      }
+    } // end evernote
+
+    // facebook
+    @else if $brand == facebook {
+      @if $btn-shape-default == icon {
+        color: $icon-color-facebook;
+      }
+      @else {
+        color: $btn-color-facebook;
+      }
+    } // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-facebook-alt;
+      }
+      @else {
+        color: $btn-color-facebook-alt;
+      }
+    } // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+      @if $btn-shape-default == icon {
+        color: $icon-color-flattr;
+      }
+      @else {
+        color: $btn-color-flattr;
+      }
+    } // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+      @if $btn-shape-default == icon {
+        color: $icon-color-flickr;
+      }
+      @else {
+        color: $btn-color-flickr;
+      }
+    } // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+      @if $btn-shape-default == icon {
+        color: $icon-color-forrst;
+      }
+      @else {
+        color: $btn-color-forrst;
+      }
+    } // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+      @if $btn-shape-default == icon {
+        color: $icon-color-foursquare;
+      }
+      @else {
+        color: $btn-color-foursquare;
+      }
+    } // end foursquare
+
+    // github
+    @else if $brand == github {
+      @if $btn-shape-default == icon {
+        color: $icon-color-github;
+      }
+      @else {
+        color: $btn-color-github;
+      }
+    } // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-github-alt;
+      }
+      @else {
+        color: $btn-color-github-alt;
+      }
+    } // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+      @if $btn-shape-default == icon {
+        color: $icon-color-gittip;
+      }
+      @else {
+        color: $btn-color-gittip;
+      }
+    } // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-gmail;
+      }
+      @else {
+        color: $btn-color-gmail;
+      }
+    } // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-gmail;
+      }
+      @else {
+        color: $btn-color-gmail;
+      }
+    } // end gmail
+
+    // google
+    @else if $brand == google {
+      @if $btn-shape-default == icon {
+        color: $icon-color-google;
+      }
+      @else {
+        color: $btn-color-google;
+      }
+    } // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+      @if $btn-shape-default == icon {
+        color: $icon-color-googleplus;
+      }
+      @else {
+        color: $btn-color-googleplus;
+      }
+    } // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @if $btn-shape-default == icon {
+        color: $icon-color-imdb;
+      }
+      @else {
+        color: $btn-color-imdb;
+      }
+    } // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+      @if $btn-shape-default == icon {
+        color: $icon-color-instagram;
+      }
+      @else {
+        color: $btn-color-instagram;
+      }
+    } // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-instagram-alt;
+      }
+      @else {
+        color: $btn-color-instagram-alt;
+      }
+    } // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-instagram-alt2;
+      }
+      @else {
+        color: $btn-color-instagram-alt2;
+      }
+    } // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @if $btn-shape-default == icon {
+        color: $icon-color-kickstarter;
+      }
+      @else {
+        color: $btn-color-kickstarter;
+      }
+    } // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @if $btn-shape-default == icon {
+        color: $icon-color-lastfm;
+      }
+      @else {
+        color: $btn-color-lastfm;
+      }
+    } // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @if $btn-shape-default == icon {
+        color: $icon-color-linkedin;
+      }
+      @else {
+        color: $btn-color-linkedin;
+      }
+    } // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @if $btn-shape-default == icon {
+        color: $icon-color-microsoft;
+      }
+      @else {
+        color: $btn-color-microsoft;
+      }
+    } // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @if $btn-shape-default == icon {
+        color: $icon-color-myspace;
+      }
+      @else {
+        color: $btn-color-myspace;
+      }
+    } // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @if $btn-shape-default == icon {
+        color: $icon-color-pandora;
+      }
+      @else {
+        color: $btn-color-pandora;
+      }
+    } // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-paypal;
+      }
+      @else {
+        color: $btn-color-paypal;
+      }
+    } // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @if $btn-shape-default == icon {
+        color: $icon-color-picasa;
+      }
+      @else {
+        color: $btn-color-picasa;
+      }
+    } // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @if $btn-shape-default == icon {
+        color: $icon-color-pinboard;
+      }
+      @else {
+        color: $btn-color-pinboard;
+      }
+    } // end pinboard
+
+    // pinterest, pinterest-alt 
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-pinterest;
+      }
+      @else {
+        color: $btn-color-pinterest;
+      }
+    } // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @if $btn-shape-default == icon {
+        color: $icon-color-podcast;
+      }
+      @else {
+        color: $btn-color-podcast;
+      }
+    } // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @if $btn-shape-default == icon {
+        color: $icon-color-rdio;
+      }
+      @else {
+        color: $btn-color-rdio;
+      }
+    } // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @if $btn-shape-default == icon {
+        color: $icon-color-reddit;
+      }
+      @else {
+        color: $btn-color-reddit;
+      }
+    } // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @if $btn-shape-default == icon {
+        color: $icon-color-rss;
+      }
+      @else {
+        color: $btn-color-rss;
+      }
+    } // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @if $btn-shape-default == icon {
+        color: $icon-color-sharethis;
+      }
+      @else {
+        color: $btn-color-sharethis;
+      }
+    } // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @if $btn-shape-default == icon {
+        color: $icon-color-skype;
+      }
+      @else {
+        color: $btn-color-skype;
+      }
+    } // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @if $btn-shape-default == icon {
+        color: $icon-color-slideshare;
+      }
+      @else {
+        color: $btn-color-slideshare;
+      }
+    } // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @if $btn-shape-default == icon {
+        color: $icon-color-soundcloud;
+      }
+      @else {
+        color: $btn-color-soundcloud;
+      }
+    } // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @if $btn-shape-default == icon {
+        color: $icon-color-spotify;
+      }
+      @else {
+        color: $btn-color-spotify;
+      }
+    } // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @if $btn-shape-default == icon {
+        color: $icon-color-stackoverflow;
+      }
+      @else {
+        color: $btn-color-stackoverflow;
+      }
+    } // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @if $btn-shape-default == icon {
+        color: $icon-color-stumbleupon;
+      }
+      @else {
+        color: $btn-color-stumbleupon;
+      }
+    } // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @if $btn-shape-default == icon {
+        color: $icon-color-tumblr;
+      }
+      @else {
+        color: $btn-color-tumblr;
+      }
+    } // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+      @if $btn-shape-default == icon {
+        color: $icon-color-twitter;
+      }
+      @else {
+        color: $btn-color-twitter;
+      }
+    } // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @if $btn-shape-default == icon {
+        color: $icon-color-vimeo;
+      }
+      @else {
+        color: $btn-color-vimeo;
+      }
+    } // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @if $btn-shape-default == icon {
+        color: $icon-color-vine;
+      }
+      @else {
+        color: $btn-color-vine;
+      }
+    } // end vine
+
+    // windows
+    @else if $brand == windows {
+      @if $btn-shape-default == icon {
+        color: $icon-color-windows;
+      }
+      @else {
+        color: $btn-color-windows;
+      }
+    } // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-windows7;
+      }
+      @else {
+        color: $btn-color-windows;
+      }
+    } // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @if $btn-shape-default == icon {
+        color: $icon-color-wordpress;
+      }
+      @else {
+        color: $btn-color-wordpress;
+      }
+    } // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      @if $btn-shape-default == icon {
+        color: $icon-color-xing;
+      }
+      @else {
+        color: $btn-color-xing;
+      }
+    } // end xing
+
+    // yahoo, yahoo-alt
+    // ( * yahoo-alt in stackicons-social-complete)
+    @else if $brand == yahoo or $brand == yahoo-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-yahoo;
+      }
+      @else {
+        color: $btn-color-yahoo;
+      }
+    } // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-yelp;
+      }
+      @else {
+        color: $btn-color-yelp;
+      }
+    } // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-youtube;
+      }
+      @else {
+        color: $btn-color-youtube;
+      }
+    } // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+      @if $btn-shape-default == icon {
+        color: $icon-color-youtube-alt;
+      }
+      @else {
+        color: $btn-color-youtube-alt;
+      }
+    } // end youtube-alt
+
+    // youtube-alt2 ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-youtube-alt2;
+      }
+      @else {
+        color: $btn-color-youtube-alt2;
+      }
+    } // end youtube-alt2
+
+    // zerply
+    @else if $brand == zerply {
+      @if $btn-shape-default == icon {
+        color: $icon-color-zerply;
+      }
+      @else {
+        color: $btn-color-zerply;
+      }
+    } // end zerply
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @if $btn-shape-default == icon {
+        color: $icon-color-cart;
+      }
+      @else {
+        color: $btn-color-cart;
+      }
+    } // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @if $btn-shape-default == icon {
+        color: $icon-color-menu;
+      }
+      @else {
+        color: $btn-color-menu;
+      }
+    } // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @if $btn-shape-default == icon {
+        color: $icon-color-more;
+      }
+      @else {
+        color: $btn-color-more;
+      }
+    } // end more
+
+    // triangle-down, -left, -right, -up *
+    // ( * -left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+             $brand == triangle-left or 
+             $brand == triangle-right or
+             $brand == triangle-up {
+      @if $btn-shape-default == icon {
+        color: $icon-color-triangle;
+      }
+      @else {
+        color: $btn-color-triangle;
+      }
+    } // end triangle-down
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+      @if $btn-shape-default == icon {
+        color: $icon-color-search;
+      }
+      @else {
+        color: $btn-color-search;
+      }
+    } // end search
+  
+  } // end .st-brand-color
+
+  // .st-brand-color.st-shape-icon - force icon color
+  // on parent
+  .st-shape-icon.st-brand-color .st-icon-#{$brand}:#{$pseudo-default},
+  .st-shape-icon.st-brand-variant .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-icon.st-brand-variant .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-icon.st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-icon.st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-icon.st-single-color-brand .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-icon.st-single-color-brand .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-rounded5.st-brand-color .st-icon-#{$brand}:#{$pseudo-default},
+  .st-shape-rounded5.st-brand-variant .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-rounded5.st-brand-variant .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-rounded5.st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-rounded5.st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-rounded5.st-single-color-brand .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-rounded5.st-single-color-brand .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-r5.st-brand-color .st-icon-#{$brand}:#{$pseudo-default},
+  .st-shape-r5.st-brand-variant .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-r5.st-brand-variant .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-r5.st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-r5.st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-shape-r5.st-single-color-brand .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-shape-r5.st-single-color-brand .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-brand-color .st-shape-icon.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only .st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only .st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand .st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand .st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-icon.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only.st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only.st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand.st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand.st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color .st-shape-rounded5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only .st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only .st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand .st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand .st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-rounded5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only.st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only.st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand.st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default}, 
+  .st-single-color-brand.st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant .st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only .st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only .st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand .st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand .st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-r5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only.st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only.st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-single-color-brand.st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color-brand.st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default} {
+
+    // addthis
+    @if $brand == addthis {
+      @if $icon-color-addthis != $btn-color-addthis {
+        color: $icon-color-addthis;
+      }
+    } // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @if $icon-color-adn != $btn-color-adn {
+        color: $icon-color-adn;
+      }
+    } // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      @if $icon-color-amazon != $btn-color-amazon {
+        color: $icon-color-amazon;
+      }
+    } // end amazon
+
+    // android
+    @else if $brand == android {
+      @if $icon-color-android != $btn-color-android {
+        color: $icon-color-android;
+      }
+    } // end android
+
+    // apple
+    @else if $brand == apple {
+      @if $icon-color-apple != $btn-color-apple {
+        color: $icon-color-apple;
+      }
+    } // end apple
+
+    // behance
+    @else if $brand == behance {
+     @if $icon-color-behance != $btn-color-behance {
+        color: $icon-color-behance;
+      }
+    } // end behance
+
+    // blogger
+    @else if $brand == blogger {
+     @if $icon-color-blogger != $btn-color-blogger {
+        color: $icon-color-blogger;
+      }
+    } // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+     @if $icon-color-codepen != $btn-color-codepen {
+        color: $icon-color-codepen;
+      }
+    } // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+     @if $icon-color-delicious != $btn-color-delicious {
+        color: $icon-color-delicious;
+      }
+    } // end delicious
+
+    // deviantart, deviantart-alt *
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+     @if $icon-color-deviantart != $btn-color-deviantart {
+        color: $icon-color-deviantart;
+      }
+    } // end deviantart
+
+    // digg
+    @else if $brand == digg {
+     @if $icon-color-digg != $btn-color-digg {
+        color: $icon-color-digg;
+      }
+    } // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+     @if $icon-color-dribbble != $btn-color-dribbble {
+        color: $icon-color-dribbble;
+      }
+    } // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+     @if $icon-color-dropbox != $btn-color-dropbox {
+        color: $icon-color-dropbox;
+      }
+    } // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+     @if $icon-color-ebay != $btn-color-ebay {
+        color: $icon-color-ebay;
+      }
+    } // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+     @if $icon-color-email != $btn-color-email {
+        color: $icon-color-email;
+      }
+    } // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+     @if $icon-color-email != $btn-color-email-alt {
+        color: $icon-color-email-alt;
+      }
+    } // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+     @if $icon-color-email != $btn-color-email-alt2 {
+        color: $icon-color-email-alt2;
+      }
+    } // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+     @if $icon-color-evernote != $btn-color-evernote {
+        color: $icon-color-evernote;
+      }
+    } // end evernote
+ 
+    // facebook
+    @else if $brand == facebook {
+     @if $icon-color-facebook != $btn-color-facebook {
+        color: $icon-color-facebook;
+      }
+    } // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+     @if $icon-color-facebook-alt != $btn-color-facebook-alt {
+        color: $icon-color-facebook-alt;
+      }
+    } // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+     @if $icon-color-flattr != $btn-color-flattr {
+        color: $icon-color-flattr;
+      }
+    } // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+     @if $icon-color-flickr != $btn-color-flickr {
+        color: $icon-color-flickr;
+      }
+    } // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+     @if $icon-color-forrst != $btn-color-forrst {
+        color: $icon-color-forrst;
+      }
+    } // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+     @if $icon-color-foursquare != $btn-color-foursquare {
+        color: $icon-color-foursquare;
+      }
+    } // end foursquare
+
+    // github
+    @else if $brand == github {
+     @if $icon-color-github != $btn-color-github {
+        color: $icon-color-github;
+      }
+    } // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+     @if $icon-color-github-alt != $btn-color-github-alt {
+        color: $icon-color-github-alt;
+      }
+    } // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+     @if $icon-color-gittip != $btn-color-gittip {
+        color: $icon-color-gittip;
+      }
+    } // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+     @if $icon-color-gmail != $btn-color-gmail {
+        color: $icon-color-gmail;
+      }
+    } // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+     @if $icon-color-gmail != $btn-color-gmail {
+        color: $icon-color-gmail;
+      }
+    } // end gmail-lg
+
+    // google
+    @else if $brand == google {
+     @if $icon-color-googleplus != $btn-color-google {
+        color: $icon-color-google;
+      }
+    } // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+     @if $icon-color-googleplus != $btn-color-googleplus {
+        color: $icon-color-googleplus;
+      }
+    } // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @if $icon-color-imdb != $btn-color-imdb {
+        color: $icon-color-imdb;
+      }
+    } // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+     @if $icon-color-instagram != $btn-color-instagram {
+        color: $icon-color-instagram;
+      }
+    } // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      @if $icon-color-instagram-alt != $btn-color-instagram-alt {
+        color: $icon-color-instagram-alt;
+      }
+    } // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      @if $icon-color-instagram-alt2 != $btn-color-instagram-alt2 {
+        color: $icon-color-instagram-alt2;
+      }
+    } // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @if $icon-color-kickstarter != $btn-color-kickstarter {
+        color: $icon-color-kickstarter;
+      }
+    } // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @if $icon-color-lastfm != $btn-color-lastfm {
+        color: $icon-color-lastfm;
+      }
+    } // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @if $icon-color-linkedin != $btn-color-linkedin {
+        color: $icon-color-linkedin;
+      }
+    } // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @if $icon-color-microsoft != $btn-color-microsoft {
+        color: $icon-color-microsoft;
+      }
+    } // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @if $icon-color-myspace != $btn-color-myspace {
+        color: $icon-color-myspace;
+      }
+    } // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @if $icon-color-pandora != $btn-color-pandora {
+        color: $icon-color-pandora;
+      }
+    } // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @if $icon-color-paypal != $btn-color-paypal {
+        color: $icon-color-paypal;
+      }
+    } // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @if $icon-color-picasa != $btn-color-picasa {
+        color: $icon-color-picasa;
+      }
+    } // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @if $icon-color-pinboard != $btn-color-pinboard {
+        color: $icon-color-pinboard;
+      }
+    } // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @if $icon-color-pinterest != $btn-color-pinterest {
+        color: $icon-color-pinterest;
+      }
+    } // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @if $icon-color-podcast != $btn-color-podcast {
+        color: $icon-color-podcast;
+      }
+    } // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @if $icon-color-rdio != $btn-color-rdio {
+        color: $icon-color-rdio;
+      }
+    } // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @if $icon-color-reddit != $btn-color-reddit {
+        color: $icon-color-reddit;
+      }
+    } // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @if $icon-color-rss != $btn-color-rss {
+        color: $icon-color-rss;
+      }
+    } // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @if $icon-color-sharethis != $btn-color-sharethis {
+        color: $icon-color-sharethis;
+      }
+    } // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @if $icon-color-skype != $btn-color-skype {
+        color: $icon-color-skype;
+      }
+    } // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @if $icon-color-slideshare != $btn-color-slideshare {
+        color: $icon-color-slideshare;
+      }
+    } // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @if $icon-color-soundcloud != $btn-color-soundcloud {
+        color: $icon-color-soundcloud;
+      }
+    } // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @if $icon-color-spotify != $btn-color-spotify {
+        color: $icon-color-spotify;
+      }
+    } // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @if $icon-color-stackoverflow != $btn-color-stackoverflow {
+        color: $icon-color-stackoverflow;
+      }
+    } // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @if $icon-color-stumbleupon != $btn-color-stumbleupon {
+        color: $icon-color-stumbleupon;
+      }
+    } // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @if $icon-color-tumblr != $btn-color-tumblr {
+        color: $icon-color-tumblr;
+      }
+    } // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+     @if $icon-color-twitter != $btn-color-twitter {
+        color: $icon-color-twitter;
+      }
+    } // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @if $icon-color-vimeo != $btn-color-vimeo {
+        color: $icon-color-vimeo;
+      }
+    } // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @if $icon-color-vine != $btn-color-vine {
+        color: $icon-color-vine;
+      }
+    } // end vine
+
+    // windows
+    @else if $brand == windows {
+      @if $icon-color-windows != $btn-color-windows {
+        color: $icon-color-windows;
+      }
+    } // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @if $icon-color-windows7 != $btn-color-windows7 {
+        color: $icon-color-windows7;
+      }
+    } // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @if $icon-color-wordpress != $btn-color-wordpress {
+        color: $icon-color-wordpress;
+      }
+    } // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      @if $icon-color-xing != $btn-color-xing {
+        color: $icon-color-xing;
+      }
+    } // end xing
+
+    // yahoo, yahoo-alt
+    // (* yahoo-alt in stackicons-social-complete)
+    @else if $brand == yahoo or $brand == yahoo-alt {
+     @if $icon-color-yahoo != $btn-color-yahoo {
+        color: $icon-color-yahoo;
+      }
+    } // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+     @if $icon-color-yelp != $btn-color-yelp {
+        color: $icon-color-yelp;
+      }
+    } // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+     @if $icon-color-youtube != $btn-color-youtube {
+        color: $icon-color-youtube;
+      }
+    } // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+     @if $icon-color-youtube-alt != $btn-color-youtube-alt {
+        color: $icon-color-youtube-alt;
+      }
+    } // end youtube-alt
+
+    // youtube-alt2  ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+     @if $icon-color-youtube-alt2 != $btn-color-youtube-alt2 {
+        color: $icon-color-youtube-alt2;
+      }
+    } // end youtube-alt2
+
+    // zerply
+    @else if $brand == zerply {
+      @if $icon-color-zerply != $btn-color-zerply {
+        color: $icon-color-zerply;
+      }
+    } // end zerply
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @if $icon-color-cart != $btn-color-cart {
+        color: $icon-color-cart;
+      }
+    } // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @if $icon-color-menu != $btn-color-menu {
+        color: $icon-color-menu;
+      }
+    } // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @if $icon-color-more != $btn-color-more {
+        color: $icon-color-more;
+      }
+    } // end more
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+     @if $icon-color-search != $btn-color-search {
+        color: $icon-color-search;
+      }
+    } // end search
+
+    // triangle-down, -left, -right, -up *
+    // (-left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+            $brand == triangle-left or 
+            $brand == triangle-right or 
+            $brand == triangle-up {
+      @if $icon-color-triangle-down != $btn-color-triangle {
+        color: $icon-color-triangle;
+      }
+    } // end triangle-down
+
+  } // end .st-brand-color.st-shape-icon
+
+
+  // .st-brand-color:hover
+  .st-brand-color .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-brand-color.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-icon-#{$brand}:focus:#{$pseudo-default} {
+  
+    // addthis
+    @if $brand == addthis {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-addthis);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-addthis);
+      }
+    }  // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-adn);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-adn);
+      }
+    }  // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-amazon);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-amazon);
+      }
+    }  // end amazon
+
+    // android
+    @else if $brand == android {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-android);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-android);
+      }
+    }  // end android
+
+    // apple
+    @else if $brand == apple {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-apple);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-apple);
+      }
+    }  // end apple
+
+    // behance
+    @else if $brand == behance {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-behance);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-behance);
+      }
+    }  // end behance
+
+    // blogger
+    @else if $brand == blogger {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-blogger);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-blogger);
+      }
+    }  // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-codepen);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-codepen);
+      }
+    }  // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-delicious);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-delicious);
+      }
+    }  // end delicious
+
+    // deviantart, deviantart-alt *
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-deviantart);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-deviantart);
+      }
+    }  // end deviantart
+
+    // digg
+    @else if $brand == digg {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-digg);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-digg);
+      }
+    }  // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-dribbble);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-dribbble);
+      }
+    }  // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-dropbox);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-dropbox);
+      }
+    }  // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-ebay);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-ebay);
+      }
+    }  // end ebay
+
+    // email, email2
+    @else if $brand == email {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-email);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-email);
+      }
+    }  // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-email-alt);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-email-alt);
+      }
+    }  // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-email-alt2);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-email-alt2);
+      }
+    }  // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-evernote);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-evernote);
+      }
+    }  // end evernote
+
+    // facebook
+    @else if $brand == facebook {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-facebook);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-facebook);
+      }
+    }  // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-facebook-alt);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-facebook-alt);
+      }
+    }  // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-flattr);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-flattr);
+      }
+    }  // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-flickr);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-flickr);
+      }
+    }  // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-forrst);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-forrst);
+      }
+    }  // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-foursquare);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-foursquare);
+      }
+    }  // end foursquare
+
+    // github
+    @else if $brand == github {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-github);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-github);
+      }
+    }  // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-github-alt);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-github-alt);
+      }
+    }  // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-gittip);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-gittip);
+      }
+    }  // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-gmail);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-gmail);
+      }
+    }  // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-gmail);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-gmail);
+      }
+    }  // end gmail
+
+    // google
+    @else if $brand == google {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-google);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-google);
+      }
+    }  // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-googleplus);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-googleplus);
+      }
+    }  // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-imdb);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-imdb);
+      }
+    }  // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-instagram);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-instagram);
+      }
+    }  // end instagram
+
+    // instagram-alt, instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt or $brand == instagram-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-instagram);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-instagram);
+      }
+    }  // end instagram
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-kickstarter);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-kickstarter);
+      }
+    }  // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-lastfm);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-lastfm);
+      }
+    }  // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-linkedin);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-linkedin);
+      }
+    }  // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-microsoft);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-microsoft);
+      }
+    }  // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-myspace);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-myspace);
+      }
+    }  // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-pandora);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-pandora);
+      }
+    }  // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-paypal);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-paypal);
+      }
+    }  // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-picasa);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-picasa);
+      }
+    }  // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-pinboard);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-pinboard);
+      }
+    }  // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-pinterest);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-pinterest);
+      }
+    }  // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-podcast);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-podcast);
+      }
+    }  // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-rdio);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-rdio);
+      }
+    }  // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-reddit);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-reddit);
+      }
+    }  // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-rss);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-rss);
+      }
+    }  // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-sharethis);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-sharethis);
+      }
+    }  // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-skype);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-skype);
+      }
+    }  // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-slideshare);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-slideshare);
+      }
+    }  // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-soundcloud);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-soundcloud);
+      }
+    }  // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-spotify);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-spotify);
+      }
+    }  // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-stackoverflow);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-stackoverflow);
+      }
+    }  // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-stumbleupon);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-stumbleupon);
+      }
+    }  // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-tumblr);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-tumblr);
+      }
+    }  // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-twitter);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-twitter);
+      }
+    }  // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-vimeo);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-vimeo);
+      }
+    }  // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-vine);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-vine);
+      }
+    }  // end vine
+
+    // windows
+    @else if $brand == windows {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-windows);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-windows);
+      }
+    }  // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-windows7);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-windows7);
+      }
+    }  // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-wordpress);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-wordpress);
+      }
+    }  // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-xing);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-xing);
+      }
+    }  // end xing
+
+    // yahoo
+    @else if $brand == yahoo or $brand == yahoo-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-yahoo);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-yahoo);
+      }
+    }  // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-yelp);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-yelp);
+      }
+    }  // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-youtube);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-youtube);
+      }
+    }  // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-youtube-alt);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-youtube-alt);
+      }
+    }  // end youtube-alt
+
+    // youtube-alt2 ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-youtube-alt2);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-youtube-alt2);
+      }
+    }  // end youtube-alt2
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-cart);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-cart);
+      }
+    }  // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-menu);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-menu);
+      }
+    }  // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-more);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-more);
+      }
+    }  // end more
+
+    // triangle-down, -left, -right, -up *
+    // ( * -left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+             $brand == triangle-left or 
+             $brand == triangle-right or 
+             $brand == triangle-up{
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-triangle);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-triangle);
+      }
+    }  // end triangle-down
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color-hover($icon-color-search);
+      }
+      @else {
+        @include adjust-brand-color-hover($btn-color-search);
+      }
+    }  // end search
+
+  } // end .st-brand-color:hover
+
+
+  // .st-brand-color:hover .st-shape-icon (force icon color)
+  .st-brand-color.st-shape-icon .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-icon .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-rounded5 .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-rounded5 .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-r5 .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-r5 .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-brand-color .st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color .st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color .st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color .st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color .st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color .st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-color.st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-color.st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default} {
+    
+    // addthis
+    @if $brand == addthis {
+      @if $icon-color-addthis != $btn-color-addthis {
+        @include adjust-brand-color-hover($icon-color-addthis);
+      }
+    } // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @if $icon-color-adn != $btn-color-adn {
+        @include adjust-brand-color-hover($icon-color-adn);
+      }
+    } // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      @if $icon-color-amazon != $btn-color-amazon {
+        @include adjust-brand-color-hover($icon-color-amazon);
+      }
+    } // end amazon
+
+    // android
+    @else if $brand == android {
+      @if $icon-color-android != $btn-color-android {
+        @include adjust-brand-color-hover($icon-color-android);
+      }
+    } // end android
+
+    // apple
+    @else if $brand == apple {
+      @if $icon-color-apple != $btn-color-apple {
+        @include adjust-brand-color-hover($icon-color-apple);
+      }
+    } // end apple
+
+    // behance
+    @else if $brand == behance {
+     @if $icon-color-behance != $btn-color-behance {
+        @include adjust-brand-color-hover($icon-color-behance);
+      }
+    } // end behance
+
+    // blogger
+    @else if $brand == blogger {
+     @if $icon-color-blogger != $btn-color-blogger {
+        @include adjust-brand-color-hover($icon-color-blogger);
+      }
+    } // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+     @if $icon-color-codepen != $btn-color-codepen {
+        @include adjust-brand-color-hover($icon-color-codepen);
+      }
+    } // end codepen
+
+    // deviantart, deviantart-alt
+    @else if $brand == deviantart or $brand == deviantart-alt {
+     @if $icon-color-deviantart != $btn-color-deviantart {
+        @include adjust-brand-color-hover($icon-color-deviantart);
+      }
+    } // end deviantart
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+     @if $icon-color-dribbble != $btn-color-dribbble {
+        @include adjust-brand-color-hover($icon-color-dribbble);
+      }
+    } // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+     @if $icon-color-dropbox != $btn-color-dropbox {
+        @include adjust-brand-color-hover($icon-color-dropbox);
+      }
+    } // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+     @if $icon-color-ebay != $btn-color-ebay {
+        @include adjust-brand-color-hover($icon-color-ebay);
+      }
+    } // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+     @if $icon-color-email != $btn-color-email {
+        @include adjust-brand-color-hover($icon-color-email);
+      }
+    } // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+     @if $icon-color-email != $btn-color-email-alt {
+        @include adjust-brand-color-hover($icon-color-email-alt);
+      }
+    } // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+     @if $icon-color-email != $btn-color-email-alt2 {
+        @include adjust-brand-color-hover($icon-color-email-alt2);
+      }
+    } // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+     @if $icon-color-evernote != $btn-color-evernote {
+        @include adjust-brand-color-hover($icon-color-evernote);
+      }
+    } // end evernote
+ 
+    // facebook
+    @else if $brand == facebook {
+     @if $icon-color-facebook != $btn-color-facebook {
+        @include adjust-brand-color-hover($icon-color-facebook);
+      }
+    } // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+     @if $icon-color-facebook-alt != $btn-color-facebook-alt {
+        @include adjust-brand-color-hover($icon-color-facebook-alt);
+      }
+    } // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+     @if $icon-color-flattr != $btn-color-flattr {
+        @include adjust-brand-color-hover($icon-color-flattr);
+      }
+    } // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+     @if $icon-color-flickr != $btn-color-flickr {
+        @include adjust-brand-color-hover($icon-color-flickr);
+      }
+    } // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+     @if $icon-color-forrst != $btn-color-forrst {
+        @include adjust-brand-color-hover($icon-color-forrst);
+      }
+    } // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+     @if $icon-color-foursquare != $btn-color-foursquare {
+        @include adjust-brand-color-hover($icon-color-foursquare);
+      }
+    } // end foursquare
+
+    // github
+    @else if $brand == github {
+     @if $icon-color-github != $btn-color-github {
+        @include adjust-brand-color-hover($icon-color-github);
+      }
+    } // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+     @if $icon-color-github-alt != $btn-color-github-alt {
+        @include adjust-brand-color-hover($icon-color-github-alt);
+      }
+    } // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+     @if $icon-color-gittip != $btn-color-gittip {
+        @include adjust-brand-color-hover($icon-color-gittip);
+      }
+    } // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+     @if $icon-color-gmail != $btn-color-gmail {
+        @include adjust-brand-color-hover($icon-color-gmail);
+      }
+    } // end gmail
+
+    // gmail-lg, gmail-lg-alt  ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+     @if $icon-color-gmail != $btn-color-gmail {
+        @include adjust-brand-color-hover($icon-color-gmail);
+      }
+    } // end gmail-lg
+
+    // google
+    @else if $brand == google {
+     @if $icon-color-googleplus != $btn-color-google {
+        @include adjust-brand-color-hover($icon-color-google);
+      }
+    } // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+     @if $icon-color-googleplus != $btn-color-googleplus {
+        @include adjust-brand-color-hover($icon-color-googleplus);
+      }
+    } // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @if $icon-color-imdb != $btn-color-imdb {
+        @include adjust-brand-color-hover($icon-color-imdb);
+      }
+    } // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+     @if $icon-color-instagram != $btn-color-instagram {
+        @include adjust-brand-color-hover($icon-color-instagram);
+      }
+    } // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      @if $icon-color-instagram-alt != $btn-color-instagram-alt {
+        @include adjust-brand-color-hover($icon-color-instagram-alt);
+      }
+    } // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      @if $icon-color-instagram-alt2 != $btn-color-instagram-alt2 {
+        @include adjust-brand-color-hover($icon-color-instagram-alt2);
+      }
+    } // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @if $icon-color-kickstarter != $btn-color-kickstarter {
+        @include adjust-brand-color-hover($icon-color-kickstarter);
+      }
+    } // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @if $icon-color-lastfm != $btn-color-lastfm {
+        @include adjust-brand-color-hover($icon-color-lastfm);
+      }
+    } // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @if $icon-color-linkedin != $btn-color-linkedin {
+        @include adjust-brand-color-hover($icon-color-linkedin);
+      }
+    } // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @if $icon-color-microsoft != $btn-color-microsoft {
+        @include adjust-brand-color-hover($icon-color-microsoft);
+      }
+    } // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @if $icon-color-myspace != $btn-color-myspace {
+        @include adjust-brand-color-hover($icon-color-myspace);
+      }
+    } // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @if $icon-color-pandora != $btn-color-pandora {
+        @include adjust-brand-color-hover($icon-color-pandora);
+      }
+    } // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @if $icon-color-paypal != $btn-color-paypal {
+        @include adjust-brand-color-hover($icon-color-paypal);
+      }
+    } // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @if $icon-color-picasa != $btn-color-picasa {
+        @include adjust-brand-color-hover($icon-color-picasa);
+      }
+    } // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @if $icon-color-pinboard != $btn-color-pinboard {
+        @include adjust-brand-color-hover($icon-color-pinboard);
+      }
+    } // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @if $icon-color-pinterest != $btn-color-pinterest {
+        @include adjust-brand-color-hover($icon-color-pinterest);
+      }
+    } // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @if $icon-color-podcast != $btn-color-podcast {
+        @include adjust-brand-color-hover($icon-color-podcast);
+      }
+    } // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @if $icon-color-rdio != $btn-color-rdio {
+        @include adjust-brand-color-hover($icon-color-rdio);
+      }
+    } // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @if $icon-color-reddit != $btn-color-reddit {
+        @include adjust-brand-color-hover($icon-color-reddit);
+      }
+    } // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @if $icon-color-rss != $btn-color-rss {
+        @include adjust-brand-color-hover($icon-color-rss);
+      }
+    } // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @if $icon-color-sharethis != $btn-color-sharethis {
+        @include adjust-brand-color-hover($icon-color-sharethis);
+      }
+    } // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @if $icon-color-skype != $btn-color-skype {
+        @include adjust-brand-color-hover($icon-color-skype);
+      }
+    } // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @if $icon-color-slideshare != $btn-color-slideshare {
+        @include adjust-brand-color-hover($icon-color-slideshare);
+      }
+    } // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @if $icon-color-soundcloud != $btn-color-soundcloud {
+        @include adjust-brand-color-hover($icon-color-soundcloud);
+      }
+    } // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @if $icon-color-spotify != $btn-color-spotify {
+        @include adjust-brand-color-hover($icon-color-spotify);
+      }
+    } // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @if $icon-color-stackoverflow != $btn-color-stackoverflow {
+        @include adjust-brand-color-hover($icon-color-stackoverflow);
+      }
+    } // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @if $icon-color-stumbleupon != $btn-color-stumbleupon {
+        @include adjust-brand-color-hover($icon-color-stumbleupon);
+      }
+    } // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @if $icon-color-tumblr != $btn-color-tumblr {
+        @include adjust-brand-color-hover($icon-color-tumblr);
+      }
+    } // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+     @if $icon-color-twitter != $btn-color-twitter {
+        @include adjust-brand-color-hover($icon-color-twitter);
+      }
+    } // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @if $icon-color-vimeo != $btn-color-vimeo {
+        @include adjust-brand-color-hover($icon-color-vimeo);
+      }
+    } // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @if $icon-color-vine != $btn-color-vine {
+        @include adjust-brand-color-hover($icon-color-vine);
+      }
+    } // end vine
+
+    // windows
+    @else if $brand == windows {
+      @if $icon-color-windows != $btn-color-windows {
+        @include adjust-brand-color-hover($icon-color-windows);
+      }
+    } // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @if $icon-color-windows7 != $btn-color-windows7 {
+        @include adjust-brand-color-hover($icon-color-windows7);
+      }
+    } // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @if $icon-color-wordpress != $btn-color-wordpress {
+        @include adjust-brand-color-hover($icon-color-wordpress);
+      }
+    } // end wordpress
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+     @if $icon-color-youtube != $btn-color-youtube {
+        @include adjust-brand-color-hover($icon-color-youtube);
+      }
+    } // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+     @if $icon-color-youtube-alt != $btn-color-youtube-alt {
+        @include adjust-brand-color-hover($icon-color-youtube-alt);
+      }
+    } // end youtube-alt
+
+     // youtube-alt2  ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+     @if $icon-color-youtube-alt2 != $btn-color-youtube-alt2 {
+        @include adjust-brand-color-hover($icon-color-youtube-alt2);
+      }
+    } // end youtube-alt2
+
+    // zerply
+    @else if $brand == zerply {
+      @if $icon-color-zerply != $btn-color-zerply {
+        @include adjust-brand-color-hover($icon-color-zerply);
+      }
+    } // end zerply
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @if $icon-color-menu != $btn-color-cart {
+        @include adjust-brand-color-hover($icon-color-cart);
+      }
+    } // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @if $icon-color-menu != $btn-color-menu {
+        @include adjust-brand-color-hover($icon-color-menu);
+      }
+    } // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @if $icon-color-more != $btn-color-more {
+        @include adjust-brand-color-hover($icon-color-more);
+      }
+    } // end more
+
+    // triangle-down, -left, -right, -up *
+    // (-left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+            $brand == triangle-left or 
+            $brand == triangle-right or 
+            $brand == triangle-up {
+      @if $icon-color-triangle-down != $btn-color-triangle {
+        @include adjust-brand-color-hover($icon-color-triangle);
+      }
+    } // end triangle-down
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+     @if $icon-color-search != $btn-color-search {
+        @include adjust-brand-color-hover($icon-color-search);
+      }
+    } // end search
+
+  } // end brand-color:hover .st-shape-icon
+  
+
+  // brand-variant
+  .st-brand-variant .st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-icon-#{$brand}:#{$pseudo-default} { 
+
+    // addthis
+    @if $brand == addthis {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-addthis);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-addthis);
+      }
+    }  // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-adn);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-adn);
+      }
+    }  // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-amazon);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-amazon);
+      }
+    }  // end amazon
+
+    // android
+    @else if $brand == android {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-android);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-android);
+      }
+    }  // end android
+
+    // apple
+    @else if $brand == apple {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-apple);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-apple);
+      }
+    }  // end apple
+
+    // behance
+    @else if $brand == behance {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-behance);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-behance);
+      }
+    }  // end behance
+
+    // blogger
+    @else if $brand == blogger {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-blogger);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-blogger);
+      }
+    }  // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-codepen);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-codepen);
+      }
+    }  // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-delicious);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-delicious);
+      }
+    }  // end delicious
+
+    // deviantart, deviantart-alt *
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-deviantart);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-deviantart);
+      }
+    }  // end deviantart
+
+    // digg
+    @else if $brand == digg {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-digg);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-digg);
+      }
+    }  // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-dribbble);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-dribbble);
+      }
+    }  // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-dropbox);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-dropbox);
+      }
+    }  // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-ebay);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-ebay);
+      }
+    }  // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-email);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-email);
+      }
+    }  // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-email-alt);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-email-alt);
+      }
+    }  // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-email-alt2);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-email-alt2);
+      }
+    }  // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-evernote);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-evernote);
+      }
+    }  // end evernote
+
+    // facebook
+    @else if $brand == facebook {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-facebook);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-facebook);
+      }
+    }  // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-facebook-alt);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-facebook-alt);
+      }
+    }  // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-flattr);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-flattr);
+      }
+    }  // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-flickr);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-flickr);
+      }
+    }  // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-forrst);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-forrst);
+      }
+    }  // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-foursquare);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-foursquare);
+      }
+    }  // end foursquare
+
+    // github
+    @else if $brand == github {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-github);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-github);
+      }
+    }  // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-github-alt);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-github-alt);
+      }
+    }  // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-gittip);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-gittip);
+      }
+    }  // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-gmail);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-gmail);
+      }
+    }  // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-gmail);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-gmail);
+      }
+    }  // end gmail
+
+    // google
+    @else if $brand == google {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-google);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-google);
+      }
+    }  // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-googleplus);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-googleplus);
+      }
+    }  // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-imdb);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-imdb);
+      }
+    }  // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-instagram);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-instagram);
+      }
+    }  // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-instagram-alt);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-instagram-alt);
+      }
+    }  // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-instagram-alt2);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-instagram-alt2);
+      }
+    }  // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-kickstarter);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-kickstarter);
+      }
+    }  // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-lastfm);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-lastfm);
+      }
+    }  // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-linkedin);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-linkedin);
+      }
+    }  // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-microsoft);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-microsoft);
+      }
+    }  // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-myspace);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-myspace);
+      }
+    }  // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-pandora);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-pandora);
+      }
+    }  // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-paypal);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-paypal);
+      }
+    }  // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-picasa);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-picasa);
+      }
+    }  // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-pinboard);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-pinboard);
+      }
+    }  // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-pinterest);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-pinterest);
+      }
+    }  // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-podcast);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-podcast);
+      }
+    }  // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-rdio);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-rdio);
+      }
+    }  // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-reddit);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-reddit);
+      }
+    }  // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-rss);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-rss);
+      }
+    }  // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-sharethis);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-sharethis);
+      }
+    }  // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-skype);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-skype);
+      }
+    }  // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-slideshare);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-slideshare);
+      }
+    }  // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-soundcloud);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-soundcloud);
+      }
+    }  // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-spotify);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-spotify);
+      }
+    }  // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-stackoverflow);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-stackoverflow);
+      }
+    }  // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-stumbleupon);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-stumbleupon);
+      }
+    }  // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-tumblr);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-tumblr);
+      }
+    }  // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-twitter);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-twitter);
+      }
+    }  // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-vimeo);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-vimeo);
+      }
+    }  // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-vine);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-vine);
+      }
+    }  // end vine
+
+    // windows
+    @else if $brand == windows {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-windows);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-windows);
+      }
+    }  // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-windows7);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-windows7);
+      }
+    }  // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-wordpress);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-wordpress);
+      }
+    }  // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-xing);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-xing);
+      }
+    }  // end xing
+
+    // yahoo, yahoo-alt
+    // (* yahoo-alt in stackicons-social-complete)
+    @else if $brand == yahoo or $brand == yahoo-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-yahoo);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-yahoo);
+      }
+    }  // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-yelp);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-yelp);
+      }
+    }  // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-youtube);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-youtube);
+      }
+    }  // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-youtube-alt);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-youtube-alt);
+      }
+    }  // end youtube-alt
+
+    // youtube-alt2  ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-youtube-alt2);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-youtube-alt2);
+      }
+    }  // end youtube-alt2
+
+    // zerply
+    @else if $brand == zerply {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-zerply);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-zerply);
+      }
+    }  // end zerply
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-cart);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-cart);
+      }
+    }  // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-menu);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-menu);
+      }
+    }  // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-more);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-more);
+      }
+    }  // end more
+
+    // triangle-down, -left, -right, -up *
+    // (-left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+             $brand == triangle-left or 
+             $brand == triangle-right or 
+             $brand == triangle-up{
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-triangle);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-triangle);
+      }
+    }  // end triangle-down
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+      @if $btn-shape-default == icon {
+        @include adjust-brand-color($icon-color-search);
+      }
+      @else {
+        @include adjust-brand-color($btn-color-search);
+      }
+    }  // end search
+
+  
+  } // end .st-brand-variant
+
+
+  // .st-brand-variant .st-shape-icon (force icon color)
+  .st-brand-variant.st-shape-icon .st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-shape-icon.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5 .st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-shape-rounded5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5 .st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant .st-shape-r5.st-icon-#{$brand}:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5.st-icon-#{$brand}:#{$pseudo-default} { 
+  
+    // addthis
+    @if $brand == addthis {
+      @include adjust-brand-color($icon-color-addthis);
+    }  // end addthis
+
+    // adn
+    @else if $brand == adn {
+      @include adjust-brand-color($icon-color-adn);
+    }  // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      @include adjust-brand-color($icon-color-amazon);
+    }  // end amazon
+
+    // android
+    @else if $brand == android {
+      @include adjust-brand-color($icon-color-android);
+    }  // end android
+
+    // apple
+    @else if $brand == apple {
+      @include adjust-brand-color($icon-color-apple);
+    }  // end apple
+
+    // behance
+    @else if $brand == behance {
+      @include adjust-brand-color($icon-color-behance);
+    }  // end behance
+
+    // blogger
+    @else if $brand == blogger {
+      @include adjust-brand-color($icon-color-blogger);
+    }  // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+      @include adjust-brand-color($icon-color-codepen);
+    }  // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+      @include adjust-brand-color($icon-color-delicious);
+    }  // end delicious
+
+    // deviantart, deviantart-alt *
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+      @include adjust-brand-color($icon-color-deviantart);
+    }  // end deviantart
+
+    // digg
+    @else if $brand == digg {
+      @include adjust-brand-color($icon-color-digg);
+    }  // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+      @include adjust-brand-color($icon-color-dribbble);
+    }  // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+      @include adjust-brand-color($icon-color-dropbox);
+    }  // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+      @include adjust-brand-color($icon-color-ebay);
+    }  // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+      @include adjust-brand-color($icon-color-email);
+    }  // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+      @include adjust-brand-color($icon-color-email-alt);
+    }  // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+      @include adjust-brand-color($icon-color-email-alt2);
+    }  // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+      @include adjust-brand-color($icon-color-evernote);
+    }  // end evernote
+
+    // facebook
+    @else if $brand == facebook {
+      @include adjust-brand-color($icon-color-facebook);
+    }  // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+      @include adjust-brand-color($icon-color-facebook-alt);
+    }  // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+      @include adjust-brand-color($icon-color-flattr);
+    }  // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+      @include adjust-brand-color($icon-color-flickr);
+    }  // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+      @include adjust-brand-color($icon-color-forrst);
+    }  // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+      @include adjust-brand-color($icon-color-foursquare);
+    }  // end foursquare
+
+    // github
+    @else if $brand == github {
+      @include adjust-brand-color($icon-color-github);
+    }  // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+      @include adjust-brand-color($icon-color-github-alt);
+    }  // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+      @include adjust-brand-color($icon-color-gittip);
+    }  // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+      @include adjust-brand-color($icon-color-gmail);
+    }  // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+      @include adjust-brand-color($icon-color-gmail);
+    }  // end gmail
+
+    // google
+    @else if $brand == google {
+      @include adjust-brand-color($icon-color-google);
+    }  // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+      @include adjust-brand-color($icon-color-googleplus);
+    }  // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      @include adjust-brand-color($icon-color-imdb);
+    }  // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+      @include adjust-brand-color($icon-color-instagram);
+    }  // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      @include adjust-brand-color($icon-color-instagram-alt);
+    }  // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      @include adjust-brand-color($icon-color-instagram-alt2);
+    }  // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      @include adjust-brand-color($icon-color-kickstarter);
+    }  // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      @include adjust-brand-color($icon-color-lastfm);
+    }  // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      @include adjust-brand-color($icon-color-linkedin);
+    }  // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      @include adjust-brand-color($icon-color-microsoft);
+    }  // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      @include adjust-brand-color($icon-color-myspace);
+    }  // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      @include adjust-brand-color($icon-color-pandora);
+    }  // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      @include adjust-brand-color($icon-color-paypal);
+    }  // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      @include adjust-brand-color($icon-color-picasa);
+    }  // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      @include adjust-brand-color($icon-color-pinboard);
+    }  // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      @include adjust-brand-color($icon-color-pinterest);
+    }  // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      @include adjust-brand-color($icon-color-podcast);
+    }  // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      @include adjust-brand-color($icon-color-rdio);
+    }  // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      @include adjust-brand-color($icon-color-reddit);
+    }  // end reddit
+
+    // rss
+    @else if $brand == rss {
+      @include adjust-brand-color($icon-color-rss);
+    }  // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      @include adjust-brand-color($icon-color-sharethis);
+    }  // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      @include adjust-brand-color($icon-color-skype);
+    }  // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      @include adjust-brand-color($icon-color-slideshare);
+    }  // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      @include adjust-brand-color($icon-color-soundcloud);
+    }  // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      @include adjust-brand-color($icon-color-spotify);
+    }  // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      @include adjust-brand-color($icon-color-stackoverflow);
+    }  // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      @include adjust-brand-color($icon-color-stumbleupon);
+    }  // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      @include adjust-brand-color($icon-color-tumblr);
+    }  // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+      @include adjust-brand-color($icon-color-twitter);
+    }  // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      @include adjust-brand-color($icon-color-vimeo);
+    }  // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      @include adjust-brand-color($icon-color-vine);
+    }  // end vine
+
+    // windows
+    @else if $brand == windows {
+      @include adjust-brand-color($icon-color-windows);
+    }  // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      @include adjust-brand-color($icon-color-windows7);
+    }  // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      @include adjust-brand-color($icon-color-wordpress);
+    }  // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      @include adjust-brand-color($icon-color-xing);
+    }  // end xing
+
+    // yahoo, yahoo-alt
+    // (* yahoo-alt in stackicons-social-complete)
+    @else if $brand == yahoo or $brand == yahoo-alt {
+      @include adjust-brand-color($icon-color-yahoo);
+    }  // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+      @include adjust-brand-color($icon-color-yelp);
+    }  // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+      @include adjust-brand-color($icon-color-youtube);
+    }  // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+      @include adjust-brand-color($icon-color-youtube-alt);
+    }  // end youtube-alt
+
+    // youtube-alt2  ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+      @include adjust-brand-color($icon-color-youtube-alt2);
+    }  // end youtube-alt2
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      @include adjust-brand-color($icon-color-cart);
+    }  // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      @include adjust-brand-color($icon-color-menu);
+    }  // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      @include adjust-brand-color($icon-color-more);
+    }  // end more
+
+    // triangle-down, -left, -right, -up *
+    // (-left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+             $brand == triangle-left or 
+             $brand == triangle-right or 
+             $brand == triangle-up{
+      @include adjust-brand-color($icon-color-triangle);
+    }  // end triangle-down
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+      @include adjust-brand-color($icon-color-search);
+    }  // end search
+
+  } // end .st-brand-variant .st-shape-icon
+  
+  // .st-brand-variant:hover .st-shape-icon (force icon color)
+  .st-brand-variant.st-shape-icon .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5 .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5 .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5 .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5 .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-brand-variant .st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-icon.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant .st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-rounded5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant .st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant .st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-brand-variant.st-shape-r5.st-icon-#{$brand}:focus:#{$pseudo-default} {
+
+    // addthis
+    @if $brand == addthis {
+      color: $icon-color-addthis;
+    } // end addthis
+
+    // adn
+    @else if $brand == adn {
+      color: $icon-color-adn;
+    } // end adn
+
+    // amazon
+    @else if $brand == amazon or $brand == amazon2  {
+      color: $icon-color-amazon;
+    } // end amazon
+
+    // android
+    @else if $brand == android {
+      color: $icon-color-android;
+    } // end android
+
+    // apple
+    @else if $brand == apple {
+      color: $icon-color-apple;
+    } // end apple
+
+    // behance
+    @else if $brand == behance {
+      color: $icon-color-behance;
+    } // end behance
+
+    // blogger
+    @else if $brand == blogger {
+      color: $icon-color-blogger;
+    } // end blogger
+
+    // codepen
+    @else if $brand == codepen {
+      color: $icon-color-codepen;
+    } // end codepen
+
+    // delicious
+    @else if $brand == delicious {
+      color: $icon-color-delicious;
+    } // end delicious
+
+    // deviantart, deviantart-alt *
+    // ( * deviantart-alt in stackicons-social-complete)
+    @else if $brand == deviantart or $brand == deviantart-alt {
+      color: $icon-color-deviantart;
+    } // end deviantart
+
+    // digg
+    @else if $brand == digg {
+      color: $icon-color-digg;
+    } // end digg
+
+    // dribbble, dribbble-alt
+    @else if $brand == dribbble or $brand == dribbble-alt  {
+      color: $icon-color-dribbble;
+    } // end dribbble
+
+    // dropbox
+    @else if $brand == dropbox {
+      color: $icon-color-dropbox;
+    } // end dropbox
+
+    // ebay
+    @else if $brand == ebay {
+      color: $icon-color-ebay;
+    } // end ebay
+
+    // email, email2
+    @else if $brand == email or $brand == email2 {
+      color: $icon-color-email;
+    } // end email
+
+    // email-alt ( * in stackicons-social-complete)
+    @else if $brand == email-alt {
+      color: $icon-color-email-alt;
+    } // end email-alt
+
+    // email-alt2 ( * in stackicons-social-complete)
+    @else if $brand == email-alt2 {
+      color: $icon-color-email-alt2;
+    } // end email-alt2
+
+    // evernote
+    @else if $brand == evernote {
+      color: $icon-color-evernote;
+    } // end evernote
+ 
+    // facebook
+    @else if $brand == facebook {
+      color: $icon-color-facebook;
+    } // end facebook
+
+    // facebook-alt
+    @else if $brand == facebook-alt {
+      color: $icon-color-facebook-alt;
+    } // end facebook-alt
+
+    // flattr
+    @else if $brand == flattr {
+      color: $icon-color-flattr;
+    } // end flattr
+
+    // flickr
+    @else if $brand == flickr {
+      color: $icon-color-flickr;
+    } // end flickr
+
+    // forrst
+    @else if $brand == forrst {
+      color: $icon-color-forrst;
+    } // end forrst
+
+    // foursquare
+    @else if $brand == foursquare {
+      color: $icon-color-foursquare;
+    } // end foursquare
+
+    // github
+    @else if $brand == github {
+      color: $icon-color-github;
+    } // end github
+
+    // github-alt
+    @else if $brand == github-alt {
+      color: $icon-color-github-alt;
+    } // end github-alt
+
+    // gittip
+    @else if $brand == gittip {
+      color: $icon-color-gittip;
+    } // end gittip
+
+    // gmail, gmail-alt
+    @else if $brand == gmail or $brand == gmail-alt {
+      color: $icon-color-gmail;
+    } // end gmail
+
+    // gmail-lg, gmail-lg-alt ( * in stackicons-social-complete)
+    @else if $brand == gmail-lg or $brand == gmail-lg-alt {
+      color: $icon-color-gmail;
+    } // end gmail-lg
+
+    // google
+    @else if $brand == google {
+      color: $icon-color-google;
+    } // end google
+
+    // googleplus
+    @else if $brand == googleplus {
+      color: $icon-color-googleplus;
+    } // end googleplus
+
+    // imdb
+    @else if $brand == imdb {
+      color: $icon-color-imdb;
+    } // end imdb
+
+    // instagram
+    @else if $brand == instagram {
+      color: $icon-color-instagram;
+    } // end instagram
+
+    // instagram-alt ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt {
+      color: $icon-color-instagram-alt;
+    } // end instagram-alt
+
+    // instagram-alt2 ( * in stackicons-social-complete)
+    @else if $brand == instagram-alt2 {
+      color: $icon-color-instagram-alt2;
+    } // end instagram-alt2
+
+    // kickstarter
+    @else if $brand == kickstarter {
+      color: $icon-color-kickstarter;
+    } // end kickstarter
+
+    // lastfm
+    @else if $brand == lastfm {
+      color: $icon-color-lastfm;
+    } // end lastfm
+
+    // linkedin
+    @else if $brand == linkedin {
+      color: $icon-color-linkedin;
+    } // end linkedin
+
+    // microsoft
+    @else if $brand == microsoft {
+      color: $icon-color-microsoft;
+    } // end microsoft
+
+    // myspace
+    @else if $brand == myspace {
+      color: $icon-color-myspace;
+    } // end myspace
+
+    // pandora
+    @else if $brand == pandora {
+      color: $icon-color-pandora;
+    } // end pandora
+
+    // paypal, paypal2
+    @else if $brand == paypal or $brand == paypal2 {
+      color: $icon-color-paypal;
+    } // end paypal
+
+    // picasa
+    @else if $brand == picasa {
+      color: $icon-color-picasa;
+    } // end picasa
+
+    // pinboard
+    @else if $brand == pinboard {
+      color: $icon-color-pinboard;
+    } // end pinboard
+
+    // pinterest, pinterest-alt *
+    // ( * pinterest-alt in stackicons-social-complete)
+    @else if $brand == pinterest or $brand == pinterest-alt {
+      color: $icon-color-pinterest;
+    } // end pinterest
+
+    // podcast ( * in stackicons-social-complete)
+    @else if $brand == podcast {
+      color: $icon-color-podcast;
+    } // end podcast
+
+    // rdio
+    @else if $brand == rdio {
+      color: $icon-color-rdio;
+    } // end rdio
+
+    // reddit
+    @else if $brand == reddit {
+      color: $icon-color-reddit;
+    } // end reddit
+
+    // rss
+    @else if $brand == rss {
+      color: $icon-color-rss;
+    } // end rss
+
+    // sharethis
+    @else if $brand == sharethis {
+      color: $icon-color-sharethis;
+    } // end sharethis
+
+    // skype
+    @else if $brand == skype {
+      color: $icon-color-skype;
+    } // end skype
+
+    // slideshare
+    @else if $brand == slideshare {
+      color: $icon-color-slideshare;
+    } // end slideshare
+
+    // soundcloud
+    @else if $brand == soundcloud {
+      color: $icon-color-soundcloud;
+    } // end soundcloud
+
+    // spotify
+    @else if $brand == spotify {
+      color: $icon-color-spotify;
+    } // end spotify
+
+    // stackoverflow
+    @else if $brand == stackoverflow {
+      color: $icon-color-stackoverflow;
+    } // end stackoverflow
+
+    // stumbleupon
+    @else if $brand == stumbleupon {
+      color: $icon-color-stumbleupon;
+    } // end stumbleupon
+
+    // tumblr
+    @else if $brand == tumblr {
+      color: $icon-color-tumblr;
+    } // end tumblr
+
+    // twitter
+    @else if $brand == twitter {
+      color: $icon-color-twitter;
+    } // end twitter
+
+    // vimeo
+    @else if $brand == vimeo {
+      color: $icon-color-vimeo;
+    } // end vimeo
+
+    // vine
+    @else if $brand == vine {
+      color: $icon-color-vine;
+    } // end vine
+
+    // windows
+    @else if $brand == windows {
+      color: $icon-color-windows;
+    } // end windows
+
+    // windows7
+    @else if $brand == windows7 {
+      color: $icon-color-windows7;
+    } // end windows7
+
+    // wordpress
+    @else if $brand == wordpress {
+      color: $icon-color-wordpress;
+    } // end wordpress
+
+    // xing
+    @else if $brand == xing {
+      color: $icon-color-xing;
+    } // end xing
+
+    // yahoo, yahoo-alt
+    // (* yahoo-alt in stackicons-social-complete)
+    @else if $brand == yahoo or $brand == yahoo-alt {
+      color: $icon-color-yahoo;
+    } // end yahoo
+
+    // yelp, yelp-alt
+    // ( * yelp-alt in stackicons-social-complete)
+    @else if $brand == yelp or $brand == yelp-alt {
+      color: $icon-color-yelp;
+    } // end yelp
+
+    // youtube, youtube2
+    @else if $brand == youtube or $brand == youtube2 {
+      color: $icon-color-youtube;
+    } // end youtube
+
+    // youtube-alt, youtube-alt-sm
+    @else if $brand == youtube-alt or $brand == youtube-alt-sm {
+      color: $icon-color-youtube-alt;
+    } // end youtube-alt
+
+    // youtube-alt2  ( * in stackicons-social-complete)
+    @else if $brand == youtube-alt2 {
+      color: $icon-color-youtube-alt2;
+    } // end youtube-alt2
+
+    // zerply
+    @else if $brand == zerply {
+      color: $icon-color-zerply;
+    } // end zerply
+
+    // nav elements:
+
+    // cart ( * in stackicons-social-complete)
+    @else if $brand == cart {
+      color: $icon-color-cart;
+    } // end cart
+
+    // menu, menu-alt, menu-alt2
+    @else if $brand == menu or $brand == menu-alt or $brand == menu-alt2 {
+      color: $icon-color-menu;
+    } // end menu
+
+    // more (ellipsis...)
+    @else if $brand == more {
+      color: $icon-color-more;
+    } // end more
+
+    // search, search-alt
+    @else if $brand == search or $brand == search-alt {
+      color: $icon-color-search;
+    } // end search
+
+    // triangle-down, -left, -right, -up *
+    // (-left, -right, -up in stackicons-social-complete)
+    @else if $brand == triangle-down or 
+            $brand == triangle-left or 
+            $brand == triangle-right or 
+            $brand == triangle-up {
+      color: $icon-color-triangle;
+    } // end triangle-down
+
+  }
+
+  // if a separate .st-icon base-class is not used in markup,
+  // then we need .st-single-color and .st-embossed-only overrides 
+  // for each brand color to deal with specificity. 
+
+  // SINGLE COLOR
+
+  // on parent
+  .st-single-color .st-icon-#{$brand}:#{$pseudo-default},
+  .st-single-color-brand .st-icon-#{$brand}:#{$pseudo-default},
+  // on icon
+  .st-single-color.st-icon-#{$brand}:#{$pseudo-default},
+  .st-single-color-brand.st-icon-#{$brand}:#{$pseudo-default} {
+    color: $btn-single-color-default;
+    @if $btn-single-color-default-rgba {
+      color: $btn-single-color-default-rgba;
+    }
+  } 
+  // do the :hover
+  // on parent
+  .st-single-color .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color .st-icon-#{$brand}:focus:#{$pseudo-default},
+  // on icon
+  .st-single-color.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-single-color.st-icon-#{$brand}:focus:#{$pseudo-default} {
+    color: $btn-single-color-default-hover;
+    @if $btn-single-color-default-rgba {
+      color: $btn-single-color-default-rgba-hover;
+    }
+  }
+
+  // EMBOSSED-ONLY
+
+  // on parent
+  .st-embossed-only .st-icon-#{$brand}:#{$pseudo-default},
+  // on icon
+  .st-embossed-only.st-icon-#{$brand}:#{$pseudo-default} {
+    color: $color-background-embossed;
+    // no rgba
+    @extend .st-embossed; } 
+  // hover
+  .st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only .st-icon-#{$brand}:active:#{$pseudo-default},
+  .st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:hover:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:active:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:focus:#{$pseudo-default} { 
+    /*text-shadow: none;*/ }
+
+  .st-embossed-only .st-icon-#{$brand}:active:#{$pseudo-default},
+  .st-embossed-only.st-icon-#{$brand}:active:#{$pseudo-default} {
+    text-shadow: none; }
+
+  // $raise-on-hover is set way up above...
+  @if $raise-on-hover == true {
+  
+    .st-embossed-only .st-icon-#{$brand}:hover, 
+    .st-embossed-only.st-icon-#{$brand}:hover { 
+      top: -1px; }
+  
+    .st-embossed-only .st-icon-#{$brand}:hover:#{$pseudo-default},
+    .st-embossed-only.st-icon-#{$brand}:hover:#{$pseudo-default},
+    .st-embossed-only .st-icon-#{$brand}:focus:#{$pseudo-default},
+    .st-embossed-only.st-icon-#{$brand}:focus:#{$pseudo-default} {
+      @extend .raised; }
+
+    .st-embossed-only .st-icon-#{$brand}:active, 
+    .st-embossed-only.st-icon-#{$brand}:active { 
+      top: 0px; }
+  
+  } // end @if
+
+} // end @each
+
+// END COLOR-STYLE OVERRIDES

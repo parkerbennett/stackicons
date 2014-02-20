@@ -1,0 +1,35 @@
+/* Stackicons-Social CSS Construction Kit v1.0 | MIT License | <http://stackicons.com> 
+   Copyright (c) 2014 by Parker Bennett @parkerbennett @stackicons */
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// font
+@import "fonts-stackicons-social"; // make sure the font path in this file is right
+
+// variables
+@import "colors-social-2014"; // brand colors as variables (tweak as desired)
+@import "unicodes-stackicons-social"; // font characters (don't change this)
+
+// *** variables used in default css ***
+@import "construction-kit-stackicons-social"; // *** change values here to tweak css defaults ***
+
+@import "css-defaults-stackicons-social"; // @each statement here lists all brands (trim as needed)
+
+// optional - comment-out if you're happy with the defaults, and don't need to override shapes per icon...
+@import "override-button-shapes-stackicons-social"; // @each statement here lists all brands (trim as needed)
+
+// you might still want icon-only (e.g., for dropdown nav-list)
+@import "override-icon-only-stackicons-social"; // @each statement here lists all brands (trim as needed)
+
+// this one is really more for demo purposes. It's commented-out by default...
+// @import "override-colors-stackicons-social"; // @each statement here lists all brands (trim as needed)
+
+// *** variables used in default css ***
+@import "multi-color-kit-stackicons-social"; // *** change values here to tweak css defaults ***
+
+@import "multi-color-css-stackicons-social"; // @each statements here list all brands (trim as needed)
+
+// optional - comment-out if you don't need to override button shapes per icon... 
+// ("st.icon-only" class is generated separately by the file above.)
+@import "multi-color-override-shapes-stackicons-social"; // @each statement here lists brands (trim as needed)

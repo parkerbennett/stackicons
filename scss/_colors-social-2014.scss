@@ -1,0 +1,938 @@
+/* =============================================================================
+ *     STACKICONS-SOCIAL - BRAND COLOR VARIABLES (2014)  http://stackicons.com
+ *     v1.13 - February 3, 2014
+ * ============================================================================= 
+ */
+// http://stackicons.com/scss/_colors-social-2014.scss
+// http://creativecommons.org/licenses/by/3.0/
+// by Parker Bennett @parkerbennett http://parkerbennett.com.
+
+//  This Sass _partial file contains color values for various online brands 
+//  (with best single-color approximations for gradients, variations, etc.).
+//  It's meant to be @imported into stackicons.scss (or your colors.scss file).
+//  Feel free to fork and add on! Please keep the attribution information above.
+
+// ---- global greys ---- /
+
+$true-black              :  #000 !default; // modify for warmer or cooler greys
+
+// (bootstrap variables: #222, #333, #555, #999, #eee)
+$greyDarker              :  lighten($true-black, 13.5) !default; // #222
+$greyDark                :  lighten($true-black, 20)   !default; // #333
+$grey                    :  lighten($true-black, 33.3) !default; // #555
+$greyLight               :  lighten($true-black, 60)   !default; // #999
+$greyLighter             :  lighten($true-black, 93.5) !default; // #eee
+
+// hyphenated - plus alts 
+$grey-darkest            :  lighten($true-black, 6.5)  !default; // #111
+$grey-darker             :  lighten($true-black, 13.5) !default; // #222
+$grey-dark               :  lighten($true-black, 20)   !default; // #333
+$grey-dark-alt           :  lighten($true-black, 26.5) !default; // #444
+$grey                    :  lighten($true-black, 33.3) !default; // #555
+$grey-alt                :  lighten($true-black, 40)   !default; // #666
+$grey-alt2               :  lighten($true-black, 46.5) !default; // #777
+$grey-default            :  lighten($true-black, 50)   !default; // #808080
+$grey-default-alt        :  lighten($true-black, 53.3) !default; // #888
+$grey-light              :  lighten($true-black, 60)   !default; // #999
+$grey-light-alt          :  lighten($true-black, 66.7) !default; // #aaa
+$grey-light-alt2         :  lighten($true-black, 73.5) !default; // #bbb
+$grey-lighter            :  lighten($true-black, 80)   !default; // #ccc
+$grey-lighter-alt        :  lighten($true-black, 86.5) !default; // #ddd
+$grey-lightest           :  lighten($true-black, 91.7) !default; // #eaeaea
+$grey-lightest-alt       :  lighten($true-black, 93.5) !default; // #eee
+$grey-lightest-alt2      :  lighten($true-black, 92.7) !default; // #f1f1f1
+
+$gray                    :  $grey-light-alt !default; // the "a" is for #aaa :-)
+$silver                  :  $grey-lighter-alt !default;
+
+// hex 
+$grey-222                :  $grey-darker !default;
+$grey-333                :  $grey-dark !default;
+$grey-444                :  $grey-dark-alt !default;
+$grey-555                :  $grey !default;
+$grey-666                :  $grey-alt !default;
+$grey-777                :  $grey-alt2 !default;
+$grey-888                :  $grey-default-alt !default;
+$grey-999                :  $grey-light !default;
+$grey-aaa                :  $grey-light-alt !default;
+$grey-bbb                :  $grey-light-alt2 !default;
+$grey-ccc                :  $grey-lighter !default;
+$grey-ddd                :  $grey-lighter-alt !default;
+$grey-eee                :  $grey-lightest-alt !default;
+
+// rgba - translucent 
+$grey-darker-rgba        :  rgba($true-black, 0.860) !default; // #222
+$grey-dark-rgba          :  rgba($true-black, 0.793) !default; // #333
+$grey-dark-alt-rgba      :  rgba($true-black, 0.727) !default; // #444
+$grey-rgba               :  rgba($true-black, 0.661) !default; // #555
+$grey-alt-rgba           :  rgba($true-black, 0.594) !default; // #666
+$grey-alt2-rgba          :  rgba($true-black, 0.528) !default; // #777
+$grey-default-rgba       :  rgba($true-black, 0.493) !default; // #808080
+$grey-default-alt-rgba   :  rgba($true-black, 0.461) !default; // #888
+$grey-light-rgba         :  rgba($true-black, 0.395) !default; // #999
+$grey-light-alt-rgba     :  rgba($true-black, 0.329) !default; // #aaa
+$grey-light-alt2-rgba    :  rgba($true-black, 0.263) !default; // #bbb
+$grey-lighter-rgba       :  rgba($true-black, 0.196) !default; // #ccc
+$grey-lighter-alt-rgba   :  rgba($true-black, 0.129) !default; // #ddd
+$grey-lightest-rgba      :  rgba($true-black, 0.079) !default; // #eaeaea
+$grey-lightest-alt-rgba  :  rgba($true-black, 0.063) !default; // #eee
+$grey-lightest-alt2-rgba :  rgba($true-black, 0.051) !default; // #f1f1f1
+
+// hex-rgba 
+$grey-222-rgba           :  $grey-darker-rgba !default;
+$grey-333-rgba           :  $grey-dark-rgba !default;
+$grey-555-rgba           :  $grey-rgba !default;
+$grey-666-rgba           :  $grey-alt-rgba !default;
+$grey-777-rgba           :  $grey-alt2-rgba !default;
+$grey-888-rgba           :  $grey-default-alt-rgba !default;
+$grey-999-rgba           :  $grey-light-rgba !default;
+$grey-ccc-rgba           :  $grey-lighter-rgba !default;
+$grey-ddd-rgba           :  $grey-lighter-alt-rgba !default;
+$grey-eee-rgba           :  $grey-lightest-alt-rgba !default;
+
+$black                   :  #111 !default;
+$white                   :  #fff !default;
+
+// ---- MRMRS - Refined Color Palette by Adam Morse - http://clrs.cc ---- /
+
+// cool
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime:  #01ff70;
+
+// warm
+$yellow:  #ffdc00;
+$orange:  #ff851b;
+$red:     #ff4136;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
+
+// gray scale is above
+
+
+// ---- BRAAAANDS... ---- /
+
+// Brand list:
+
+// addthis, adn, adobe, amazon, android, apple, beatsmusic, 
+// behance,  blogger, codepen, delicious, deviantart, digg,   
+// dribbble, dropbox, ebay, email, evernote, facebook, flattr,  
+// flickr, forrst, foursquare, github, gittip, gmail, google,  
+// googleplus, imdb, instagram, kickstarter, lastfm, linkedin,  
+// microsoft, myspace, pandora, paypal, picasa, pinboard,  
+// pinterest, podcast, rdio, reddit, rss, sharethis, skype, 
+// slideshare, soundcloud, spotify, stackicons, stackoverflow, 
+// stumbleupon, tumblr, twitter, vimeo, vine, weibo, windows, 
+// wordpress, xing, yahoo, yelp, youtube, zerply
+
+// Navigation elements (at end):
+// cart, menu, more (ellipsis), search, triangles
+
+
+// ADDTHIS (2014) */
+  $addthis-orange:          rgb(255, 92, 62) !default; // logo
+  $addthis-orange-alt:      rgb(248, 105, 77) !default;
+
+  // single color background with icon reversed out
+  $btn-color-addthis:       $addthis-orange !default;
+  
+  // single color icon (or hover color) on light bg
+  $icon-color-addthis:      $btn-color-addthis !default;
+
+
+// ADN - alt.net (2014) 
+  $adn-grey:                rgb(106, 105, 108) !default;
+  $adn-grey-dk:             rgb(74, 72, 76) !default;
+  $adn-red:                 rgb(216, 122, 104) !default;
+
+  $btn-color-adn:           $adn-grey !default;
+  $icon-color-adn:          $adn-grey-dk !default;
+
+
+// ADOBE (2014) 
+  $adobe-red:               rgb(255, 0, 0) !default;
+
+  $btn-color-adobe:         $adobe-red !default;
+  $icon-color-adobe:        $btn-color-adobe !default;
+
+
+// AMAZON (2014) 
+  $amazon-orange:           rgb(255, 153, 0) !default; // official
+  $amazon-orange-alt:       rgb(252, 154, 24) !default; // website
+  $amazon-black:            rgb(0, 0, 0) !default;
+  $amazon-black-alt:        rgb(9, 6, 7) !default;
+  $amazon-white:            rgb(245, 245, 245) !default;
+
+  $btn-color-amazon:        $grey-dark !default;
+  $icon-color-amazon:       $amazon-black !default;
+
+
+// ANDROID (2014)
+  $android-green:           rgb(141, 201, 23) !default; // robot
+  $android-green-alt:       rgb(128, 189, 1) !default; // logo
+  $android-green-lt:        rgb(164, 198, 57) !default; // favicon robot
+
+  $btn-color-android:       $android-green !default;
+  $icon-color-android:      $btn-color-android !default;
+
+
+// APPLE (2014) 
+  $apple-grey:              rgb(153, 153, 153) !default; // favicon store
+  $apple-grey-lt:           rgb(233, 234, 235) !default;
+  $apple-grey-dk:           rgb(114, 114, 114) !default;
+
+  $btn-color-apple:         $apple-grey !default;
+  $icon-color-apple:        $apple-grey-dk !default;
+
+  // single color icon (or hover color) on dark bg 
+  $icon-color-lt-apple:     $apple-grey-lt !default;
+
+
+// BEATS MUSIC (2014)
+  $beatsmusic-orange:       rgb(224, 23, 54) !default;
+  $beatsmusic-purple:       rgb(140, 36, 130) !default;
+  $beatsmusic-red-mix:      rgb(212, 30, 92) !default; // gradient mix
+  $beatsmusic-red:          rgb(200, 26, 77) !default; // center of logo
+
+  $beatsmusic-grey:         rgb(32, 32, 32) !default;
+
+
+// BEHANCE (2014) 
+  $behance-black:           rgb(29, 29, 29) !default; // website
+  // favicon gradient mix(rgb(0, 156, 255), rgb(33, 109, 237)) = rgb(17, 137, 246)
+  $behance-blue:            rgb(25, 123, 241) !default; // favicon mix darker
+
+  $btn-color-behance:       $behance-blue !default;
+  $icon-color-behance:      $behance-black !default;
+
+
+// BLOGGER (2014) 
+  $blogger-orange:          rgb(255, 150, 52) !default; // logo
+  $blogger-orange-alt:      rgb(254, 102, 2) !default;  // favicon
+
+  $btn-color-blogger:       $blogger-orange !default;
+  $icon-color-blogger:      $btn-color-blogger !default;
+
+
+// CODEPEN (2014) 
+  $codepen-black:           rgb(26, 26, 26) !default;
+
+  $btn-color-codepen:       $codepen-black !default;
+  $icon-color-codepen:      $btn-color-codepen !default;
+ 
+
+// DELICIOUS (2014)  
+  $delicious-blue:          rgb(51, 153, 255) !default;
+  $delicious-grey:          rgb(238, 238, 238) !default;
+  $delicious-black:         rgb(34, 34, 34) !default;
+
+  $btn-color-delicious:     $delicious-black !default;
+  $icon-color-delicious:    $delicious-black !default;
+
+
+// DEVIANT ART (2014) 
+  $deviantart-green:        rgb(93, 112, 97) !default; // favicon
+  $deviantart-green-dk:     rgb(60, 76, 71) !default;
+  $deviantart-green-lt:     rgb(208, 222, 33) !default;
+
+  $btn-color-deviantart:    $deviantart-green !default;
+  $icon-color-deviantart:   $btn-color-deviantart !default;
+  $icon-color-lt-deviantart: $deviantart-green-lt !default;
+
+
+// DIGG (2014) 
+  $digg-black:              rgb(11, 11, 12) !default;
+  $digg-blue:               rgb(0, 140, 210) !default;
+
+  $btn-color-digg:          $digg-black !default;
+  $icon-color-digg:         $btn-color-digg !default;
+
+
+// DRIBBBLE (2014) 
+  // gradient mix(rgb(253, 131, 175), rgb(236, 82, 140))
+  $dribbble-pink:           rgb(240, 119, 160) !default;
+  $dribbble-pink-dk:        rgb(197, 55, 109) !default;
+  // gradient mix(rgb(253, 162, 195), rgb(245, 138, 177))
+  $dribbble-pink-lt:        rgb(250, 156, 190) !default;
+  $dribbble-grey:           rgb(204, 204, 204) !default; // shadow
+  $dribbble-grey-rgba:      rgba(0, 0, 0, 0.198) !default;
+
+  $btn-color-dribbble:      $dribbble-pink !default;
+  $icon-color-dribbble:     $dribbble-pink-dk !default;
+
+
+// DROPBOX (2014) 
+  $dropbox-blue:            rgb(0, 126, 229) !default; // website splash
+  $dropbox-blue-alt:        rgb(52, 130, 225) !default; // website header
+
+  $btn-color-dropbox:       $dropbox-blue !default;
+  $icon-color-dropbox:      $btn-color-dropbox !default;
+
+
+// EBAY (2014) 
+  $ebay-red:                rgb(228, 49, 55) !default;
+  $ebay-blue:               rgb(0, 99, 209) !default;
+  $ebay-yellow:             rgb(244, 174, 1) !default;
+  $ebay-yellow-mix:         rgba(247, 240, 0, 0.7) !default;
+  $ebay-green:              rgb(133, 183, 22) !default;
+
+  $btn-color-ebay:          $ebay-green !default;
+  $btn-color-lt-ebay:       $ebay-yellow !default;
+  $btn-color-dk-ebay:       $ebay-blue !default;
+  $icon-color-ebay:         $ebay-green !default;  
+  $icon-color-lt-ebay:      $ebay-yellow !default;
+  $icon-color-dk-ebay:      $ebay-blue !default;
+
+
+// EMAIL 
+  $email-grey:              rgb(174, 177, 180) !default; // light grey
+  $email-grey-alt:          rgb(162, 179, 183) !default;
+  $email-grey-alt2:         rgb(115, 138, 141) !default; // addthis (greenish)
+  $email-grey-lt:           rgb(227, 231, 234) !default; // darker: rgb(221, 225, 229)
+  $email-grey-dk:           rgb(147, 150, 152) !default;
+  $email-grey-mix:          mix($email-grey, $email-grey-lt) !default;
+
+  $btn-color-email:         $email-grey !default;
+  $btn-color-dk-email:      $email-grey-alt2 !default;
+  $icon-color-email:        $btn-color-email !default;
+  $icon-color-dk-email:     $btn-color-dk-email !default;
+  $icon-multi-color-email:  $email-grey-lt !default; // envelope
+  $icon-multi-color-email-dk: darken($icon-multi-color-email, 18) !default;
+  $icon-multi-color-email-lt: lighten($icon-multi-color-email, 3.3) !default;
+
+
+  $btn-color-email-alt:     $btn-color-email !default;
+  $icon-color-email-alt:    $icon-color-email !default;
+  $btn-color-email-alt2:    $btn-color-email !default;
+  $icon-color-email-alt2:   $icon-color-email !default;
+
+
+// EVERNOTE (2014) 
+  $evernote-green:          rgb(95, 179, 54) !default; // website 
+  $evernote-grey:           rgb(117, 119, 120) !default; // website
+  $evernote-grey-dk:        rgb(85, 85, 85) !default; // icon grey
+  $evernote-green-lt:       rgb(146, 221, 118) !default; // iOS gradient 
+  $evernote-green-alt:      rgb(94, 196, 66) !default; // iOS gradient mix, darker: rgb(87, 193, 58)
+  $evernote-green-alt1:     rgb(34, 205, 66) !default; // gradient sample
+  $evernote-green-alt2:     rgb(111, 151, 84) !default; // guidelines
+  $evernote-grey-alt:       rgb(105, 105, 105) !default; // guidelines 
+
+  $btn-color-evernote:      $evernote-green !default;
+  $icon-color-evernote:     $evernote-grey !default;
+
+
+// FACEBOOK (2014) 
+  $facebook-blue:           rgb(59, 89, 152) !default;
+  $facebook-blue-lt:        rgb(109, 132, 180) !default; // old "bar"
+
+  $btn-color-facebook:      $facebook-blue !default;
+  $icon-color-facebook:     $btn-color-facebook !default;
+  $btn-color-facebook-alt:  $btn-color-facebook !default;
+  $icon-color-facebook-alt: $icon-color-facebook !default;
+
+
+// FLATTR (2014) 
+  $flattr-orange:           rgb(242, 146, 45) !default;
+  $flattr-orange-alt:       rgb(246, 124, 26) !default; // site h2
+  $flattr-green:            rgb(140, 194, 53) !default;
+  $flattr-green-alt:        rgb(102, 177, 21) !default; // site btns
+
+  $btn-color-flattr:        $flattr-green !default;
+  $icon-color-flattr:       $btn-color-flattr !default;
+
+
+// FLICKR (2014) 
+  $flickr-blue:             rgb(0, 99, 220) !default;
+  $flickr-pink:             rgb(255, 2, 133) !default;
+  $flickr-blue-alt:         rgb(0, 106, 221) !default; // favicon
+  $flickr-pink-alt:         rgb(255, 25, 129) !default; // favicon
+
+  $btn-color-flickr:        $flickr-pink !default;
+  $btn-color-alt-flickr:    $flickr-blue !default;
+  $icon-color-flickr:       $btn-color-flickr !default;
+  $btn-color-alt-flickr:    $btn-color-alt-flickr !default;
+
+
+// FORRST (2014) 
+  $forrst-green:            rgb(59, 113, 64) !default;
+  $forrst-green-lt:         rgb(93, 158, 107) !default; // rgb(91, 154, 104) website
+  $forrst-green-dk:         rgb(77, 111, 84) !default;
+  $forrst-brown:            rgb(141, 94, 63) !default;
+
+  $btn-color-forrst:        $forrst-green !default;
+  $icon-color-forrst:       $forrst-green-lt !default;
+
+
+// FOURSQUARE (2014 - iOS7 icon) 
+  $foursquare-blue:         rgb(45, 181, 237) !default;
+  $foursquare-blue-dk:      rgb(38, 82, 108) !default;
+  $foursquare-blue-lt:      rgb(0, 177, 242) !default;
+  $foursquare-green:        rgb(140, 212, 52) !default;
+  $foursquare-white-rgba:   rgba(255, 255, 255, 0.9) !default; // .925 exact match
+
+  $btn-color-foursquare:    $foursquare-blue !default;
+  $icon-color-foursquare:   mix($foursquare-blue, $foursquare-blue-dk) !default;
+
+
+// GITHUB (2014) 
+  $github-grey:             rgb(54, 56, 58) !default; // gradient mix
+  $github-blue:             rgb(65, 131, 196) !default;
+
+  // octocat body 
+  $github-black:            rgb(21, 21, 21) !default;
+  // octocat water 
+  $github-blue-lt:          rgb(156, 230, 254) !default; // rgb(156, 218, 241)
+  $github-blue-lt-rgba:     rgba(131, 224, 254, 0.8) !default;
+  // octocat face 
+  $github-orange-lt:        rgb(243, 202, 178) !default; // rgb(248, 208, 180) lighter
+  $github-orange-lt-alt:    rgb(255, 192, 159) !default; 
+  $github-beige:            $github-orange-lt !default;
+  // octocat eyes 
+  $github-red-dk:           rgb(177, 66, 58) !default;
+  $github-red-dk-alt:       rgb(171, 91, 81) !default;
+  $github-maroon:           $github-red-dk !default;
+
+  $btn-color-github:        $github-grey !default;
+  $icon-color-github:       $btn-color-github !default;
+  $btn-color-github-alt:    $btn-color-github !default;
+  $icon-color-github-alt:   $icon-color-github !default;
+  $btn-color-github-alt2:   $btn-color-github !default;
+  $icon-color-github-alt2:  $icon-color-github !default;
+
+
+// GITTIP (2014) 
+  $gittip-brown:            rgb(101, 54, 20) !default;
+
+  $btn-color-gittip:        $gittip-brown !default;
+  $icon-color-gittip:       $btn-color-gittip !default;
+
+
+// GMAIL (2014) 
+  // bottom gradient mix(rgb(248, 246, 236), rgb(208, 207, 193))
+  $gmail-beige:             rgb(228, 226, 214) !default;
+  // top flap gradient mix(rgb(222, 224, 213), rgb(250, 252, 241))
+  $gmail-beige-lt:          rgb(236, 238, 227) !default;
+  $gmail-beige-lt-rgba:     rgba(255, 255, 255, 0.15) !default;
+  $gmail-beige-dk:          rgb(174, 173, 164) !default;
+  $gmail-beige-dk-rgba:     rgba(0, 0, 0, 0.26) !default;
+  $gmail-red:               rgb(222, 72, 60) !default;
+  $gmail-red-alt:           rgb(220, 0, 0) !default;
+  $gmail-red-dk:            rgb(165, 53, 44) !default;
+
+  $btn-color-gmail:         $gmail-red-alt !default;
+  $btn-color-alt-gmail:     $gmail-beige-dk !default;
+  $icon-color-gmail:        $gmail-red !default;
+
+
+// GMAIL ALT (late 2014 - iOS icon) 
+  $gmail-grey:              rgb(224, 224, 227) !default;
+  $gmail-grey-lt:           rgb(241, 241, 244) !default;
+  $gmail-grey-lt-rgba:      rgba(255, 255, 255, 0.44) !default;
+  $gmail-grey-dk:           rgb(163, 168, 175) !default;
+  $gmail-grey-dk-rgba:      rgba(0, 0, 0, 0.26) !default;
+  $gmail-alt-red:           rgb(220, 0, 0) !default;
+  $gmail-alt-red-dk:        rgb(165, 53, 44) !default;
+
+  $btn-color-gmail-alt:     $gmail-alt-red !default;
+  $btn-color-alt-gmail-alt: $gmail-grey-dk !default;
+  $icon-color-gmail-alt:    $gmail-alt-red !default;
+
+
+// GOOGLE (2014) 
+  $google-blue:             rgb(41, 119, 245) !default; // website (gradient mix)
+  $google-blue-alt:         rgb(66, 133, 234) !default; // favicon
+  $google-red:              rgb(209, 61, 41) !default;
+  $google-yellow:           rgb(255, 184, 1) !default;
+  $google-green:            rgb(0, 150, 85) !default;
+
+  $btn-color-google:        $google-blue !default;
+  $icon-color-google:       $btn-color-google !default;
+
+
+// GOOGLE+ (2014) 
+  $googleplus-red:          rgb(242, 48, 28) !default;
+
+  $btn-color-googleplus:    $googleplus-red !default;
+  $icon-color-googleplus:   $btn-color-googleplus !default;
+
+
+// IMDB (2014) 
+  $imdb-black:              rgb(0, 0, 0) !default;
+  $imdb-gold:               rgb(186, 164, 29) !default;
+  $imdb-gold-mix:           mix(rgb(186, 164, 29), rgb(227, 186, 32)) !default;
+  $imdb-yellow:             rgb(227, 186, 32) !default;
+  $imdb-yellow-alt:         rgb(220, 192, 35) !default;
+  $imdb-yellow-lt:          rgb(255, 253, 174) !default;
+  $imdb-yellow-lt-rgba:     rgba(255, 227, 32, .4) !default;
+
+  $btn-color-imdb:          $imdb-gold-mix !default;
+  $icon-color-imdb:         $imdb-black !default;
+
+
+// INSTAGRAM (2014) 
+  $instagram-beige:         rgb(224, 220, 208) !default; // rgb(231, 226, 214) lighter
+  $instagram-tan:           rgb(198, 184, 164) !default;
+  $instagram-tan-rgba:      rgba(148, 116, 84, 0.35) !default;
+  $instagram-brown:         rgb(138, 87, 71) !default;
+  $instagram-brown-dk:      rgb(72, 48, 45) !default;
+  $instagram-black:         rgb(62, 70, 71) !default;
+  $instagram-black-rgba:    rgba(1, 9, 10, .77) !default;
+  $instagram-blue:          rgb(63, 114, 155) !default;
+  $instagram-blue-alt:      rgb(65, 111, 150) !default;
+  // color bars 
+  $instagram-red:           rgb(254, 43, 89) !default;
+  $instagram-yellow:        rgb(255, 201, 54) !default;
+  $instagram-green:         rgb(111, 204, 147) !default;
+  $instagram-blue-lt:          rgb(78, 148, 245) !default;
+
+  $btn-color-instagram:     $instagram-blue !default;
+  $btn-color-alt-instagram: $instagram-brown !default;
+  $icon-color-instagram:    $btn-color-alt-instagram !default;
+  $icon-color-alt-instagram: $btn-color-instagram !default;
+
+  $btn-color-instagram-alt: $instagram-brown !default;
+  $btn-color-alt-instagram-alt: $instagram-blue !default;
+  $icon-color-instagram-alt: $btn-color-instagram-alt !default;
+  $icon-color-alt-instagram-alt: $btn-color-alt-instagram-alt !default;
+
+  $btn-color-instagram-alt2: $btn-color-instagram !default;
+  $btn-color-alt-instagram-alt2: $btn-color-alt-instagram !default;
+  $icon-color-instagram-alt2: $icon-color-instagram !default;
+  $icon-color-alt-instagram-alt2: $icon-color-alt-instagram !default;
+
+
+// KICKSTARTER (2014) 
+  $kickstarter-green:       rgb(118, 204, 30) !default;
+  $kickstarter-black:       rgb(11, 24, 2) !default;
+  
+  $btn-color-kickstarter:   $kickstarter-green !default;
+  $icon-color-kickstarter:  $btn-color-kickstarter !default;
+  $icon-color-alt-kickstarter: $kickstarter-black !default;
+
+
+// LAST.FM (2014) 
+  $lastfm-red:              rgb(196, 24, 30) !default;
+
+  $btn-color-lastfm:        $lastfm-red !default;
+  $icon-color-lastfm:       $btn-color-lastfm !default;
+
+
+// LINKED IN (2014) 
+  $linkedin-blue:           rgb(16, 126, 184) !default;
+  $linkedin-blue-lt:        rgb(33, 137, 190) !default;
+  $linkedin-blue-dk:        rgb(0, 115, 178) !default;
+
+  $btn-color-linkedin:      $linkedin-blue !default;
+  $icon-color-linkedin:     $btn-color-linkedin !default;
+
+
+// MICROSOFT (2014) (See also WINDOWS below)
+  $microsoft-red:           rgb(246, 83, 20) !default;
+  $microsoft-green:         rgb(124, 187, 0) !default;
+  $microsoft-yellow:        rgb(255, 187, 0) !default;
+  $microsoft-blue:          rgb(0, 161, 241) !default;
+
+  $microsoft-blue-mix:      rgb(0, 154, 222) !default;
+  $microsoft-yellow-mix:    rgba(255, 240, 0, .65) !default;
+
+  $btn-color-microsoft:     $microsoft-blue !default;
+  $icon-color-microsoft:    $btn-color-microsoft !default;
+
+
+// MYSPACE (2014) 
+  $myspace-grey:            rgb(49, 49, 49) !default;
+  $myspace-grey-lt:         rgb(223, 223, 223) !default;
+  $myspace-blue:            rgb(0, 141, 222) !default;
+
+  $btn-color-myspace:       $myspace-grey !default;
+  $icon-color-myspace:      $btn-color-myspace !default;
+  $icon-color-lt-myspace:   $myspace-grey-lt !default;
+
+
+// PANDORA (2014) 
+  $pandora-blue:            rgb(1, 84, 134) !default;
+  $pandora-blue-dk:         rgb(36, 46, 73) !default;
+  $pandora-blue-lt:         rgb(214, 222, 234) !default;
+  $pandora-blue-alt:        rgb(48, 86, 131) !default;
+  $pandora-grey-lt:         rgb(230, 234, 236) !default;
+
+  $btn-color-pandora:       $pandora-blue-dk !default;
+  $btn-color-alt-pandora:   $pandora-blue !default;
+  $icon-color-pandora:      $pandora-blue !default;
+  $icon-color-lt-pandora:   $pandora-blue-lt !default;
+
+
+// PAYPAL (2014) 
+  $paypal-blue:             rgb(0, 121, 193) !default;
+  $paypal-blue-dk:          rgb(0, 69, 124) !default;
+  $paypal-blue-alt:         rgb(0, 108, 176) !default; // iOS icon bg
+  $paypal-blue-lt:          rgb(161, 199, 223) !default; // iOS icon
+  $paypal-white:            rgb(250, 250, 250) !default; // iOS icon
+
+  $btn-color-paypal:        $paypal-blue-alt !default;
+  $icon-color-paypal:       $paypal-blue-dk !default;
+
+
+// PICASA (2014) 
+  $picasa-grey:             rgb(235, 235, 235) !default; // spokes
+  $picasa-red:              rgb(224, 74, 64) !default;
+  $picasa-yellow:           rgb(255, 211, 79) !default;
+  $picasa-green:            rgb(14, 171, 99) !default;
+  $picasa-blue:             rgb(70, 140, 253) !default;
+  $picasa-purple:           rgb(155, 71, 159) !default;
+  $picasa-green-dk:         rgb(81, 100, 102) !default; // logotype
+
+  $picasa-yellow-mix:       rgb(250, 224, 72) !default;
+  $picasa-blue-mix:         rgba(0, 128, 255, 0.45) !default;
+
+  $btn-color-picasa:        $picasa-green-dk !default;
+  $btn-color-alt-picasa:    $picasa-purple !default;
+  $icon-color-picasa:       $btn-color-picasa !default;
+  $icon-color-alt-picasa:   $picasa-green-dk !default;
+  $icon-color-lt-picasa:    $picasa-grey !default;
+
+
+// PINBOARD (2014) 
+  $pinboard-blue:           rgb(50, 90, 246) !default;
+  $pinpoard-blue-dk:        rgb(0, 0, 230) !default;
+
+  $btn-color-pinboard:      $pinboard-blue !default;
+  $icon-color-pinboard:     $btn-color-pinboard !default;
+
+
+// PINTEREST (2014) 
+  $pinterest-red:           rgb(204, 32, 39) !default;
+  $pinterest-red-alt:       rgb(199, 37, 39) !default;
+  $pinterest-grey:          rgb(230, 230, 239) !default;
+  $pinterest-shadow-rgba:   rgba(0, 0, 0, .4) !default;
+
+  $btn-color-pinterest:     $pinterest-red !default;
+  $icon-color-pinterest:    $btn-color-pinterest !default;
+
+  $btn-color-pinterest-alt:  $btn-color-pinterest !default;
+  $icon-color-pinterest-alt: $icon-color-pinterest !default;
+
+// PODCAST 
+  $podcast-purple:          rgb(146, 68, 200) !default;
+  $podcast-purple-rgba:     rgba(146, 68, 200, 0.7) !default;
+  $podcast-purple-lt:       rgb(192, 136, 223) !default;
+  $podcast-purple-dk:       rgb(132, 43, 193) !default;
+  $podcast-purple-dk-rgba:  rgba(132, 43, 193, 0.7) !default;
+  $podcast-grey:            $grey !default;
+
+  // instacast 
+  $podcast-orange:          rgb(250, 120, 0) !default;
+  $podcast-orange-lt:       rgb(255, 148, 0) !default;
+  $podcast-orange-dk:       rgb(242, 81, 1) !default;
+  $podcast-white-rgba:      rgba(255, 255, 255, 0.3) !default;
+
+  $btn-color-podcast:       $podcast-purple !default;
+  $icon-color-podcast:      $podcast-purple-dk !default;
+  $btn-color-alt-podcast:   $podcast-orange !default;
+  $icon-color-alt-podcast:  $podcast-orange-dk !default;
+
+
+// RDIO (2014) 
+  $rdio-blue:               rgb(0, 143, 213) !default;
+
+  $btn-color-rdio:          $rdio-blue !default;
+  $icon-color-rdio:         $btn-color-rdio !default;
+
+
+// REDDIT (2014) 
+  $reddit-blue-lt:          rgb(206, 227, 248) !default;
+  $reddit-blue:             rgb(150, 195, 240) !default;
+  $reddit-red:              rgb(255, 69, 0) !default;
+  $reddit-black:            rgb(0, 0, 0) !default;
+
+  $btn-color-reddit:        $reddit-blue !default;
+  $icon-color-reddit:       $reddit-black !default;
+
+
+// RSS (2014) 
+  $rss-orange:              rgb(246, 140, 40) !default;
+  $rss-orange-dk:           rgb(255, 118, 0) !default;
+
+  $btn-color-rss:           $rss-orange !default;
+  $icon-color-rss:          $rss-orange-dk !default;
+
+
+// SHARETHIS (2014) 
+  $sharethis-green:         rgb(0, 191, 0) !default;
+
+  $btn-color-sharethis:     $sharethis-green !default;
+  $icon-color-sharethis:    $btn-color-sharethis !default;
+
+
+// SINA WEIBO (2014) - See WEIBO
+
+
+// SKYPE (2014) 
+  $skype-blue:              rgb(0, 175, 240) !default;
+
+  $btn-color-skype:         $skype-blue !default;
+  $icon-color-skype:        $btn-color-skype !default;
+
+
+// SLIDESHARE (2014) 
+  $slideshare-orange:       rgb(240, 150, 58) !default;
+  $slideshare-blue:         rgb(52, 140, 206) !default;
+  $slideshare-grey:         rgb(177, 179, 181) !default;
+  $slideshare-green:        rgb(75, 163, 166) !default;
+  $slideshare-white-rgba:   rgba(255, 255, 255, 0.3) !default;
+
+  $btn-color-slideshare:    $slideshare-orange !default;
+  $btn-color-alt-slideshare:  $slideshare-green !default;
+  $icon-color-slideshare:   $slideshare-green !default;
+  $icon-color-alt-slideshare: $slideshare-orange !default;
+
+
+// SOUNDCLOUD (2014) 
+  $soundcloud-orange:       rgb(255, 61, 0) !default;
+  $soundcloud-orange-lt:    rgb(255, 85, 0) !default;
+  $soundcloud-red:          rgb(255, 0, 0) !default;
+  $soundcloud-orange-dk:    $soundcloud-red !default;
+
+  $btn-color-soundcloud:    $soundcloud-orange !default;
+  $icon-color-soundcloud:   $soundcloud-orange-lt !default;
+
+
+// SPOTIFY (2014) 
+  $spotify-green:           rgb(160, 200, 11) !default; // logo gradient mix
+  $spotify-green-lt:        rgb(180, 214, 18) !default; // logo 
+  $spotify-green-md:        rgb(140, 186, 4) !default; // logo
+  $spotify-grey:            rgb(63, 63, 63) !default;
+  $spotify-grey-rgba:       rgba(0, 0, 0, 0.75) !default;
+  $spotify-black:           rgb(0, 0, 0) !default;
+
+  $btn-color-spotify:       $spotify-green !default;
+  $icon-color-spotify:      $btn-color-spotify !default;
+  $icon-color-alt-spotify:  $spotify-black !default;
+
+
+// STACKICONS (2014) 
+  $stackicons-red-dk:       rgb(220, 0, 42) !default; // #dc002a
+  $stackicons-red:          rgb(250, 88, 13) !default; // #fa580d
+  $stackicons-orange:       rgb(245, 121, 0) !default; // #f57900
+  $stackcons-orange-lt:     rgb(245, 170, 0) !default; // #f5aa00
+  $stackicons-yellow:       rgb(255, 210, 0) !default; // #ffd200
+  $stackicons-grey-lt:      rgb(236, 235, 233) !default; // #ecebe9
+  $stackicons-grey-dk:      rgb(76, 70, 64) !default; // #4c4640
+
+  $btn-color-stackicons:    $stackicons-orange !default;
+  $icon-color-stackicons:   $stackicons-red !default;
+
+
+// STACK OVERFLOW (2014) 
+  $stackoverflow-grey:      rgb(129, 129, 133) !default;
+  $stackoverflow-brown-dk:  rgb(166, 138, 110) !default;
+  $stackoverflow-brown:     rgb(192, 149, 83) !default;
+  $stackoverflow-brown-lt:  rgb(211, 139, 40) !default;
+  $stackoverflow-orange:    rgb(253, 138, 7) !default;
+  $stackoverflow-orange-dk: rgb(254, 122, 21) !default;
+  $stackoverflow-orange-red: $stackoverflow-orange-dk !default;
+
+  $stackoverflow-orange-mix: rgb(242, 144, 7) !default;
+  $stackoverflow-grey-mix:   rgba(129, 129, 133, 0.45) !default;
+
+
+  $btn-color-stackoverflow: $stackoverflow-grey !default;
+  $icon-color-stackoverflow: $btn-color-stackoverflow !default;
+
+
+// STUMBLEUPON (2014) 
+  $stumbleupon-red:         rgb(234, 75, 36) !default;
+
+  $btn-color-stumbleupon:   $stumbleupon-red !default;
+  $icon-color-stumbleupon:  $btn-color-stumbleupon !default;
+
+
+// TUMBLR (2014) 
+  $tumblr-blue:             rgb(57, 75, 98) !default;
+  $tumblr-blue-alt:         rgb(44, 71, 98) !default; // favicon 
+
+  $btn-color-tumblr:        $tumblr-blue !default;
+  $icon-color-tumblr:       $btn-color-tumblr !default;
+
+
+// TWITTER (2014) 
+  $twitter-blue:            rgb(0, 188, 246) !default;
+  $twitter-blue-dk:         rgb(0, 172, 237) !default; // gradient
+  $twitter-blue-alt:        rgb(46, 172, 225) !default; // old
+
+  $btn-color-twitter:       $twitter-blue !default;
+  $icon-color-twitter:      $btn-color-twitter !default;
+
+
+// VIMEO (2014) 
+  $vimeo-blue:              rgb(26, 183, 234) !default; // iOS icon
+
+  $btn-color-vimeo:         $vimeo-blue !default;
+  $icon-color-vimeo:        $btn-color-vimeo !default;
+
+
+// VINE (2014) 
+  $vine-green:              rgb(0, 191, 143) !default; // website
+  $vine-green-alt:          rgb(0, 179, 136) !default; // favicon
+
+  $btn-color-vine:          $vine-green !default;
+  $icon-color-vine:         $vine-green-alt !default;
+
+
+// WEIBO (2014)
+  $weibo-red:               rgb(228, 48, 55) !default; // website
+  $weibo-orange:            rgb(247, 148, 30) !default; 
+  $weibo-black:             rgb(5, 7, 8) !default; 
+  $weibo-yellow:            rgb(255, 222, 111) !default; // iOS icon bg
+
+
+// WINDOWS (2014) 
+  $windows7-red:            $microsoft-red !default;
+  $windows7-green:          $microsoft-green !default;
+  $windows7-yellow:         $microsoft-yellow !default;
+  $windows7-blue:           $microsoft-blue !default;
+
+  $windows7-blue-mix:       $microsoft-blue-mix !default;
+  $windows7-yellow-mix:     $microsoft-yellow-mix !default;
+
+  // windows 8 
+  $windows-blue:            rgb(109, 194, 233) !default;
+  $windows-blue-lt:         rgb(33, 201, 255) !default;
+  
+  $windows-phone-purple:    rgb(104, 33, 122) !default;
+
+  $btn-color-windows:       $windows-blue !default;
+  $icon-color-windows:      $btn-color-windows !default;
+
+  $btn-color-windows7:      $microsoft-green !default;
+  $icon-color-windows7:     $microsoft-blue !default;
+
+
+// WORDPRESS (2014) 
+  $wordpress-blue:          rgb(33, 117, 155) !default;
+  $wordpress-grey:          rgb(70, 70, 70) !default;
+
+  $btn-color-wordpress:     $wordpress-blue !default;
+  $btn-color-alt-wordpress: $wordpress-grey !default;
+  $icon-color-wordpress:    $btn-color-wordpress !default;
+  $icon-color-alt-wordpress: $btn-color-alt-wordpress !default;
+
+
+// XING (2014) 
+  $xing-green:              rgb(3, 101, 103) !default;
+  $xing-green-lt:           rgb(205, 214, 24) !default;
+
+  $btn-color-xing:          $xing-green !default;
+  $icon-color-xing:         $btn-color-xing !default;
+  $btn-color-alt-xing:      $xing-green-lt !default;
+  $icon-color-alt-xing:     $btn-color-alt-xing !default;
+
+
+// YAHOO (2014) 
+  $yahoo-purple:            rgb(123, 0, 153) !default;
+
+  $btn-color-yahoo:         $yahoo-purple !default;
+  $icon-color-yahoo:        $btn-color-yahoo !default;
+
+
+// YELP (2014) 
+  $yelp-red:                rgb(191, 49, 26) !default;
+  $yelp-grey:               rgb(230, 231, 232) !default;
+
+  $btn-color-yelp:          $yelp-red !default;
+  $icon-color-yelp:         $btn-color-yelp !default;
+  $btn-color-yelp-alt:      $btn-color-yelp !default;
+  $icon-color-yelp-alt:     $icon-color-yelp !default;
+
+
+// YOUTUBE (2014) 
+  // "play" button icon 
+  $youtube-red:             rgb(210, 34, 34) !default; // play button icon
+  $youtube-red-dk:          rgb(153, 23, 23) !default; // inset button shadow
+  $youtube-red-dk-rgba:     rgba(0, 0, 0, 0.35) !default;
+  $youtube-red-alt2:        rgb(225, 76, 64) !default; // chrome launch screen
+  $youtube-white:           rgb(241, 241, 241) !default; // white "screen" shape
+  $youtube-grey:            rgb(168, 168, 168) !default; // inset shadow white
+  $youtube-grey-rgba:       rgba(0, 0, 0, 0.3) !default;
+  // logotype 
+  $youtube-red-alt:         rgb(175, 43, 38) !default;
+  $youtube-red-alt-lt:      rgb(205, 51, 45) !default;
+  $youtube-red-alt-dk:      rgb(146, 36, 32) !default;
+  $youtube-black:           rgb(40, 40, 40) !default;
+
+  $btn-color-youtube:       $youtube-red !default;
+  $icon-color-youtube:      $btn-color-youtube !default;
+  $btn-color-youtube-alt:   $youtube-red-alt !default;
+  $icon-color-youtube-alt:  $btn-color-youtube-alt !default;
+  $btn-color-youtube-alt2:  $btn-color-youtube !default;
+  $icon-color-youtube-alt2: $btn-color-youtube !default;
+
+
+// ZERPLY (2014) 
+  $zerply-green:            rgb(160, 194, 112) !default; // logo gradient mix
+  $zerply-green-alt:        rgb(157, 188, 122) !default; // website bg
+  $zerply-grey:             $grey-dark !default;
+
+  $btn-color-zerply:        $zerply-green !default;
+  $icon-color-zerply:       $btn-color-zerply !default;
+
+
+// ---- NAV ELEMENTS ---- /
+
+  $color-nav:               $grey-light !default;
+
+// CART (SHOPPING CART)
+
+  $cart-green:              rgb(104, 163, 164) !default;
+  $cart-grey:               $grey-dark !default;
+
+  $btn-color-cart:          $color-nav !default;
+  $btn-color-cart-alt:      $cart-grey !default;
+  $btn-color-cart-alt2:     $cart-green !default;
+  $icon-color-cart:         $btn-color-cart !default;
+  $icon-color-cart-alt:     $btn-color-cart-alt !default;
+  $icon-color-cart-alt2:    $btn-color-cart-alt2 !default;
+
+
+// MENU
+  $btn-color-menu:          $color-nav !default;
+  $icon-color-menu:         $btn-color-menu !default;
+
+
+// MORE
+  $btn-color-more:          $color-nav !default;
+  $icon-color-more:         $btn-color-more !default;
+
+
+// SEARCH
+  $search-blue:             rgb(41, 119, 245) !default; // google blue
+  $search-black:            $grey-darker !default;
+  $search-grey:             $grey;
+  $search-blue-lt:          rgb(209, 236, 236) !default;
+  $search-blue-lt-rgba:     rgba(170, 238, 238, 0.4) !default;
+
+  $btn-color-search:        $search-grey !default;
+  $icon-color-search:       $search-black !default;
+
+
+// TRIANGLES
+  $btn-color-triangle:      $color-nav !default;
+  $icon-color-triangle:     $btn-color-triangle !default;
+
+  $btn-color-triangle-down:   $btn-color-triangle !default;
+  $icon-color-triangle-down:  $btn-color-triangle-down !default;
+
+  $btn-color-triangle-left:   $btn-color-triangle !default;
+  $icon-color-triangle-left:  $btn-color-triangle-left !default;
+
+  $btn-color-triangle-right:  $btn-color-triangle !default;
+  $icon-color-triangle-right: $btn-color-triangle-right !default;
+
+  $btn-color-triangle-up:   $btn-color-triangle !default;
+  $icon-color-triangle-up:  $btn-color-triangle-up !default;
+

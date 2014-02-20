@@ -1,0 +1,1551 @@
+// getting default button shape...
+@import "construction-kit-stackicons-social"; 
+
+/* =================================================================
+ *     STACKICONS-SOCIAL - UNICODE CHARACTER MAPPING  
+ *     http://stackicons.com/scss/_unicodes-stackicons-social.scss
+ * =================================================================
+ */
+// http://creativecommons.org/licenses/by/3.0/
+// by Parker Bennett @parkerbennett http://parkerbennett.com.
+ 
+//  This Sass _partial file contains the unicodes for font characters 
+//  in the Stackicons-Social icon font, abstracted into variables.
+//  It's meant to be @imported into stackicons.scss (or your _variables).
+
+// ---- BUTTONS ---- /
+
+// There are 5 button shapes
+
+  $btn-shape-sq:          "\e001"; // solid square
+  $btn-shape-r1:          "\e002"; // rounded1 (slightly rounded - Android)
+  $btn-shape-r2:          "\e003"; // rounded2 
+  $btn-shape-r3:          "\e004"; // rounded3 (more rounded - iOS 7)
+  $btn-shape-cir:         "\e005"; // circle
+  
+  $btn-shape-square:      $btn-shape-sq;
+  $btn-shape-circle:      $btn-shape-cir;
+
+  $btn-shape-cir-inner:   "\e020"; // smaller circle (75%)
+
+
+// **** CONSTRUCTION KIT VARIABLE ****
+
+  // -c0, -c1, -c2, etc. are stacked elements used
+  // in creating "multi-color" icons:  -c0 is usually 
+  // the bg, -c1 is often the icon. By having a solid 
+  // icon stacked on a solid bg, we can use different 
+  // text-shadow effects in the "multi-color" version.
+
+  // Unless the icon is an unusual shape, there is a 
+  // default-shape variable that we set below, usually 
+  // the same as the single-color "btn-shape-default" 
+  // set in _construction-kit-stackicons-social.scss.
+  // (may be overridden in _multi-color-stackicons-social.)
+
+$btn-shape-c0-default:  false !default;
+
+@if not $btn-shape-c0-default {
+  @if ($btn-shape-default == sq) { 
+    $btn-shape-c0-default: $btn-shape-sq; 
+  }
+  @else if ($btn-shape-default == r2) { 
+    $btn-shape-c0-default: $btn-shape-r2; 
+  }
+  @else if ($btn-shape-default == r3) { 
+    $btn-shape-c0-default: $btn-shape-r3; 
+  }
+  @else if ($btn-shape-default == cir) { 
+    $btn-shape-c0-default: $btn-shape-cir; 
+  }
+  @else { 
+    $btn-shape-c0-default: $btn-shape-r1; 
+  }
+}
+  // icon-only is not an option for default bg shape
+
+
+// ---- BUTTON BORDERS ---- /
+
+// thicker "bevel" all around - matches bottoms and tops below       
+  $btn-border-sq:         "\e601";
+  $btn-border-r1:         "\e602";
+  $btn-border-r2:         "\e603";
+  $btn-border-r3:         "\e604";
+  $btn-border-cir:        "\e605";
+
+// medium border
+  $btn-border-alt-sq:     "\e60a";
+  $btn-border-alt-r1:     "\e60b";
+  $btn-border-alt-r2:     "\e60c";
+  $btn-border-alt-r3:     "\e60d";
+  $btn-border-alt-cir:    "\e60e";
+
+// thinner border
+  $btn-border-alt2-sq:     "\e611";
+  $btn-border-alt2-r1:     "\e612";
+  $btn-border-alt2-r2:     "\e613";
+  $btn-border-alt2-r3:     "\e614";
+  $btn-border-alt2-cir:    "\e615";
+
+// hairline border
+  $btn-border-alt3-sq:     "\e61a";
+  $btn-border-alt3-r1:     "\e61b";
+  $btn-border-alt3-r2:     "\e61c";
+  $btn-border-alt3-r3:     "\e61d";
+  $btn-border-alt3-cir:    "\e61e";
+
+// thicker "bevel" left, right, and bottom - matches bottoms and tops below
+  $btn-border-sides-sq:    "\e006";
+  $btn-border-sides-r1:    "\e007";
+  $btn-border-sides-r2:    "\e008";
+  $btn-border-sides-r3:    "\e009";
+  $btn-border-sides-cir:   "\e00a";
+
+  $btn-border-bottom-sq:  "\e00b";
+  $btn-border-top-sq:     "\e00c";
+  $btn-highlight-sq:      "\e00d";
+
+  $btn-border-bottom-r1:  "\e00e";
+  $btn-border-top-r1:     "\e00f";
+  $btn-highlight-r1:      "\e010";
+
+  $btn-border-bottom-r2:  "\e011";
+  $btn-border-top-r2:     "\e012";
+  $btn-highlight-r2:      "\e013";
+
+  $btn-border-bottom-r3:  "\e014";
+  $btn-border-top-r3:     "\e015";
+  $btn-highlight-r3:      "\e016";
+
+  $btn-border-bottom-cir: "\e017";
+  $btn-border-top-cir:    "\e018";
+  $btn-highlight-cir:     "\e019";
+
+
+
+// ---- NAVIGATION ELEMENTS ---- /
+
+
+// CART (SHOPPING CART)
+  $cart-sq:             "\e59a";
+  $cart-r1:             "\e59b";
+  $cart-r2:             "\e59c";
+  $cart-r3:             "\e59d";
+  $cart-cir:            "\e59e";
+  $cart-icon:           "\e59f";
+
+  $cart-c0:             $btn-shape-c0-default !default; 
+  $cart-c1:             $cart-icon; 
+
+
+// MENU ICON ("NAVICON") - SLIGHTLY ROUNDED LINES
+  $menu-sq:             "\e581";
+  $menu-r1:             "\e582";
+  $menu-r2:             "\e583";
+  $menu-r3:             "\e584";
+  $menu-cir:            "\e585";
+  $menu-icon:           "\e586";
+  $menu-icon-alt:       "\2630"; // fallback if font not present
+
+  $menu-c0:             $btn-shape-c0-default !default; 
+  $menu-c1:             $menu-icon; 
+
+// MENU ICON ALT - SQUARE LINES
+  $menu-alt-sq:         "\e58a";
+  $menu-alt-r1:         "\e58b";
+  $menu-alt-r2:         "\e58c";
+  $menu-alt-r3:         "\e58d";
+  $menu-alt-cir:        "\e58e";
+  $menu-alt-icon:       "\e58f";
+
+  $menu-alt-c0:         $btn-shape-c0-default !default; 
+  $menu-alt-c1:         $menu-alt-icon; 
+
+// MENU ICON ALT2 - FULLY ROUNDED LINES
+  $menu-alt2-sq:        "\e591";
+  $menu-alt2-r1:        "\e592";
+  $menu-alt2-r2:        "\e593";
+  $menu-alt2-r3:        "\e594";
+  $menu-alt2-cir:       "\e595";
+  $menu-alt2-icon:      "\e596";
+
+  $menu-alt2-c0:         $btn-shape-c0-default !default; 
+  $menu-alt2-c1:         $menu-alt2-icon; 
+
+
+// MORE (ELLIPSIS...)
+  $more-sq:             "\e461";
+  $more-r1:             "\e462";
+  $more-r2:             "\e463";
+  $more-r3:             "\e464";
+  $more-cir:            "\e465";
+  $more-icon:           "\e466";
+  $ellipsis:            "…";
+
+  $more-c0:             $btn-shape-c0-default !default; 
+  $more-c1:             $more-icon; 
+
+
+// SEARCH (plus SEARCH-ALT)
+  $search-sq:           "\e061";
+  $search-r1:           "\e062";
+  $search-r2:           "\e063";
+  $search-r3:           "\e064";
+  $search-cir:          "\e065";
+  $search-icon:         "\e066";
+
+  $search-c0:           $btn-shape-c0-default !default; // blue or black bg
+  $search-c1:           $search-icon; // white icon
+  $search-c2:           "\e067"; // light blue glass
+  $search-c2-alt:       "\e068"; // light blue glass w reflection
+  $search-c3:           "\e069"; // white reflection
+
+  $search-alt-c0:       $search-c0 !default;
+  $search-alt-c1:       $search-c1;
+  $search-alt-c2:       $search-c2;
+  $search-alt-c2-alt:   $search-c2-alt;
+  $search-alt-c3:       $search-c3;
+
+
+// TRIANGLE DOWN
+  $triangle-down-sq:    "\e441";
+  $triangle-down-r1:    "\e442";
+  $triangle-down-r2:    "\e443";
+  $triangle-down-r3:    "\e444";
+  $triangle-down-cir:   "\e445";
+  $triangle-down-icon:  "\e446";
+  $triangle-down:       "&#9662;"; // smaller if font not present
+  $triangle-down-alt:   "&#9660;";
+
+  $triangle-down-c0:    $btn-shape-c0-default !default; 
+  $triangle-down-c1:    $triangle-down-icon; 
+
+
+// TRIANGLE LEFT
+  $triangle-left-sq:    "\e44a";
+  $triangle-left-r1:    "\e44b";
+  $triangle-left-r2:    "\e44c";
+  $triangle-left-r3:    "\e44d";
+  $triangle-left-cir:   "\e44e";
+  $triangle-left-icon:  "\e44f";
+  $triangle-left:       "&#9666;"; // smaller if font not present
+  $triangle-left-alt:   "&#9664;";
+
+  $triangle-left-c0:    $btn-shape-c0-default !default; 
+  $triangle-left-c1:    $triangle-left-icon; 
+
+
+// TRIANGLE RIGHT
+  $triangle-right-sq:   "\e451";
+  $triangle-right-r1:   "\e452";
+  $triangle-right-r2:   "\e453";
+  $triangle-right-r3:   "\e454";
+  $triangle-right-cir:  "\e455";
+  $triangle-right-icon: "\e456";
+  $triangle-right:      "&#9656;"; // smaller if font not present
+  $triangle-right-alt:  "&#9654;";
+
+  $triangle-right-c0:    $btn-shape-c0-default !default; 
+  $triangle-right-c1:    $triangle-right-icon; 
+
+
+// TRIANGLE UP
+  $triangle-up-sq:      "\e45a";
+  $triangle-up-r1:      "\e45b";
+  $triangle-up-r2:      "\e45c";
+  $triangle-up-r3:      "\e45d";
+  $triangle-up-cir:     "\e45e";
+  $triangle-up-icon:    "\e45f";
+  $triangle-up:         "&#9652;"; // smaller if font not present
+  $triangle-up-alt:     "&#9650;";
+
+  $triangle-up-c0:      $btn-shape-c0-default !default; 
+  $triangle-up-c1:      $triangle-up-icon; 
+
+
+
+// ---- BRAAANDS... ---- /
+
+// ADDTHIS (2014)
+  $addthis-sq:          "\e06a";
+  $addthis-r1:          "\e06b";
+  $addthis-r2:          "\e06c";
+  $addthis-r3:          "\e06d";
+  $addthis-cir:         "\e06e";
+  $addthis-icon:        "\e06f";
+
+  // color icon - stacking order bottom to top
+  $addthis-c0:          $btn-shape-c0-default; // orange sq
+  $addthis-c1:          $addthis-icon; // white "+"
+
+
+// ADN - alt.net (2014)
+  $adn-sq:              "\e071";
+  $adn-r1:              "\e072";
+  $adn-r2:              "\e073";
+  $adn-r3:              "\e074";
+  $adn-cir:             "\e075";
+  $adn-icon:            "\e076";
+
+  $adn-c0:              $btn-shape-c0-default; // dk grey bg
+  $adn-c0-alt:          $btn-shape-cir;
+  $adn-c1:              $adn-icon; // white "A"
+
+
+// AMAZON (2014)
+  $amazon-sq:           "\e07a";
+  $amazon-r1:           "\e07b";
+  $amazon-r2:           "\e07c";
+  $amazon-r3:           "\e07d";
+  $amazon-cir:          "\e07e";
+  $amazon-icon:         "\e07f";
+
+  $amazon-c0:           $btn-shape-c0-default; // white bg
+  $amazon-c1:           "\e079"; // black "a" 
+  $amazon-c2:           "\e080"; // orange smile
+
+
+// AMAZON LOGO (2014)
+  $amazon-logo-icon:    "\e087";
+
+  $amazon-logo-c0:      "" !important; // no bg
+  $amazon-logo-c1:      "\e088"; // black "amazon"
+  $amazon-logo-c2:      "\e089"; // orange smile
+
+
+// ANDROID (2014)
+  $android-sq:          "\e081";
+  $android-r1:          "\e082";
+  $android-r2:          "\e083";
+  $android-r3:          "\e084";
+  $android-cir:         "\e085";
+  $android-icon:        "\e086";
+
+  $android-c0:          $btn-shape-c0-default; // light bg
+  $android-c1:          $android-icon; // green icon
+  $android-c2:          "\e087"; // white eyes
+
+
+// APPLE (2014)
+  $apple-sq:            "\e08a";
+  $apple-r1:            "\e08b";
+  $apple-r2:            "\e08c";
+  $apple-r3:            "\e08d";
+  $apple-cir:           "\e08e";
+  $apple-icon:          "\e08f";
+
+  $apple-c0:            $btn-shape-c0-default; // grey bg
+  $apple-c1:            $apple-icon; // white apple
+
+
+// BEHANCE (2014)
+  $behance-sq:          "\e091";
+  $behance-r1:          "\e092";
+  $behance-r2:          "\e093";
+  $behance-r3:          "\e094";
+  $behance-cir:         "\e095";
+  $behance-icon:        "\e096";
+
+  $behance-c0:          $btn-shape-c0-default !default; // black bg 
+  $behance-c1:          $behance-icon; // white "bē"
+
+
+// BLOGGER (2014)
+  $blogger-sq:          "\e09a";
+  $blogger-r1:          "\e09b";
+  $blogger-r2:          "\e09c";
+  $blogger-r3:          "\e09d";
+  $blogger-cir:         "\e09e";
+  $blogger-icon:        "\e09f";
+
+  $blogger-c0:          $btn-shape-c0-default !default; // orange bg
+  $blogger-c1:          $blogger-icon; // white "b"
+
+
+// CODEPEN (2014)
+  $codepen-sq:          "\e101";
+  $codepen-r1:          "\e102";
+  $codepen-r2:          "\e103";
+  $codepen-r3:          "\e104";
+  $codepen-cir:         "\e105";
+  $codepen-icon:        "\e106";
+  $codepen-icon-alt:    "\e100"; // icon w circle
+
+  $codepen-c0:          $btn-shape-c0-default !default; // black bg
+  $codepen-c0-alt:      $btn-shape-cir; // black circle 
+  $codepen-c1:          $codepen-icon; // white icon
+  $codepen-c1-alt:      $codepen-icon-alt; // white icon w circle
+
+  $codepen-logo-icon:   "\e099";
+
+
+// DELICIOUS (2014)
+  $delicious-sq:        "\e10a";
+  $delicious-r1:        "\e10b";
+  $delicious-r2:        "\e10c";
+  $delicious-r3:        "\e10d";
+  $delicious-cir:       "\e10e";
+  $delicious-icon:      "\e10f";
+
+  $delicious-c0:        $btn-shape-c0-default !default; 
+  $delicious-c1:        "\e107"; // white big sq. bg
+  $delicious-c1-alt:    "\e120"; // white big sq. minus lower right
+  $delicious-c2:        "\e108"; // blue sq. ur
+  $delicious-c3:        "\e109"; // grey sq. lr
+  $delicious-c4:        "\e110"; // black sq. ll
+
+
+// DELICIOUS-ALT (2014 - needs 2 extra spans)
+  $delicious-alt-sq:    $delicious-sq;
+  $delicious-alt-r1:    $delicious-r1;
+  $delicious-alt-r2:    $delicious-r2;
+  $delicious-alt-r3:    $delicious-r3;
+  $delicious-alt-cir:   $delicious-cir;
+  $delicious-alt-icon:  $delicious-icon;
+
+  $delicious-alt-c0:    $btn-shape-c0-default !default; 
+  $delicious-alt-c1:    "\e107"; // white big sq. bg
+  $delicious-alt-c2:    "\e108"; // blue sq. ur
+  $delicious-alt-c3:    "\e109"; // grey sq. lr
+  $delicious-alt-c4:    "\e110"; // black sq. ll
+
+
+// DEVIANT ART (2014 - inset bordered)
+  $deviantart-sq:       "\e111";
+  $deviantart-r1:       "\e112";
+  $deviantart-r2:       "\e113";
+  $deviantart-r3:       "\e114";
+  $deviantart-cir:      "\e115";
+  $deviantart-icon:     "\e116"; // smaller
+  $deviantart-icon-alt: "\e13f"; // smaller shifted right
+
+  $deviantart-c0:       $btn-shape-c0-default !default;
+  $deviantart-c0-alt:   $btn-shape-r1 !important;
+  $deviantart-c1:       $deviantart-icon;
+
+  // inset bordered logo
+  $deviantart-c1-alt:   "\e118"; // bordered logo r1
+  $deviantart-c1-alt0:  "\e117"; // bordered logo sq
+  $deviantart-c1-alt1:  "\e118"; // bordered logo r1
+  $deviantart-c1-alt2:  "\e119"; // bordered logo r2
+  $deviantart-c1-alt3:  "\e13d"; // bordered logo r3
+  $deviantart-c1-alt4:  "\e13e"; // bordered logo cir
+
+
+// DEVIANT ART ALT (2014 - edge bordered)
+  $deviantart-alt-sq:   $deviantart-sq;
+  $deviantart-alt-r1:   $deviantart-r1;
+  $deviantart-alt-r2:   $deviantart-r2;
+  $deviantart-alt-r3:   $deviantart-r3;
+  $deviantart-alt-cir:  $deviantart-cir;
+  $deviantart-alt-icon: $deviantart-icon;
+  $deviantart-alt-icon-alt: $deviantart-icon-alt;
+
+  $deviantart-alt-c0:    $btn-shape-c0-default !default;
+  $deviantart-alt-c0-alt: $btn-shape-r1 !important;
+  $deviantart-alt-c1:    $deviantart-alt-icon;
+
+  // edge bordered logo
+  $deviantart-alt-c1-alt:  "\e16f"; // cropped to border
+  $deviantart-alt-c1-alt2: "\e170"; // cropped to border circle
+
+  $deviantart-alt-c2-alt0:  $btn-border-alt-sq !default; // sq border
+  $deviantart-alt-c2-alt1:  $btn-border-alt-r1 !default; // r1 border
+  $deviantart-alt-c2-alt2:  $btn-border-alt-r2 !default; // r2 border
+  $deviantart-alt-c2-alt3:  $btn-border-alt-r3 !default; // r3 border
+  $deviantart-alt-c2-alt4:  $btn-border-alt-cir !default; // circle border
+
+
+// DIGG (2014)
+  $digg-sq:             "\e11a";
+  $digg-r1:             "\e11b";
+  $digg-r2:             "\e11c";
+  $digg-r3:             "\e11d";
+  $digg-cir:            "\e11e";
+  $digg-icon:           "\e11f";
+      
+  $digg-c0:             $btn-shape-c0-default; // black bg 
+  $digg-c1:             $digg-icon; // white logo 
+
+
+// DRIBBBLE (2014)
+  $dribbble-sq:         "\e121";
+  $dribbble-r1:         "\e122";
+  $dribbble-r2:         "\e123";
+  $dribbble-r3:         "\e124";
+  $dribbble-cir:        "\e125";
+  $dribbble-icon:       "\e126";
+
+  $dribbble-c0:         $btn-shape-c0-default !default; // (better w no bg)
+  $dribbble-c1:         $btn-shape-cir-inner; // round bg, alt: "\e127"
+  $dribbble-c2:         "\e128"; // highlight
+  $dribbble-c3:         $dribbble-icon; // icon outline
+  $dribbble-c4:         "\e129"; // grey shadow (optional)
+
+
+// DROPBOX (2014)
+  $dropbox-sq:          "\e12a";
+  $dropbox-r1:          "\e12b";
+  $dropbox-r2:          "\e12c";
+  $dropbox-r3:          "\e12d";
+  $dropbox-cir:         "\e12e";
+  $dropbox-icon:        "\e12f";
+
+  $dropbox-c0:          $btn-shape-c0-default !default; // (better w no bg)
+  $dropbox-c1:          $dropbox-icon; // blue box 
+
+
+// EBAY (2014)
+  $ebay-sq:             "\e131";
+  $ebay-r1:             "\e132";
+  $ebay-r2:             "\e133";
+  $ebay-r3:             "\e134";
+  $ebay-cir:            "\e135";
+  $ebay-icon:           "\e136";
+
+  $ebay-c0:            $btn-shape-c0-default !default; // white bg
+  $ebay-c1:             "\e137"; // red "e"
+  $ebay-c1-alt:         "\e13a"; // red "e a"
+  $ebay-c2:             "\e138"; // blue "b"
+  $ebay-c2-alt:         "\e13b"; // blue "b y"
+  $ebay-c3:             "\e139"; // yellow "a"
+  $ebay-c3-alt:         "\e13c"; // yellow "ay"
+  $ebay-c4:             "\e140"; // green "y"
+
+
+// EMAIL
+  $email-sq:            "\e04a";
+  $email-r1:            "\e04b";
+  $email-r2:            "\e04c";
+  $email-r3:            "\e04d";
+  $email-cir:           "\e04e";
+  $email-icon:          "\e04f"; // envelope reversed
+  $email-icon-alt:      "\e050"; // envelope outline
+
+  $email-c0:            $btn-shape-c0-default !default; // btn bg (optional)
+  $email-c1:            "\e037"; // grey envelope bg (becomes outline)
+  $email-c2:            "\e048"; // lt grey envelope bottom
+  $email-c3:            "\e049"; // lighter top flap (optional)
+
+
+// EMAIL ALT (bolder, geometric style)
+  $email-alt-sq:        "\e051";
+  $email-alt-r1:        "\e052";
+  $email-alt-r2:        "\e053";
+  $email-alt-r3:        "\e054";
+  $email-alt-cir:       "\e055";
+  $email-alt-icon:      "\e056"; // 5x7 solid
+  $email-alt-icon-alt:  "\e057"; // 5x7 outline
+  $email-alt-icon-alt2: "\e047"; // square outline
+  $email-alt-icon-alt3: "\e058"; // #10 outline
+
+  $email-alt-c0:        $btn-shape-c0-default !default; // optional
+  $email-alt-c1:        $email-alt-r1 !default;
+
+  $email-alt-c0-alt0:   $btn-shape-sq !important; // lt. grey square (optional)
+  $email-alt-c1-alt0:   $email-alt-sq; // dk grey flaps
+
+  $email-alt-c0-alt1:    $btn-shape-r1 !important;  
+  $email-alt-c1-alt1:    $email-alt-r1; 
+
+  $email-alt-c0-alt2:   $btn-shape-r2 !important; 
+  $email-alt-c1-alt2:   $email-alt-r2; 
+
+  $email-alt-c0-alt3:   $btn-shape-r3 !important; 
+  $email-alt-c1-alt3:   $email-alt-r3; 
+
+  $email-alt-c0-alt4:   $btn-shape-cir !important; 
+  $email-alt-c1-alt4:   $email-alt-cir; 
+
+  $email-alt-c0-icon:   "\e038"; // lt. grey bg 5x7 - don't override
+  $email-alt-c1-icon:   $email-alt-icon-alt2; // grey outline 5x7
+
+  $email-alt-c0-icon-alt:   "\e039"; // lt. grey bg #10 - don't override
+  $email-alt-c1-icon-alt:   $email-alt-icon-alt3; // grey outline #10
+
+
+// EMAIL ALT 2 (stationery, w bottom-fold)
+  $email-alt2-sq:       "\e05a";
+  $email-alt2-r1:       "\e05b";
+  $email-alt2-r2:       "\e05c";
+  $email-alt2-r3:       "\e05d";
+  $email-alt2-cir:      "\e05e";
+  $email-alt2-icon:     "\e05f"; // 5x7 envelope
+
+  $email-alt2-c0:       $btn-shape-c0-default !default;
+  $email-alt2-c0-alt:   $btn-shape-sq !important; // lt grey bg
+  $email-alt2-c1:       $email-alt2-sq; 
+  $email-alt2-c1-alt0:  $email-alt2-c1;    
+  $email-alt2-c1-alt1:  $email-alt2-r1;  
+  $email-alt2-c1-alt2:  $email-alt2-r2;  
+  $email-alt2-c1-alt3:  $email-alt2-r3;  
+  $email-alt2-c1-alt4:  $email-alt2-cir;  
+
+  $email-alt2-c2:       "\e060"; // top flap shadow (optional)
+  $email-alt2-c2-cir:   "\e070"; // top shadow cropped by circle
+  
+  $email-alt2-c0-icon:  "\e038"; // 5x7 sq
+  $email-alt2-c1-icon:  $email-alt2-icon;
+  $email-alt2-c2-icon:  "\e040"; // top flap shadow (optional)
+
+
+// EVERNOTE (2014)
+  $evernote-sq:          "\e141";
+  $evernote-r1:          "\e142";
+  $evernote-r2:          "\e143";
+  $evernote-r3:          "\e144";
+  $evernote-cir:         "\e145";
+  $evernote-icon:        "\e146";
+
+  $evernote-c0:          $btn-shape-c0-default !default; // green bg - better w no bg
+  $evernote-c1:          $evernote-icon; // grey elephant
+  $evernote-c2:          "\e147"; // folded part of ear
+
+
+// FACEBOOK (2014)
+  $facebook-sq:          "\e021";
+  $facebook-r1:          "\e022";
+  $facebook-r2:          "\e023";
+  $facebook-r3:          "\e024";
+  $facebook-cir:         "\e027"; // "f" nudged left in circle
+  $facebook-cir-alt:     "\e025"; // "f" in line with other icons
+  $facebook-icon:        "\e026"; 
+  $facebook-icon-cir:    "\e028"; // "f" nudged left for circle
+
+  $facebook-c0:          $btn-shape-c0-default !default; // blue bg
+  $facebook-c1:          $facebook-icon; // white "f"
+  $facebook-c1-alt:      $facebook-icon-cir;
+
+
+// FACEBOOK ALT (2014 - centered "f")
+  $facebook-alt-sq:     "\e02a";
+  $facebook-alt-r1:     "\e02b";
+  $facebook-alt-r2:     "\e02c";
+  $facebook-alt-r3:     "\e02d";
+  $facebook-alt-cir:    "\e02e";
+  $facebook-alt-icon:   "\e02f";
+
+  $facebook-alt-c0:     $btn-shape-c0-default !default; // blue bg
+  $facebook-alt-c1:     $facebook-alt-icon; // centered "f"
+
+
+// FIND (See SEARCH in the NAV ELEMENTS above)
+
+
+// FLATTR (2014)
+  $flattr-sq:           "\e14a";
+  $flattr-r1:           "\e14b";
+  $flattr-r2:           "\e14c";
+  $flattr-r3:           "\e14d";
+  $flattr-cir:          "\e14e";
+  $flattr-icon:         "\e14f";
+
+  $flattr-c0:           $btn-shape-c0-default !default; // dark bg
+  $flattr-c1:           "\e148"; // orange l
+  $flattr-c2:           "\e149"; // green r
+  // no bg
+  $flattr-c0-alt:       $flattr-c1;
+  $flattr-c1-alt:       $flattr-c2;
+
+
+// FLICKR (2014)
+  $flickr-sq:           "\e151";
+  $flickr-r1:           "\e152";
+  $flickr-r2:           "\e153";
+  $flickr-r3:           "\e154";
+  $flickr-cir:          "\e155";
+  $flickr-icon:         "\e156";
+
+  $flickr-c0:           $btn-shape-c0-default !default; // white bg
+  $flickr-c1:           "\e157"; // blue dot l
+  $flickr-c2:           "\e158"; // pink dot r
+  // no bg
+  $flickr-c0-alt:       $flickr-c1;
+  $flickr-c1-alt:       $flickr-c2;
+
+
+// FORRST (2014)
+  $forrst-sq:           "\e15a";
+  $forrst-r1:           "\e15b";
+  $forrst-r2:           "\e15c";
+  $forrst-r3:           "\e15d";
+  $forrst-cir:          "\e15e";
+  $forrst-icon:         "\e15f";
+
+  $forrst-c0:           $btn-shape-c0-default !default;
+  $forrst-c1:           $forrst-icon; // green tree
+  $forrst-c1-alt:       "\e159"; // tree triangle
+  $forrst-c2:           "\e15f"; // tree trunk (optional)
+
+
+// FOURSQUARE (2014 - iOS 7 icon)
+  $foursquare-sq:       "\e161";
+  $foursquare-r1:       "\e162";
+  $foursquare-r2:       "\e163";
+  $foursquare-r3:       "\e164";
+  $foursquare-cir:      "\e165";
+  $foursquare-icon:     "\e166";
+
+  $foursquare-c0:       $btn-shape-c0-default !default;  // lt blue bg
+  $foursquare-c1:       "\e167"; // dk blue diamond
+  $foursquare-c2:       "\e168"; // green ball
+  $foursquare-c3:       "\e16b"; // white swoosh rounded1
+
+  $foursquare-c0-alt0:  $btn-shape-sq;  // blue sq
+  $foursquare-c0-alt1:  $btn-shape-r1;  // 
+  $foursquare-c0-alt2:  $btn-shape-r2 !important;  // blue rounded2
+  $foursquare-c0-alt3:  $btn-shape-r3 !important;  // blue rounded3
+  $foursquare-c0-alt4:  $btn-shape-cir !important; // blue circle
+  $foursquare-c3-alt0:   "\e16a"; // white swoosh square
+  $foursquare-c3-alt1:  $foursquare-c3; // r1
+  $foursquare-c3-alt2:  "\e16c"; // white swoosh rounded2
+  $foursquare-c3-alt3:  "\e16d"; // white swoosh rounded3
+  $foursquare-c3-alt4:  "\e16e"; // white swoosh circle
+
+
+// GITHUB (2014 - Octocat)
+  $github-sq:           "\e17a";
+  $github-r1:           "\e17b";
+  $github-r2:           "\e17c";
+  $github-r3:           "\e17d";
+  $github-cir:          "\e17e";
+  $github-icon:         "\e17f"; // nudged up to center
+  $github-icon-alt:     "\e177"; // nudged up silhouette
+  $github-icon-alt2:    "\e180"; // lower, in line w btn
+
+  $github-c0:           $btn-shape-c0-default !default;
+  $github-c1:           "\e178"; // black octocat
+  $github-c1-alt:       "\e179"; // reflection
+  $github-c1-alt2:      "\e177"; // full silhouette
+  $github-c2:           "\e174"; // lt orange face
+  $github-c2-alt:       "\e173"; // lt orange face no eye holes (for dark bg)
+  $github-c3:           "\e175"; // dk red eyes & mouth
+  $github-c4:           "\e176"; // lt blue water (rgba)
+
+
+// GITHUB ALT (2014 - Simplified Silhouette - official)
+  $github-alt-sq:       "\e181";
+  $github-alt-r1:       "\e182";
+  $github-alt-r2:       "\e183";
+  $github-alt-r3:       "\e184";
+  $github-alt-cir:      "\e185";
+  $github-alt-icon:     "\e186";
+  $github-alt-icon-alt: "\e188"; // larger - btn-shape-cir
+
+  $github-alt-c0:       $btn-shape-c0-default !default;
+  $github-alt-c0-alt:   $btn-shape-cir-inner !important; // light grey med circle
+  $github-alt-c1:       $github-alt-icon;
+  $github-alt-c2:       "\e187"; // black silhouette no circle
+  $github-alt-c2-alt:   "\e189"; // larger - for btn-shape-cir
+
+
+// GITTIP (2014)
+  $gittip-sq:           "\e18a";
+  $gittip-r1:           "\e18b";
+  $gittip-r2:           "\e18c";
+  $gittip-r3:           "\e18d";
+  $gittip-cir:          "\e18e";
+  $gittip-icon:         "\e18f";
+
+  $gittip-c0:           $btn-shape-c0-default !default;
+  $gittip-c0-alt:       $btn-shape-cir !important; // brown circle
+  $gittip-c1:           $gittip-icon; // white heart
+
+
+// GMAIL (2014)
+  $gmail-sq:            "\e191";
+  $gmail-r1:            "\e192";
+  $gmail-r2:            "\e193";
+  $gmail-r3:            "\e194";
+  $gmail-cir:           "\e195";
+  $gmail-icon:          "\e196"; // no bottom lines
+  $gmail-icon-alt:      "\e190"; // bottom lines
+
+  $gmail-c0:            $btn-shape-c0-default !default;
+  $gmail-c1:            "\e197"; // lt beige bg
+  $gmail-c2:            "\e198"; // red "M"
+  $gmail-c3:            "\e199"; // shadow rgba
+  $gmail-c3-alt:        "\e19e"; // shadow non-rgba
+  $gmail-c4:            "\e19d"; // lighter envelope flap (optional)
+  $gmail-c4-alt:        "\e19b"; // darker red "M" stem non-rgba
+
+
+// GMAIL ALT (late 2013 - iOS 7 icon)
+  $gmail-alt-sq:        $gmail-sq;
+  $gmail-alt-r1:        $gmail-r1;
+  $gmail-alt-r2:        $gmail-r2;
+  $gmail-alt-r3:        $gmail-r3;
+  $gmail-alt-cir:       $gmail-cir;
+  $gmail-alt-icon:      $gmail-icon;
+  $gmail-alt-icon-alt:  $gmail-icon-alt;
+
+  $gmail-alt-c0:        $btn-shape-c0-default !default;
+  $gmail-alt-c1:        "\e197"; // lt grey bg
+  $gmail-alt-c2:        "\e198"; // red "M"
+  $gmail-alt-c3:        "\e19a"; // alt shadow rgba
+  $gmail-alt-c3-alt:    "\e19f"; // alt shadow non-rgba
+  $gmail-alt-c4:        "\e19d"; // lighter envelope flap
+  $gmail-alt-c4-alt:    "\e19c"; // alt darker "M" stems non-rgba
+
+
+// * GMAIL LARGE (2014 - larger "btn-size" icon) *
+
+  $gmail-lg-sq:         $gmail-sq;
+  $gmail-lg-r1:         $gmail-r1;
+  $gmail-lg-r2:         $gmail-r2;
+  $gmail-lg-r3:         $gmail-r3;
+  $gmail-lg-cir:        $gmail-cir;
+  $gmail-lg-icon:       "\e201"; // no bottom lines
+  $gmail-lg-icon-alt:   "\e200"; // bottom lines
+
+  $gmail-lg-c0:         "\e202" !important; // light beige bg
+  $gmail-lg-c1:         "\e203"; // red "M"
+  $gmail-lg-c2:         "\e204"; // shadow rgba
+  $gmail-lg-c2-alt:     "\e209"; // shadow non-rgba 
+  $gmail-lg-c3:         "\e208"; // lighter envelope flap
+  $gmail-lg-c3-alt:     "\e206"; // darker "M" stem non-rgba
+
+
+// * GMAIL LARGE (2014 - larger "btn-size" icon) *
+
+  $gmail-lg-alt-sq:         $gmail-sq;
+  $gmail-lg-alt-r1:         $gmail-r1;
+  $gmail-lg-alt-r2:         $gmail-r2;
+  $gmail-lg-alt-r3:         $gmail-r3;
+  $gmail-lg-alt-cir:        $gmail-cir;
+  $gmail-lg-alt-icon:       "\e201"; // no bottom lines
+  $gmail-lg-alt-icon-alt:   "\e200"; // bottom lines
+
+  $gmail-lg-alt-c0:         "\e202" !important; // light beige bg
+  $gmail-lg-alt-c1:         "\e203"; // red "M"
+
+  $gmail-lg-alt-c2:         "\e205"; // alt shadow rgba (iOS 7)
+  $gmail-lg-alt-c2-alt:     "\e209"; // alt shadow non-rgba 
+  $gmail-lg-alt-c3:         "\e208"; // lighter envelope flap (iOS 7)
+  $gmail-lg-alt-c3-alt:     "\e207"; // darker "M" stems non-rgba (iOS 7)
+
+
+// GOOGLE SEARCH (2014)
+  $google-sq:           "\e20a";
+  $google-r1:           "\e20b";
+  $google-r2:           "\e20c";
+  $google-r3:           "\e20d";
+  $google-cir:          "\e20e";
+  $google-icon:         "\e20f";
+
+  $google-c0:           $btn-shape-c0-default; // blue bg
+  $google-c1:           $google-icon; // white "g"
+  $google-c2:           "\e00e"; // bottom shape shadow (optional)
+
+
+// GOOGLE+ (2014)
+  $googleplus-sq:       "\e03a";
+  $googleplus-r1:       "\e03b";
+  $googleplus-r2:       "\e03c";
+  $googleplus-r3:       "\e03d";
+  $googleplus-cir:      "\e03e";
+  $googleplus-icon:     "\e03f";
+
+  $googleplus-c0:       $btn-shape-c0-default !default; // red bg
+  $googleplus-c1:       $googleplus-icon; // white "g+"
+  $googleplus-c2:       "\e00e"; // bottom shape shadow (optional)
+
+
+// IMDB (2014)
+  $imdb-sq:             "\e211";
+  $imdb-r1:             "\e212";
+  $imdb-r2:             "\e213";
+  $imdb-r3:             "\e214";
+  $imdb-cir:            "\e215";
+  $imdb-icon:           "\e216";
+  $imdb-icon-alt:       "\e217"; // reversed - ticket sized
+
+  $imdb-c0:             $btn-shape-c0-default !default;
+  $imdb-c1:             "\e21a"; // spotlight l rounded1
+  $imdb-c3:             $imdb-icon; // black - add white text-shadow for glow
+  $imdb-c3-alt:         $imdb-icon-alt;
+
+  $imdb-c0-alt0:        $btn-shape-sq;
+  $imdb-c0-alt1:        $btn-shape-r1; // gold rounded1 - don't override
+  $imdb-c0-alt2:        $btn-shape-r2; // gold rounded2 - don't override
+  $imdb-c0-alt3:        $btn-shape-r3; // gold rounded3 - don't override
+  $imdb-c0-alt4:        $btn-shape-cir; // gold circle - don't override
+
+  $imdb-c1-alt0:        "\e218"; // spotlight l sq
+  $imdb-c1-alt1:        "\e21a"; // spotlight l rounded1
+  $imdb-c1-alt2:        "\e21b"; // spotlight l rounded2
+  $imdb-c1-alt3:        "\e21c"; // spotlight l rounded3
+  $imdb-c1-alt4:        "\e21e"; // spotlight l circle
+
+  $imdb-c2-alt0:        "\e219"; // spotlight r sq
+  $imdb-c2-alt1:        $imdb-c2-alt0; // spotlight r r1
+  $imdb-c2-alt2:        $imdb-c2-alt0; // spotlight r r2
+  $imdb-c2-alt3:        "\e21d"; // spotlight r rounded3
+  $imdb-c2-alt4:        "\e21f"; // spotlight r circle
+
+
+// INSTAGRAM (2014 - official)
+  $instagram-sq:        "\e221";
+  $instagram-r1:        "\e222";
+  $instagram-r2:        "\e223";
+  $instagram-r3:        "\e224";
+  $instagram-cir:       "\e225";
+  $instagram-icon:      "\e226";
+
+  $instagram-c0:        $btn-shape-c0-default !default;
+  $instagram-c1:        "\e220"; // full camera bg
+  $instagram-c1-alt:    "\e228"; // just the beige bottom
+  $instagram-c2:        $instagram-icon; // tan outline
+  $instagram-c3:        "\e227"; // brown top
+  $instagram-c4:        "\e229"; // lens
+  $instagram-c4-alt:    "\e250"; // lens & flash
+
+  // color bars - need 2 extra spans
+  $instagram-c5:        "\e23c"; // red bar
+  $instagram-c6:        "\e23d"; // yellow bar
+  $instagram-c7:        "\e23e"; // green bar
+  $instagram-c8:        "\e23f"; // blue bar
+
+
+// INSTAGRAM ALT (2014 - bold, stylized)
+  $instagram-alt-sq:    "\e22a";
+  $instagram-alt-r1:    "\e22b";
+  $instagram-alt-r2:    "\e22c";
+  $instagram-alt-r3:    "\e22d";
+  $instagram-alt-cir:   "\e22e";
+  $instagram-alt-icon:  "\e22f";
+
+  $instagram-alt-c0: $btn-shape-r2 !important; // (optional)
+  $instagram-alt-c1: "\e235"; // brown top rounded2
+  $instagram-alt-c2: "\e236"; // tan bottom rounded2
+  $instagram-alt-c3: "\e259"; // black lens
+
+  $instagram-alt-c0-alt0: $btn-shape-sq !important; // (optional)
+  $instagram-alt-c1-alt0: "\e231"; // brown top sq
+  $instagram-alt-c2-alt0: "\e232"; // tan bottom sq
+
+  $instagram-alt-c0-alt1: $btn-shape-r1 !important; // (optional)
+  $instagram-alt-c1-alt1: "\e233"; // brown top rounded1
+  $instagram-alt-c2-alt1: "\e234"; // tan bottom rounded1
+
+  $instagram-alt-c0-alt2: $btn-shape-r2 !important; // (optional)
+  $instagram-alt-c1-alt2: "\e235"; // brown top rounded2
+  $instagram-alt-c2-alt2: "\e236"; // tan bottom rounded2
+  $instagram-alt-c3-alt2: $instagram-alt-c3; // black lens
+
+  $instagram-alt-c0-alt3: $btn-shape-r3 !important; // (optional)
+  $instagram-alt-c1-alt3: "\e237"; // brown top rounded3
+  $instagram-alt-c2-alt3: "\e238"; // tan bottom rounded3
+  $instagram-alt-c3-alt3: $instagram-alt-c3; // black lens
+
+  $instagram-alt-c0-alt4: $btn-shape-cir !important; // (optional)
+  $instagram-alt-c1-alt4: "\e239"; // brown top circle
+  $instagram-alt-c2-alt4: "\e23a"; // tan bottom circle
+  $instagram-alt-c3-alt4: $instagram-alt-c3; // black lens
+
+  $instagram-alt-c1-icon: "\e247"; // brown top
+  $instagram-alt-c2-icon: "\e248"; // tan bottom
+  $instagram-alt-c3-icon: "\e229"; // lens (smaller)
+
+
+// INSTAGRAM ALT 2 (2014 - iOS icon vectorized)
+  $instagram-alt2-sq:   "\e241";
+  $instagram-alt2-r1:   "\e242";
+  $instagram-alt2-r2:   "\e243";
+  $instagram-alt2-r3:   "\e244";
+  $instagram-alt2-cir:  "\e245";
+  $instagram-alt2-icon: "\e246";
+
+  $instagram-alt2-c0:   $btn-shape-c0-default;
+  $instagram-alt2-c1:   "\e230"; // bg minus lens & flash
+  $instagram-alt2-c1-alt: "\e248"; // just the bottom
+  $instagram-alt2-c1-alt2: "\e240"; // solid bg
+  $instagram-alt2-c2:   "\e269"; // outline & top no lens
+  $instagram-alt2-c3:   "\e247"; // brown top
+  $instagram-alt2-c4:   "\e249"; // lens
+  $instagram-alt2-c4-alt: "\e260"; // lens & flash
+
+  // color bars - adds extra spans
+  $instagram-alt2-c5:   $instagram-c5; // red bar
+  $instagram-alt2-c6:   $instagram-c6; // yellow bar
+  $instagram-alt2-c7:   $instagram-c7; // green bar
+  $instagram-alt2-c8:   $instagram-c8; // blue bar
+
+
+// KICKSTARTER (2014)
+  $kickstarter-sq:      "\e24a";
+  $kickstarter-r1:      "\e24b";
+  $kickstarter-r2:      "\e24c";
+  $kickstarter-r3:      "\e24d";
+  $kickstarter-cir:     "\e24e";
+  $kickstarter-icon:    "\e24f";
+
+  $kickstarter-c0:      $btn-shape-c0-default; // black bg
+  $kickstarter-c1:      $kickstarter-icon; // green "k"
+
+
+// LAST.FM (2014)
+  $lastfm-sq:           "\e251";
+  $lastfm-r1:           "\e252";
+  $lastfm-r2:           "\e253";
+  $lastfm-r3:           "\e254";
+  $lastfm-cir:          "\e255";
+  $lastfm-icon:         "\e256";
+
+  $lastfm-c0:           $btn-shape-c0-default; // red bg
+  $lastfm-c1:           $lastfm-icon; // white logo
+
+
+// LINKED IN (2014)
+  $linkedin-sq:         "\e25a";
+  $linkedin-r1:         "\e25b";
+  $linkedin-r2:         "\e25c";
+  $linkedin-r3:         "\e25d";
+  $linkedin-cir:        "\e25e";
+  $linkedin-icon:       "\e25f";
+
+  $linkedin-c0:         $btn-shape-c0-default; // blue bg
+  $linkedin-c1:         $linkedin-icon; // white "in"
+
+
+// MICROSOFT (2014 - Microsoft Logo - square)
+// See also WINDOWS below
+
+  $microsoft-sq:        "\e37a";
+  $microsoft-r1:        "\e37b";
+  $microsoft-r2:        "\e37c";
+  $microsoft-r3:        "\e37d";
+  $microsoft-cir:       "\e37e";
+  $microsoft-icon:      "\e37f";
+
+  $microsoft-c0:        $btn-shape-c0-default;
+  $microsoft-c1:        "\e357"; // red (+yellow)
+  $microsoft-c2:        "\e358"; // blue (+green)
+  $microsoft-c3:        "\e359"; // yellow (+green)
+
+  $microsoft-c1-icon:   "\e377"; // red sq ul
+  $microsoft-c2-icon:   "\e378"; // green sq ur
+  $microsoft-c3-icon:   "\e379"; // yellow sq lr
+  $microsoft-c4-icon:   "\e380"; // blue sq ll
+
+
+// MYSPACE (2014)
+  $myspace-sq:          "\e261";
+  $myspace-r1:          "\e262";
+  $myspace-r2:          "\e263";
+  $myspace-r3:          "\e264";
+  $myspace-cir:         "\e265";
+  $myspace-icon:        "\e266";
+
+  $myspace-c0:          $btn-shape-c0-default; // dk grey bg
+  $myspace-c1:          $myspace-icon; // white logo
+
+
+// PANDORA (2014)
+  $pandora-sq:          "\e26a";
+  $pandora-r1:          "\e26b";
+  $pandora-r2:          "\e26c";
+  $pandora-r3:          "\e26d";
+  $pandora-cir:         "\e26e";
+  $pandora-icon:        "\e26f";
+
+  $pandora-c0:          $btn-shape-c0-default; // lt grey bg
+  $pandora-c1:          $pandora-icon; // blue "P"
+
+
+// PAYPAL (2014)
+  $paypal-sq:           "\e271";
+  $paypal-r1:           "\e272";
+  $paypal-r2:           "\e273";
+  $paypal-r3:           "\e274";
+  $paypal-cir:          "\e275";
+  $paypal-icon:         "\e276";
+ 
+  $paypal-c0:           $btn-shape-c0-default;
+  $paypal-c1:           "\e277"; // blue "P"
+  $paypal-c2:           "\e278"; // light blue shadow
+
+
+// PICASA (2014)
+  $picasa-sq:           "\e27a";
+  $picasa-r1:           "\e27b";
+  $picasa-r2:           "\e27c";
+  $picasa-r3:           "\e27d";
+  $picasa-cir:          "\e27e";
+  $picasa-icon:         "\e27f"; // solid
+  $picasa-icon-alt:     "\e280"; // outline
+ 
+  $picasa-c0:           $btn-shape-c0-default; 
+  $picasa-c0-alt:       "\e286"; // round bg
+  $picasa-c1:           "\e281"; // shutter1 red + purple + yellow
+  $picasa-c2:           "\e282"; // shutter2 yellow + green
+  $picasa-c3:           "\e283"; // shutter3 blue + purple + green
+  $picasa-c4:           $picasa-icon-alt; // lt grey "spokes"
+
+
+// PICASA-ALT (2014 - requires 2 extra spans)
+  $picasa-alt-sq:       $picasa-sq;
+  $picasa-alt-r1:       $picasa-r1;
+  $picasa-alt-r2:       $picasa-r2;
+  $picasa-alt-r3:       $picasa-r3;
+  $picasa-alt-cir:      $picasa-cir;
+  $picasa-alt-icon:     $picasa-icon; // solid
+  $picasa-alt-icon-alt: $picasa-icon-alt; // outline
+
+  $picasa-alt-c0:       $btn-shape-c0-default; 
+  $picasa-alt-c1:       "\e284"; // shutter1 red 
+  $picasa-alt-c2:       "\e285"; // shutter2 yellow 
+  $picasa-alt-c3:       "\e286"; // shutter3 green 
+  $picasa-alt-c4:       "\e287"; // shutter4 blue 
+  $picasa-alt-c5:       "\e288"; // shutter5 purple 
+  $picasa-alt-c6:       $picasa-alt-icon-alt;
+
+
+// PINBOARD (2014)
+  $pinboard-sq:         "\e28a";
+  $pinboard-r1:         "\e28b";
+  $pinboard-r2:         "\e28c";
+  $pinboard-r3:         "\e28d";
+  $pinboard-cir:        "\e28e";
+  $pinboard-icon:       "\e28f";
+
+  $pinboard-c0:         $btn-shape-c0-default; // blue bg
+  $pinboard-c1:         $pinboard-icon; // white icon
+
+
+// PINTEREST (2014)
+  $pinterest-sq:        "\e291";
+  $pinterest-r1:        "\e292";
+  $pinterest-r2:        "\e293";
+  $pinterest-r3:        "\e294";
+  $pinterest-cir:       "\e295";
+  $pinterest-icon:      "\e29f"; // P inside circle
+  $pinterest-icon-alt:  "\e296"; // just the P uncropped
+
+  $pinterest-c0:        $btn-shape-c0-default !default;
+  $pinterest-c0-alt:    $btn-shape-cir !important; // red round bg - don't override
+  $pinterest-c1:        "\e297"; // big P cropped by bottom
+  $pinterest-c1-alt:    $pinterest-icon-alt; // big P uncropped
+  $pinterest-c1-cir:    "\e298"; // big P cropped by big circle
+  $pinterest-icon-c1:   "\e299"; // little P cropped by smaller circle
+
+// PINTEREST ALT (2014)
+  $pinterest-alt-sq:    "\e29a";
+  $pinterest-alt-r1:    "\e29b";
+  $pinterest-alt-r2:    "\e29c";
+  $pinterest-alt-r3:    "\e29d";
+  $pinterest-alt-cir:   "\e29e";
+  $pinterest-alt-icon:  "\e29f";
+
+  $pinterest-alt-c0:    $btn-shape-c0-default !default; // red bg
+  $pinterest-alt-c0-alt: $btn-shape-cir-inner !important; // round bg
+  $pinterest-alt-c1:    $btn-shape-cir-inner; // red smaller circle
+  $pinterest-alt-c2:    "\e299"; // little P cropped by smaller circle
+
+
+// PODCAST
+  $podcast-sq:        "\e301";
+  $podcast-r1:        "\e302";
+  $podcast-r2:        "\e303";
+  $podcast-r3:        "\e304";
+  $podcast-cir:       "\e305";
+  $podcast-icon:      "\e306";
+
+  $podcast-c0:        $btn-shape-c0-default !default; // purple bg
+  $podcast-c1:        "\e307"; // dk grey "person"
+  $podcast-c2:        "\e308"; // purple waves
+  $podcast-c3:        "\e309"; // inner wave
+
+
+// RDIO (2014)
+  $rdio-sq:           "\e30a";
+  $rdio-r1:           "\e30b";
+  $rdio-r2:           "\e30c";
+  $rdio-r3:           "\e30d";
+  $rdio-cir:          "\e30e";
+  $rdio-icon:         "\e30f";
+       
+  $rdio-c0:           $btn-shape-c0-default; // blue bg
+  $rdio-c1:           $rdio-icon; // white logo
+
+
+// REDDIT (2014)
+  $reddit-sq:           "\e311";
+  $reddit-r1:           "\e312";
+  $reddit-r2:           "\e313";
+  $reddit-r3:           "\e314";
+  $reddit-cir:          "\e315";
+  $reddit-icon:         "\e316";
+
+  $reddit-c0:           $btn-shape-c0-default; // light blue bg
+  $reddit-c1:           "\e317"; // white head silhouette
+  $reddit-c2:           "\e318"; // head outline no eyes
+  $reddit-c3:           "\e319"; // red eyes
+ 
+
+// RSS (2014)
+  $rss-sq:              "\e041";
+  $rss-r1:              "\e042";
+  $rss-r2:              "\e043";
+  $rss-r3:              "\e044";
+  $rss-cir:             "\e045";
+  $rss-icon:            "\e046";
+
+  $rss-c0:              $btn-shape-c0-default; // orange bg
+  $rss-c1:              $rss-icon; // white icon
+
+
+// SEARCH (see NAVIGATION ELEMENTS above)
+
+
+// SHARETHIS (2014)
+  $sharethis-sq:        "\e31a";
+  $sharethis-r1:        "\e31b";
+  $sharethis-r2:        "\e31c";
+  $sharethis-r3:        "\e31d";
+  $sharethis-cir:       "\e31e";
+  $sharethis-icon:      "\e31f";
+       
+  $sharethis-c0:        $btn-shape-c0-default; // green bg
+  $sharethis-c1:        $sharethis-icon; // white logo
+
+
+// SKYPE (2014)
+  $skype-sq:            "\e321";
+  $skype-r1:            "\e322";
+  $skype-r2:            "\e323";
+  $skype-r3:            "\e324";
+  $skype-cir:           "\e325";
+  $skype-icon:          "\e326";
+
+  $skype-c0:            $btn-shape-c0-default;
+  $skype-c1:            "\e327"; // blue cloud shape
+  $skype-c2:            "\e320"; // white "s"
+
+
+// SLIDESHARE (2014)
+  $slideshare-sq:       "\e32a";
+  $slideshare-r1:       "\e32b";
+  $slideshare-r2:       "\e32c";
+  $slideshare-r3:       "\e32d";
+  $slideshare-cir:      "\e32e";
+  $slideshare-icon:     "\e32f";
+       
+  $slideshare-c0:       $btn-shape-c0-default;
+  $slideshare-c1:       $slideshare-icon; // grey icon w sceen border
+  $slideshare-c1-alt:   "\e330"; // grey sceen border only
+  $slideshare-c1-alt2:  "\e337"; // white screen bg (optional - from favicon)
+  $slideshare-c2:       "\e328"; // blue person r
+  $slideshare-c3:       "\e329"; // orange person l
+
+
+// SOUNDCLOUD (2014)
+  $soundcloud-sq:       "\e331";
+  $soundcloud-r1:       "\e332";
+  $soundcloud-r2:       "\e333";
+  $soundcloud-r3:       "\e334";
+  $soundcloud-cir:      "\e335";
+  $soundcloud-icon:     "\e336";
+
+  $soundcloud-c0:       $btn-shape-c0-default; // orange bg
+  $soundcloud-c1:       "\e336"; // white cloud
+
+
+// SPOTIFY (2014)
+  $spotify-sq:          "\e33a";
+  $spotify-r1:          "\e33b";
+  $spotify-r2:          "\e33c";
+  $spotify-r3:          "\e33d";
+  $spotify-cir:         "\e33e";
+  $spotify-icon:        "\e33f";
+
+  $spotify-c0:          $btn-shape-c0-default; // grey bg
+  $spotify-c1:          $btn-shape-cir-inner; // green cir - don't override
+  $spotify-c1-alt:      $spotify-icon;
+  $spotify-c2:          "\e340"; // black waves
+
+
+// STACKICONS ICON (2014)
+  $stackicons-sq:       "\e611";
+  $stackicons-r1:       "\e612";
+  $stackicons-r2:       "\e613";
+  $stackicons-r3:       "\e614";
+  $stackicons-cir:      "\e615";
+  $stackicons-icon:     "\e616";
+
+  $stackicons-c0:       $btn-shape-c0-default;
+  $stackicons-c1:       "\e617"; // dk red outer
+  $stackicons-c2:       "\e618"; // red middle
+  $stackicons-c3:       "\e619"; // orange inner
+
+
+// STACKICONS LOGO (2014)
+  $stackicons-logo-icon: "\e60b"; // logo
+  $stackicons-logo-icon-alt: "\e60a"; // logo reversed
+
+  $stackicons-logo-c0:  "\e60c" !important; // dk red outer
+  $stackicons-logo-c1:  "\e60d"; // red middle
+  $stackicons-logo-c2:  "\e60e"; // orange inner
+  $stackicons-logo-c3:  "\e60f"; // lt orange inner
+
+
+// STACK OVERFLOW (2014)
+  $stackoverflow-sq:    "\e341";
+  $stackoverflow-r1:    "\e342";
+  $stackoverflow-r2:    "\e343";
+  $stackoverflow-r3:    "\e344";
+  $stackoverflow-cir:   "\e345";
+  $stackoverflow-icon:  "\e346";
+
+  $stackoverflow-c0:    $btn-shape-c0-default; 
+  $stackoverflow-c1:    "\e347"; // bottom tray +2
+  $stackoverflow-c2:    "\e348"; // orange lines x5
+  $stackoverflow-c2-alt: "\e34a"; // orange lines x4
+  $stackoverflow-c3:    "\e349"; // bottom tray +4  
+  $stackoverflow-c4:    "\e34c"; // red-orange line top
+
+
+// STUMBLEUPON (2014)
+  $stumbleupon-sq:      "\e351";
+  $stumbleupon-r1:      "\e352";
+  $stumbleupon-r2:      "\e353";
+  $stumbleupon-r3:      "\e354";
+  $stumbleupon-cir:     "\e355";
+  $stumbleupon-icon:    "\e356";
+
+  $stumbleupon-c0:      $btn-shape-c0-default; // orange bg
+  $stumbleupon-c0-alt:  $btn-shape-cir !important; // orange circle
+  $stumbleupon-c1:      $stumbleupon-icon; // white icon
+
+
+// TUMBLR (2014)
+  $tumblr-sq:           "\e35a";
+  $tumblr-r1:           "\e35b";
+  $tumblr-r2:           "\e35c";
+  $tumblr-r3:           "\e35d";
+  $tumblr-cir:          "\e35e";
+  $tumblr-icon:         "\e35f";
+
+  $tumblr-c0:           $btn-shape-c0-default; // blue bg
+  $tumblr-c1:           $tumblr-icon; // white icon
+
+
+// TWITTER (2014)
+  $twitter-sq:          "\e031";
+  $twitter-r1:          "\e032";
+  $twitter-r2:          "\e033";
+  $twitter-r3:          "\e034";
+  $twitter-cir:         "\e035";
+  $twitter-icon:        "\e036";
+
+  $twitter-c0:          $btn-shape-c0-default !default; // blue bg
+  $twitter-c1:          $twitter-icon; // white icon
+
+
+// VIMEO (2014)
+  $vimeo-sq:            "\e361";
+  $vimeo-r1:            "\e362";
+  $vimeo-r2:            "\e363";
+  $vimeo-r3:            "\e364";
+  $vimeo-cir:           "\e365";
+  $vimeo-icon:          "\e366";
+
+  $vimeo-c0:            $btn-shape-c0-default; // blue bg
+  $vimeo-c1:            $vimeo-icon; // white icon
+
+
+// VINE (2014)
+  $vine-sq:             "\e36a";
+  $vine-r1:             "\e36b";
+  $vine-r2:             "\e36c";
+  $vine-r3:             "\e36d";
+  $vine-cir:            "\e36e";
+  $vine-icon:           "\e36f";
+
+  $vine-c0:             $btn-shape-c0-default; // green bg
+  $vine-c1:             $vine-icon; // white icon
+
+
+// WINDOWS (2014 - Windows 8)
+  $windows-sq:          "\e371";
+  $windows-r1:          "\e372";
+  $windows-r2:          "\e373";
+  $windows-r3:          "\e374";
+  $windows-cir:         "\e375";
+  $windows-icon:        "\e376";
+
+  $windows-c0:          $btn-shape-c0-default; // blue bg
+  $windows-c1:          $windows-icon; // white icon
+
+
+// WINDOWS 7 (2014 - wavy)
+  $windows7-sq:         "\e381";
+  $windows7-r1:         "\e382";
+  $windows7-r2:         "\e383";
+  $windows7-r3:         "\e384";
+  $windows7-cir:        "\e385";
+  $windows7-icon:       "\e386";
+    
+  $windows7-c0:         $btn-shape-c0-default;
+  $windows7-c1:         "\e367"; // red (+yellow)
+  $windows7-c2:         "\e368"; // blue (+green)
+  $windows7-c3:         "\e369"; // yellow (+green)
+
+  $windows7-c1-icon:    "\e387"; // red sq ul
+  $windows7-c2-icon:    "\e388"; // green sq ur
+  $windows7-c3-icon:    "\e389"; // yellow sq lr
+  $windows7-c4-icon:    "\e390"; // blue sq ll
+
+// WORDPRESS (2014)
+  $wordpress-sq:        "\e38a";
+  $wordpress-r1:        "\e38b";
+  $wordpress-r2:        "\e38c";
+  $wordpress-r3:        "\e38d";
+  $wordpress-cir:       "\e38e";
+  $wordpress-icon:      "\e38f";
+
+  $wordpress-c0:        $btn-shape-c0-default; // blue or grey bg
+  $wordpress-c1:        $wordpress-icon; // white icon
+
+
+// XING (2014)
+  $xing-sq:             "\e391";
+  $xing-r1:             "\e392";
+  $xing-r2:             "\e393";
+  $xing-r3:             "\e394";
+  $xing-cir:            "\e395";
+  $xing-icon:           "\e396";
+
+  $xing-c0:             $btn-shape-c0-default; // white bg
+  $xing-c1:             "\e397"; // dk green l
+  $xing-c2:             "\e398"; // lt green r
+
+
+// YAHOO (2014)
+  $yahoo-sq:            "\e39a";
+  $yahoo-r1:            "\e39b";
+  $yahoo-r2:            "\e39c";
+  $yahoo-r3:            "\e39d";
+  $yahoo-cir:           "\e39e";
+  $yahoo-icon:          "\e39f";
+  $yahoo-icon-alt:      "\e399"; // reversed in scalloped square
+ 
+  $yahoo-c0:            $btn-shape-c0-default; // blue or grey bg
+  $yahoo-c0-alt:        "\e400"; // scalloped square
+  $yahoo-c1:            $yahoo-icon; // white icon
+
+// YAHOO-ALT (2014)
+  $yahoo-alt-sq:        "\e399"; // reversed in scalloped square
+  $yahoo-alt-r1:        "\e39b";
+  $yahoo-alt-r2:        "\e39c";
+  $yahoo-alt-r3:        "\e39d";
+  $yahoo-alt-cir:       "\e39e";
+  $yahoo-alt-icon:      "\e409"; // reversed in scalloped square smaller
+  $yahoo-alt-icon-alt:  "\e39f"; // Y
+ 
+  $yahoo-alt-c0:        $btn-shape-c0-default;
+  $yahoo-alt-c0-alt:    "\e400" !important; // scalloped square
+  $yahoo-alt-c1:        $yahoo-icon; // white icon
+  $yahoo-alt-c0-icon:   "\e360"; // scalloped square smaller
+  $yahoo-alt-c1-icon:   "\e370"; // white icon smaller
+
+
+// YELP (2014)
+  $yelp-sq:             "\e401";
+  $yelp-r1:             "\e402";
+  $yelp-r2:             "\e403";
+  $yelp-r3:             "\e404";
+  $yelp-cir:            "\e405";
+  $yelp-icon:           "\e406";
+
+  $yelp-c0:             $btn-shape-c0-default; // red bg (optional)
+  $yelp-c1:             "\e407"; // inset (text-shadow 0 -1px for bevel)
+  $yelp-c2:             "\e408"; // white outline
+  $yelp-c2-alt:         $yelp-icon; // red asterisk
+
+
+// YELP ALT (2014)
+  $yelp-alt-sq:         "\e40a";
+  $yelp-alt-r1:         "\e40b";
+  $yelp-alt-r2:         "\e40c";
+  $yelp-alt-r3:         "\e40d";
+  $yelp-alt-cir:        "\e40e";
+  $yelp-alt-icon:       $yelp-icon;
+
+  $yelp-alt-c0:         $btn-shape-c0-default; // red bg (optional)
+  $yelp-alt-c1:         "\e407"; // inset (text-shadow 0 -1px for bevel)
+  $yelp-alt-c2:         $yelp-icon; // red asterisk
+
+
+// YOUTUBE (2014 - screen shape w play button)
+  $youtube-sq:          "\e411";
+  $youtube-r1:          "\e412";
+  $youtube-r2:          "\e413";
+  $youtube-r3:          "\e414";
+  $youtube-cir:         "\e415";
+  $youtube-icon:        "\e416";
+  $youtube-icon-alt:    "\e41f"; // bigger, btn-size icon
+
+  $youtube-c0:          $btn-shape-c0-default !default; // red bg (optional)
+  $youtube-c1:          "\e417"; // white screen shape
+  $youtube-c1-alt:      "\e416"; // white screen shape with play button
+  $youtube-c2:          "\e418"; // red play button
+  $youtube-c3:          "\e410"; // inset shadow of play button (optional)
+
+
+// YOUTUBE ALT (2014 - logotype stacked)
+  $youtube-alt-sq:      "\e421";
+  $youtube-alt-r1:      "\e422";
+  $youtube-alt-r2:      "\e423";
+  $youtube-alt-r3:      "\e424";
+  $youtube-alt-cir:     "\e425";
+  $youtube-alt-icon:    "\e426";
+
+  $youtube-alt-c0:      $btn-shape-c0-default !default;
+  $youtube-alt-c1:      "\e427"; // black "You"
+  $youtube-alt-c2:      "\e428"; // red screen shape
+  $youtube-alt-c2-alt:  "\e430"; // red screen shape around "Tube"
+  $youtube-alt-c3:      "\e429"; // white "Tube"
+
+
+// YOUTUBE ALT 2 (2014 - play button only, no screen shape)
+  $youtube-alt2-sq:     "\e41a";
+  $youtube-alt2-r1:     "\e41b";
+  $youtube-alt2-r2:     "\e41c";
+  $youtube-alt2-r3:     "\e41d";
+  $youtube-alt2-cir:    "\e41e";
+  $youtube-alt2-icon:   "\e41f"; // bigger, btn-size icon
+
+  $youtube-alt2-c0:     $btn-shape-c0-default !default;
+  $youtube-alt2-c0-alt0: $btn-shape-sq;
+  $youtube-alt2-c0-alt1: $btn-shape-r1;
+  $youtube-alt2-c0-alt2: $btn-shape-r2;
+  $youtube-alt2-c0-alt3: $btn-shape-r3;
+  $youtube-alt2-c0-alt4: $btn-shape-cir;
+  $youtube-alt2-c1:     "\e42f"; // screen-shaped bg
+  $youtube-alt2-c2:     "\e420"; // play button
+  $youtube-alt2-c3:     "\e419"; // inset shadow of play button (optional)
+
+
+// YOUTUBE LOGO (2014)
+  $youtube-logo-icon:   "\e42a";
+
+  $youtube-logo-c0:     "\e042b"; // black "You"
+  $youtube-logo-c1:     "\e042c"; // red screen shape
+  $youtube-logo-c1-alt: "\e042e"; // red screen shape around "Tube"
+  $youtube-logo-c2:     "\e042d"; // white "Tube"
+
+
+// ZERPLY (2014)
+  $zerply-sq:           "\e431";
+  $zerply-r1:           "\e432";
+  $zerply-r2:           "\e433";
+  $zerply-r3:           "\e434";
+  $zerply-cir:          "\e435";
+  $zerply-icon:         "\e436";
+
+  $zerply-c0:           $btn-shape-c0-default; // grey bg
+  $zerply-c1:           $zerply-icon; // green icon
+
+// end UNICODES (_unicodes-stackicons-social.scss)

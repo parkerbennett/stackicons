@@ -1,0 +1,63 @@
+FONTLOG
+Stackicons-Social font family
+=============================
+
+This file provides detailed information on the Stackicons-Social 
+family of fonts. This information should be distributed along with 
+the Stackicons-Social fonts and any derivative works.
+
+Basic Font Information
+----------------------
+
+Stackicons-Social is an icon font with up-to-date branding for over 
+60 online social brands -- from App.net to Zerply. (Copyrights and 
+trademarks for these brands are the property of their respective 
+owners.)
+
+Stackicons (http://stackicons.com) are icon fonts designed for added 
+flexibility, with multiple button shapes, plus "stackable" elements, 
+which can create icons with multiple colors using CSS.
+
+Stackicons-Social includes:
+addthis, adn (alt.net), amazon, android, apple, behance, blogger, 
+codepen, delicious, deviantart, digg, dribbble, dropbox, ebay, email, 
+evernote, facebook, facebook-alt (centered f), flattr, flickr, forrst, 
+foursquare, github, github-alt (silhouette), gittip, gmail, google, 
+googleplus, imdb, instagram, kickstarter, lastfm, linkedin, microsoft, 
+myspace, pandora, paypal, picasa, pinboard, pinterest, rdio, reddit, 
+rss, sharethis, skype, slideshare, soundcloud, spotify, stackoverflow, 
+stumbleupon, tumblr, twitter, vimeo, vine, windows, windows7, wordpress, 
+xing, yahoo, yelp, youtube (symbol), youtube-alt ("YouTube"), zerply, 
+menu, more (...), search, and triangle-down, along with some variations.
+
+Stackicons-Social-Minimal is a subset of more commonly used icons:
+dribbble, codepen, email, facebook, facebook-alt, flickr, github, 
+github-alt, instagram, linkedin, pinterest, rss, tumblr, twitter, 
+vimeo, youtube, youtube-alt, menu, search, and triangle-down.
+
+Stackicons-Social-Complete includes some additional variants, plus:
+email-alt, email-alt2, podcast, and shopping cart. It is offered  
+as a small “thank you" to those who contribute to the project:
+http://stackicons.com/contribute (thank you).
+
+
+ChangeLog
+---------
+
+2014 February 20 (Parker Bennett) Version 1.0
+    
+    * First public release.
+        
+Acknowledgements
+----------------
+Thanks to Chris Coyier and the team at CodePen (http://codepen.com). 
+Thanks to Tish and Carter and Reeve.
+
+N: Parker Bennett
+E: parker@stackicons.com
+W: http:/stackicons.com
+D: Creative Director, Developer
+
+For more information please visit http://stackicons.com.
+
+You can also send an email to <parker at parkerbennett.com>

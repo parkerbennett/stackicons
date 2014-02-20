@@ -1,0 +1,423 @@
+//  ****************************************
+// |                                        |
+// |  STACKICONS-SOCIAL "CONSTRUCTION KIT"  |
+// |  VARIABLES & MIXINS                    |
+// |                                        |
+//  ****************************************
+
+// This is the SCSS "Construction Kit" that will 
+// generate default CSS for Stackicons-Social,
+// an icon font designed for added flexibility.
+
+// Modify the $variables and @mixins below to
+// change default colors and shapes for icons, 
+// formulate variants for brand-colors, etc.
+
+// This file is @imported into 
+// _css-defaults-stackicons-social (as well as
+// stackicons.scss).
+
+
+// **** CONSTRUCTION KIT VARIABLES ****
+
+// ---- BUTTON SIZE & SHAPE DEFAULTS ---- /
+
+// The values set below determine the default 
+// button shape (or icon-only) of the individual 
+// .st-icon-(brand) classes generated below.
+
+
+// **** CHOOSE DEFAULT BUTTON SHAPE & SIZE ****
+
+// sq = square, r1 = slightly rounded (Android), 
+// r2 = rounded, r3 = more rounded (iOS 7), 
+// cir = circle, icon = icon only 
+
+$btn-shape-default: r1 !default;  // Choices: sq, r1, r2, r3, cir, icon
+
+// referenced in _multi-color-stackicons-social,
+// but may be overridden in that file
+
+$btn-size-default: 1.815em; // (1.7em = 32px, 1.815em = 34px, 1.92em = 36px, 2.135em = 40px)
+
+// Padding gives users a bigger touch-target.  
+// (We actually create "fake" padding with this value 
+// since "stacked" elements use position: absolute.)
+
+$btn-padding: .143em; // 4px (.214 = 6px)
+
+
+// ---- COLORS & SHADOWS ---- /
+
+// DROPSHADOW DEFAULT COLORS:
+
+// non-rgba fallback
+$color-shadow: $grey-light !default; // #999
+
+$color-shadow-rgba: $grey-light-rgba !default; // rgba(0,0,0, 0.395)
+
+$color-glowshadow: $grey-alt2 !default; // #777
+
+$color-glowshadow-rgba: $grey-alt2-rgba !default; // rgba(0,0,0, 0.528)
+
+
+// **** CHOOSE DEFAULT COLOR & COLOR-HOVER STYLES **** /
+
+// (Brand colors are @imported from _colors-social-2014.
+// Button and icon colors can be different, e.g., in 
+// evernote the button is green, elephant icon is grey.)
+
+// There are 4 "color style" choices for buttons:
+
+// 1) single-color:         all buttons & icons the same color
+// 2) brand-color:          buttons & icons are the brand color
+// 3) brand-color-variant:  brand-color is adjusted by @mixin (below)
+// 4) embossed-only:        darkened background-color, embossed
+
+$btn-color-style-default: brand-color !default; 
+
+
+// There are 3 "hover style" choices:
+
+// single-color-hover:  all buttons & icons same hover color
+// brand-color:         brand color on hover
+// brand-color-hover:   brand-color is adjusted by @mixin (below)
+
+$btn-color-hover-default: brand-color-hover !default;
+
+
+
+// DEFINE "SINGLE-COLOR" (icons same color):
+
+$btn-single-color-default: $grey-lighter !default;
+
+// if no rgba, set to false or null
+$btn-single-color-default-rgba: $grey-lighter-rgba !default;
+
+
+
+// DEFINE "SINGLE-COLOR-HOVER" (hover color all the same):
+
+$btn-single-color-default-hover: $grey !default;
+
+// if no rgba, set to false or null
+$btn-single-color-default-rgba-hover: $grey-rgba !default;
+
+
+
+// DEFINE "EMBOSSED-ONLY" (darkened bg color):
+
+// background behind icons
+
+$color-background: $white !default;
+
+$emboss-darken-background-by: 7.5;
+
+$color-background-embossed: darken($color-background, $emboss-darken-background-by);
+
+// shadows & highlights
+
+// non-rgba fallback
+$emboss-shadow: $grey-light-alt2 !default; // #bbb
+
+$emboss-shadow-rgba: $grey-light-alt2-rgba !default; // rgba(0, 0, 0, 0.263);
+
+// non-rgba fallback
+$emboss-highlight: white !default;
+
+$emboss-highlight-rgba: rgba($emboss-highlight, 0.5) !default;
+
+
+.st-embossed {
+  // non-rgba fallback
+  text-shadow: 0 -1px 0 $emboss-shadow, 
+    0 1px 0 $emboss-highlight;
+  text-shadow: 0 -1px $emboss-shadow-rgba,
+    // softens slightly
+    0 -1px 1px rgba(0, 0, 0, 0.05),
+    0 1px 0 $emboss-highlight-rgba;
+}
+
+.st-raised {
+  // non-rgba fallback
+  text-shadow: 0 1px 0 $emboss-shadow, 
+    0 -1px 0 $emboss-highlight;
+  text-shadow: 0 1px $emboss-shadow-rgba,
+    // softens slightly
+    0 1px 1px rgba(0, 0, 0, 0.05),
+    0 -1px 0 $emboss-highlight-rgba;
+}
+
+
+// DEFINE "BRAND-COLOR-VARIANT":
+//   lighten or darken, saturate or desaturate, change alpha
+//   percentage variables required for "scale-color" function:
+
+$brand-color-lighten-by: 60%;  // (-100 to 0 to 100%) negative darkens
+
+$brand-color-saturate-by: -30%;  // (-100 to 0 to 100%) negative desaturates
+
+$brand-color-alpha: 50%;  // (0 to 100%) 0 is completely transparent
+
+
+// DEFINE "BRAND-COLOR-HOVER":
+//   lighten or darken, saturate or desaturate, change alpha
+//   percentage variables required for "scale-color" function:
+
+$brand-color-hover-lighten-by: 50%;  // (-100 to 0 to 100%) negative darkens
+
+$brand-color-hover-saturate-by: 5%;  // (-100 to 0 to 100%) negative desaturates
+
+$brand-color-hover-alpha: 100%;  // (0 to 100%) 0 is completely transparent
+
+
+// ---- MIXINS ---- /
+
+// brand-color-variant - btn or icon, @include for each
+
+// if the $brand-color lightness is low (<25)
+// we don't pump up the saturation...
+
+@mixin adjust-brand-color ($brand-color:$grey-lighter-alt, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by, $alpha:$brand-color-alpha) {
+  // dark color, and we're lightening and saturating
+  @if lightness($brand-color) < 25 and $lightness > 0 and $saturation > 0 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-lighten-by*1.1);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-lighten-by*1.1, $alpha:$brand-color-alpha);
+    }
+  }
+  // dark color, and we're lightening but either not saturating or desaturating
+  @else if lightness($brand-color) < 25 and $lightness > 0 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by*1.1);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by*1.1, $alpha:$brand-color-alpha);
+    }
+  }
+  // very desaturated color and we're saturating
+  @else if saturation($brand-color) < 5 and $saturation > 0 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-lighten-by);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-lighten-by, $alpha:$brand-color-alpha);
+    }
+  }
+  @else if saturation($brand-color) < 5 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by, $alpha:$brand-color-alpha);
+    }
+  }
+  @else {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:$brand-color-saturate-by, $lightness:$brand-color-lighten-by, $alpha:$brand-color-alpha);
+    }
+  }
+}
+
+// brand-color-hover - btn or icon, @include for each
+
+@mixin adjust-brand-color-hover ($brand-color:$grey-lighter-alt, $saturation:$brand-color-hover-saturate-by, $lightness:$brand-color-hover-lighten-by, $alpha:$brand-color-hover-alpha) {
+  @if lightness($brand-color) < 25 and $lightness > 0 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-hover-lighten-by*1.1);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-hover-lighten-by*1.1, $alpha:$brand-color-hover-alpha);
+    }
+  }
+  @else if saturation($brand-color) < 5 {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-hover-lighten-by);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:0%, $lightness:$brand-color-hover-lighten-by, $alpha:$brand-color-hover-alpha);
+    }
+  }
+  @else {
+    // non-rgba fallback
+    color: scale-color($brand-color, $saturation:$brand-color-hover-saturate-by, $lightness:$brand-color-hover-lighten-by);
+    @if $brand-color-alpha < 100 {
+      color: scale-color($brand-color, $saturation:$brand-color-hover-saturate-by, $lightness:$brand-color-hover-lighten-by, $alpha:$brand-color-hover-alpha);
+    }
+  }
+}
+
+
+// (mixin for "multi-color" is in separate _partial file)
+
+
+// MIXINS FOR TEXT-SHADOWS
+
+// Stackicons create shapes using font characters not CSS, 
+// so we use text-shadows not box-shadows. IMPORTANT NOTE:
+// There's no text-shadow support in IE 8 or 9, and some 
+// other issues: http://caniuse.com/#search=text-shadow.
+
+// Workaround if you want shadows on buttons in IE8 or 9: 
+// use the icon-only version of the icons and margins  
+// instead of padding, then style the containing element.
+
+$shadow-size: 1px;
+$shadow-blur: 1px;
+$color-glow: white;
+$color-glow-rgba: rgba($white, 0.67);
+
+@mixin dropshadow ($shadow-size: 1px, $shadow-blur: 1px, $color-shadow: $color-shadow, $color-shadow-rgba:$color-shadow-rgba) {
+  // non-rgba fallback
+  text-shadow:      0 $shadow-size $shadow-blur $color-shadow;
+  text-shadow:      0 $shadow-size $shadow-blur $color-shadow-rgba; }
+
+// and in class form:
+.st-dropshadow {
+  // non-rgba fallback
+  text-shadow:      0 $shadow-size $shadow-blur $color-shadow;
+  text-shadow:      0 $shadow-size $shadow-blur $color-shadow-rgba;   
+}
+
+@mixin glow ($shadow-blur: 6px, $color-glow: white, $color-glow-rgba:rgba(white, 0.67)) {
+  // non-rgba fallback
+  text-shadow:      0 0 $shadow-blur $color-glow;
+  text-shadow:      0 0 $shadow-blur $color-glow-rgba; }
+
+// and in class form:
+.st-glow {
+  // non-rgba fallback
+  text-shadow:      0 0 $shadow-blur $color-glow;
+  text-shadow:      0 0 $shadow-blur $color-glow-rgba; 
+}
+
+@mixin glowshadow ($shadow-blur: 6px, $color-glow:$color-glowshadow, $color-glow-rgba:$color-glowshadow-rgba) {
+  // non-rgba fallback
+  text-shadow:      0 0 $shadow-blur $color-glow;
+  text-shadow:      0 0 $shadow-blur $color-glow-rgba; }
+
+// and in class form:
+.st-glowshadow {
+  // non-rgba fallback
+  text-shadow:      0 0 $shadow-blur $color-glowshadow;
+  text-shadow:      0 0 $shadow-blur $color-glowshadow-rgba; 
+}
+
+// .st-embossed and .st-raised are classes we can extend, here in @mixin form...
+
+@mixin embossed ($emboss-shadow, $emboss-shadow-rgba, $emboss-highlight-rgba) {
+  // non-rgba fallback
+  text-shadow:      0 -1px 0 $emboss-shadow, 
+                    0 1px 0 $emboss-highlight;
+  text-shadow:      0 -1px $emboss-shadow-rgba,
+                    // softens slightly
+                    0 -1px 1px rgba(0, 0, 0, 0.05),
+                    0 1px 0 emboss-highlight-rgba;
+}
+
+// .st-embossed and .st-raised are classes we can extend, here in @mixin form...
+
+@mixin embossed ($emboss-shadow:$grey-light-alt2, $emboss-shadow-rgba:$grey-light-alt2-rgba, $emboss-highlight-rgba:rgba(white,0.5)) {
+  // non-rgba fallback
+  text-shadow:      0 -1px 0 $emboss-shadow, 
+                    0 1px 0 $emboss-highlight;
+  text-shadow:      0 -1px $emboss-shadow-rgba,
+                    // softens slightly
+                    0 -1px 1px rgba(0, 0, 0, 0.05),
+                    0 1px 0 emboss-highlight-rgba;
+}
+
+@mixin raised ($emboss-shadow:$grey-light-alt2, $emboss-shadow-rgba:$grey-light-alt2-rgba, $emboss-highlight-rgba:rgba(white,0.5)) {
+  // non-rgba fallback
+  text-shadow:      0 1px 0 $emboss-shadow, 
+                    0 -1px 0 $emboss-highlight;
+  text-shadow:      0 1px $emboss-shadow-rgba,
+                    // softens slightly
+                    0 1px 1px rgba(0, 0, 0, 0.05),
+                    0 -1px 0 $emboss-highlight-rgba;
+}
+
+@mixin threedeetext ($color) {
+  color: $color;
+  text-shadow:      0 2px 0 darken($color, 14%),
+                    0 4px 0 darken($color, 16%),
+                    0 6px 0 darken($color, 18%),
+                    0 8px 0 darken($color, 20%),
+                    3px 8px 15px rgba(0,0,0,0.1),
+                    3px 8px 5px rgba(0,0,0,0.3);
+}
+
+// box-shadows if you need them...
+
+@mixin dropshadow-box ($shadow-size: 1px, $shadow-blur: 1px, $color-shadow: $color-shadow, $color-shadow-rgba:$color-shadow-rgba) {
+   -moz-box-shadow:    0 $shadow-size $shadow-blur $color-shadow;
+   -webkit-box-shadow: 0 $shadow-size $shadow-blur $color-shadow;
+   box-shadow:         0 $shadow-size $shadow-blur $color-shadow;
+   -moz-box-shadow:    0 $shadow-size $shadow-blur $color-shadow-rgba;
+   -webkit-box-shadow: 0 $shadow-size $shadow-blur $color-shadow-rgba;
+   box-shadow:         0 $shadow-size $shadow-blur $color-shadow-rgba; }
+
+@mixin glow-box ($shadow-blur: 6px, $color-glow: $white, $color-glow-rgba:rgba($white, 0.67)) {
+   -moz-box-shadow:    0 0 $shadow-blur $color-glow;
+   -webkit-box-shadow: 0 0 $shadow-blur $color-glow;
+   box-shadow:         0 0 $shadow-blur $color-glow;
+   -moz-box-shadow:    0 0 $shadow-blur $color-glow-rgba;
+   -webkit-box-shadow: 0 0 $shadow-blur $color-glow-rgba;
+   box-shadow:         0 0 $shadow-blur $color-glow-rgba; }
+
+@mixin glowshadow-box ($shadow-blur: 6px, $color-glow:$color-shadow, $color-glow-rgba:$color-shadow-rgba) {
+   -moz-box-shadow:    0 0 $shadow-blur $color-glow;
+   -webkit-box-shadow: 0 0 $shadow-blur $color-glow;
+   box-shadow:         0 0 $shadow-blur $color-glow;
+   -moz-box-shadow:    0 0 $shadow-blur $color-glow-rgba;
+   -webkit-box-shadow: 0 0 $shadow-blur $color-glow-rgba;
+   box-shadow:         0 0 $shadow-blur $color-glow-rgba; }
+
+
+// MIXINS FOR TRANSITIONS...
+
+$transition-dur: .2s; // 0 for no transition duration
+
+$transition-ease: ease-out; 
+// transition-timing-function - choices: 
+//     ease, linear, ease-in, ease-out, 
+//     ease-in-out, step-start. step-end
+
+@mixin transition-color {
+  -webkit-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease;
+     -moz-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease;
+       -o-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease;
+      -ms-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease;
+          transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease;
+}
+
+@mixin transition-color-shadow {
+  -webkit-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease,
+                text-shadow $transition-dur $transition-ease;
+     -moz-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease,
+                text-shadow $transition-dur $transition-ease;
+       -o-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease,
+                text-shadow $transition-dur $transition-ease;
+      -ms-transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease,
+                text-shadow $transition-dur $transition-ease;
+          transition: color $transition-dur $transition-ease,
+                 background $transition-dur $transition-ease,
+                text-shadow $transition-dur $transition-ease;
+}
+
+@mixin transition-all {
+  -webkit-transition: all $transition-dur $transition-ease;
+     -moz-transition: all $transition-dur $transition-ease;
+       -o-transition: all $transition-dur $transition-ease;
+      -ms-transition: all $transition-dur $transition-ease;
+          transition: all $transition-dur $transition-ease;
+}
+
+
