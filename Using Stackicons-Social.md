@@ -19,7 +19,7 @@ There's also an [examples.html](http://stackicons.com/examples.html) file that y
 
 A smaller version of the font, *Stackicons-Social-Minimal,* includes a subset of commonly-used icons. Change "stackicons.css" to "stackicons-minimal.css" if you don't need more than the following:
 
-* Alt.net
+* App.net
 * Codepen
 * Dribbble
 * Email
