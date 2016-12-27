@@ -28,6 +28,13 @@
     "*.ico",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "css/fontviewer.css",
+    "css/normalize.css",
+    "css/stackicons-branding.css",
+    "css/stackicons-branding.min.css",
+    "css/style.css",
+    "fonts/Stackicons/Desktop Fonts",
+    "fonts/Stackicons/Stackicons-Branding*"
   ]
 }
