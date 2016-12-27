@@ -17,6 +17,7 @@
   ],
   "license": "MIT",
   "ignore": [
+    "**/.*",
     "node_modules",
     "_source",
     "img",
