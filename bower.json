@@ -35,6 +35,9 @@
     "css/stackicons-branding.min.css",
     "css/style.css",
     "fonts/Stackicons/Desktop Fonts",
-    "fonts/Stackicons/Stackicons-Branding*"
+    "fonts/Stackicons/Stackicons-Branding*",
+    "*.html",
+    "*.md",
+    "*.txt"
   ]
 }
