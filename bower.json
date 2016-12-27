@@ -1,11 +1,11 @@
 {
   "name": "p3x-stackicons",
-  "homepage": "https://github.com/parkerbennett/stackicons",
+  "homepage": "https://github.com/patrikx3/stackicons",
   "authors": [
     "Parker Bennett <parker@stackicons.com>",
     "Patrik Laszlo <alabard@gmail.com>"
   ],
-  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option. Created by Parker Bennett.",
+  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option.",
   "main": [
     "css/stackicons-social.css"
   ],
