@@ -1,0 +1,31 @@
+{
+  "name": "stackicons",
+  "homepage": "https://github.com/parkerbennett/stackicons",
+  "authors": [
+    "Parker Bennett <parker@stackicons.com>",
+    "Patrik Laszlo <alabard@gmail.com>"
+  ],
+  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option. The Stackicons-Social font and Sass-based construction kit are free and open source, created by Parker Bennett.",
+  "main": [
+    "css/stackicons-social.css"
+  ],
+  "keywords": [
+    "social",
+    "icon",
+    "stack",
+    "colorful"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "_source",
+    "img",
+    "js",
+    "scss",
+    "*.png",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
