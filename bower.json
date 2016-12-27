@@ -5,7 +5,7 @@
     "Parker Bennett <parker@stackicons.com>",
     "Patrik Laszlo <alabard@gmail.com>"
   ],
-  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option. The Stackicons-Social font and Sass-based construction kit are free and open source, created by Parker Bennett.",
+  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option. Created by Parker Bennett.",
   "main": [
     "css/stackicons-social.css"
   ],
