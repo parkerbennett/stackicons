@@ -17,13 +17,14 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
     "node_modules",
     "_source",
     "img",
     "js",
     "scss",
     "*.png",
+    "*.rb",
+    "*.ico",
     "bower_components",
     "test",
     "tests"
