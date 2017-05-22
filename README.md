@@ -5,10 +5,10 @@ Icon font and Sass-based construction kit for Stackicons-Social, which supports 
 
 For more information visit <http://stackicons.com>
 
-#Bower
+# Bower
 ```html
 bower install p3x-stackicons --save
 ```
 
-#Original
+# Original
 [Parker Bennett Stackicons](https://github.com/parkerbennett/stackicons)
