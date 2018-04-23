@@ -37,7 +37,6 @@
     "fonts/Stackicons/Desktop Fonts",
     "fonts/Stackicons/Stackicons-Branding*",
     "*.html",
-    "*.md",
     "*.txt"
   ]
 }

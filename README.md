@@ -6,8 +6,16 @@ Icon font and Sass-based construction kit for Stackicons-Social, which supports 
 For more information visit <http://stackicons.com>
 
 # Bower
-```html
+```bash
 bower install p3x-stackicons --save
+```
+
+# NPM
+
+```bash
+npm i p3x-stackicons --save
+# or
+yarn add p3x-stackicons
 ```
 
 # Original
