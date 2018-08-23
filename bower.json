@@ -1,0 +1,42 @@
+{
+  "name": "p3x-stackicons",
+  "homepage": "https://github.com/patrikx3/stackicons",
+  "authors": [
+    "Parker Bennett <parker@stackicons.com>",
+    "Patrik Laszlo <alabard@gmail.com>"
+  ],
+  "description": "Stackicons are icon fonts for the web, designed to do more — with multiple button shapes and a unique “multi-color” option.",
+  "main": [
+    "css/stackicons-social.css"
+  ],
+  "keywords": [
+    "social",
+    "icon",
+    "stack",
+    "colorful"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "_source",
+    "img",
+    "js",
+    "scss",
+    "*.png",
+    "*.rb",
+    "*.ico",
+    "bower_components",
+    "test",
+    "tests",
+    "css/fontviewer.css",
+    "css/normalize.css",
+    "css/stackicons-branding.css",
+    "css/stackicons-branding.min.css",
+    "css/style.css",
+    "fonts/Stackicons/Desktop Fonts",
+    "fonts/Stackicons/Stackicons-Branding*",
+    "*.html",
+    "*.txt"
+  ]
+}

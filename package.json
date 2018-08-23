@@ -1,0 +1,29 @@
+{
+  "name": "p3x-stackicons",
+  "version": "1.0.0",
+  "description": "Icon font and Sass-based construction kit for Stackicons-Social, which supports multiple button shapes and a unique \"multi-color\" option in CSS for over 60 social brands.",
+  "main": "css/stackicons-social.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrikx3/stackicons.git"
+  },
+  "keywords": [
+    "social",
+    "icon",
+    "stack",
+    "colorful",
+    "brand"
+  ],
+  "author": "Parker Bennett <parker@stackicons.com>",
+  "contributors": [
+    "Patrik Laszlo <alabard@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrikx3/stackicons/issues"
+  },
+  "homepage": "https://github.com/patrikx3/stackicons#readme"
+}
